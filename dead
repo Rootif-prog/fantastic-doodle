@@ -1,0 +1,2981 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local Dead_Rails = Instance.new("ScreenGui")
+local ImageLabel = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local Container = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local FunctionsBackground = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local FeaturesContainer = Instance.new("ScrollingFrame")
+local UIGridLayout = Instance.new("UIGridLayout")
+local UIPadding = Instance.new("UIPadding")
+local Frame = Instance.new("Frame")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local Indicator = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Trigger = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Indicator_2 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Trigger_2 = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local Indicator_3 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Trigger_3 = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local Indicator_4 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local Trigger_4 = Instance.new("TextButton")
+local Frame_5 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local Indicator_5 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local Trigger_5 = Instance.new("TextButton")
+local Frame_6 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local Indicator_6 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Trigger_6 = Instance.new("TextButton")
+local Frame_7 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local Indicator_7 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Trigger_7 = Instance.new("TextButton")
+local Frame_8 = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local Indicator_8 = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local Trigger_8 = Instance.new("TextButton")
+local Frame_9 = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local Indicator_9 = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local Trigger_9 = Instance.new("TextButton")
+local Frame_10 = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
+local Indicator_10 = Instance.new("Frame")
+local UICorner_23 = Instance.new("UICorner")
+local Trigger_10 = Instance.new("TextButton")
+local Frame_11 = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local Indicator_11 = Instance.new("Frame")
+local UICorner_25 = Instance.new("UICorner")
+local Trigger_11 = Instance.new("TextButton")
+local Frame_12 = Instance.new("Frame")
+local UICorner_26 = Instance.new("UICorner")
+local TextLabel_12 = Instance.new("TextLabel")
+local Indicator_12 = Instance.new("Frame")
+local UICorner_27 = Instance.new("UICorner")
+local Trigger_12 = Instance.new("TextButton")
+local Frame_13 = Instance.new("Frame")
+local UICorner_28 = Instance.new("UICorner")
+local TextLabel_13 = Instance.new("TextLabel")
+local Indicator_13 = Instance.new("Frame")
+local UICorner_29 = Instance.new("UICorner")
+local Trigger_13 = Instance.new("TextButton")
+local Frame_14 = Instance.new("Frame")
+local UICorner_30 = Instance.new("UICorner")
+local TextLabel_14 = Instance.new("TextLabel")
+local Indicator_14 = Instance.new("Frame")
+local UICorner_31 = Instance.new("UICorner")
+local Trigger_14 = Instance.new("TextButton")
+local VisualsContainer = Instance.new("ScrollingFrame")
+local UIGridLayout_2 = Instance.new("UIGridLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local Frame_15 = Instance.new("Frame")
+local UICorner_32 = Instance.new("UICorner")
+local TextLabel_15 = Instance.new("TextLabel")
+local Indicator_15 = Instance.new("Frame")
+local UICorner_33 = Instance.new("UICorner")
+local Trigger_15 = Instance.new("TextButton")
+local Frame_16 = Instance.new("Frame")
+local UICorner_34 = Instance.new("UICorner")
+local TextLabel_16 = Instance.new("TextLabel")
+local Indicator_16 = Instance.new("Frame")
+local UICorner_35 = Instance.new("UICorner")
+local Trigger_16 = Instance.new("TextButton")
+local Frame_17 = Instance.new("Frame")
+local UICorner_36 = Instance.new("UICorner")
+local TextLabel_17 = Instance.new("TextLabel")
+local Indicator_17 = Instance.new("Frame")
+local UICorner_37 = Instance.new("UICorner")
+local Trigger_17 = Instance.new("TextButton")
+local TeleportsContainer = Instance.new("ScrollingFrame")
+local UIGridLayout_3 = Instance.new("UIGridLayout")
+local UIPadding_3 = Instance.new("UIPadding")
+local Frame_18 = Instance.new("Frame")
+local UICorner_38 = Instance.new("UICorner")
+local TextLabel_18 = Instance.new("TextLabel")
+local Trigger_18 = Instance.new("TextButton")
+local Frame_19 = Instance.new("Frame")
+local UICorner_39 = Instance.new("UICorner")
+local TextLabel_19 = Instance.new("TextLabel")
+local Trigger_19 = Instance.new("TextButton")
+local Frame_20 = Instance.new("Frame")
+local UICorner_40 = Instance.new("UICorner")
+local TextLabel_20 = Instance.new("TextLabel")
+local Trigger_20 = Instance.new("TextButton")
+local Frame_21 = Instance.new("Frame")
+local UICorner_41 = Instance.new("UICorner")
+local TextLabel_21 = Instance.new("TextLabel")
+local Trigger_21 = Instance.new("TextButton")
+local Frame_22 = Instance.new("Frame")
+local UICorner_42 = Instance.new("UICorner")
+local TextLabel_22 = Instance.new("TextLabel")
+local Trigger_22 = Instance.new("TextButton")
+local TabsBackground = Instance.new("Frame")
+local UICorner_43 = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding_4 = Instance.new("UIPadding")
+local Features = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local Trigger_23 = Instance.new("TextButton")
+local UICorner_44 = Instance.new("UICorner")
+local Visuals = Instance.new("Frame")
+local Name_2 = Instance.new("TextLabel")
+local Trigger_24 = Instance.new("TextButton")
+local UICorner_45 = Instance.new("UICorner")
+local Teleports = Instance.new("Frame")
+local Name_3 = Instance.new("TextLabel")
+local Trigger_25 = Instance.new("TextButton")
+local UICorner_46 = Instance.new("UICorner")
+local SpineWare = Instance.new("TextLabel")
+local Frame_23 = Instance.new("Frame")
+local UICorner_47 = Instance.new("UICorner")
+local Tips = Instance.new("TextLabel")
+local UICorner_48 = Instance.new("UICorner")
+
+--Properties:
+
+Dead_Rails.Name = "Dead_Rails"
+Dead_Rails.Parent = game.CoreGui
+Dead_Rails.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageLabel.Parent = Dead_Rails
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.600000024, 0, 0.12769486, 0)
+ImageLabel.Size = UDim2.new(0, 392, 0, 370)
+ImageLabel.Image = "rbxassetid://133687044005427"
+
+UICorner.Parent = ImageLabel
+
+Container.Name = "Container"
+Container.Parent = ImageLabel
+Container.BackgroundColor3 = Color3.fromRGB(128, 128, 128)
+Container.BackgroundTransparency = 0.200
+Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(-0.000488125545, 0, -6.33445961e-05, 0)
+Container.Size = UDim2.new(0, 392, 0, 370)
+
+UICorner_2.Parent = Container
+
+FunctionsBackground.Name = "FunctionsBackground"
+FunctionsBackground.Parent = Container
+FunctionsBackground.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+FunctionsBackground.BackgroundTransparency = 0.250
+FunctionsBackground.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FunctionsBackground.BorderSizePixel = 0
+FunctionsBackground.Position = UDim2.new(0.352040827, 0, 0.123536475, 0)
+FunctionsBackground.Size = UDim2.new(0, 246, 0, 317)
+
+UICorner_3.Parent = FunctionsBackground
+
+FeaturesContainer.Name = "FeaturesContainer"
+FeaturesContainer.Parent = FunctionsBackground
+FeaturesContainer.Active = true
+FeaturesContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FeaturesContainer.BackgroundTransparency = 1.000
+FeaturesContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FeaturesContainer.BorderSizePixel = 0
+FeaturesContainer.Position = UDim2.new(0, 0, 0.00630914839, 0)
+FeaturesContainer.Size = UDim2.new(0, 246, 0, 315)
+FeaturesContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+UIGridLayout.Parent = FeaturesContainer
+UIGridLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout.CellPadding = UDim2.new(0, 10, 0, 5)
+UIGridLayout.CellSize = UDim2.new(0, 110, 0, 35)
+
+UIPadding.Parent = FeaturesContainer
+UIPadding.PaddingLeft = UDim.new(0, 8)
+UIPadding.PaddingTop = UDim.new(0, 3)
+
+Frame.Parent = FeaturesContainer
+Frame.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame.BackgroundTransparency = 0.250
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel.Font = Enum.Font.Jura
+TextLabel.Text = "Auto Sell"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+Indicator.Name = "Indicator"
+Indicator.Parent = Frame
+Indicator.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator.BorderSizePixel = 0
+Indicator.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Indicator
+
+Trigger.Name = "Trigger"
+Trigger.Parent = Frame
+Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger.BackgroundTransparency = 1.000
+Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.BorderSizePixel = 0
+Trigger.Size = UDim2.new(0, 110, 0, 35)
+Trigger.Font = Enum.Font.SourceSans
+Trigger.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger.TextSize = 14.000
+Trigger.TextTransparency = 1.000
+
+Frame_2.Parent = FeaturesContainer
+Frame_2.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_2.BackgroundTransparency = 0.250
+Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_2.BorderSizePixel = 0
+Frame_2.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = Frame_2
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_2.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_2.Font = Enum.Font.Jura
+TextLabel_2.Text = "Auto Burn"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+Indicator_2.Name = "Indicator"
+Indicator_2.Parent = Frame_2
+Indicator_2.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_2.BorderSizePixel = 0
+Indicator_2.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_2.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = Indicator_2
+
+Trigger_2.Name = "Trigger"
+Trigger_2.Parent = Frame_2
+Trigger_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_2.BackgroundTransparency = 1.000
+Trigger_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.BorderSizePixel = 0
+Trigger_2.Size = UDim2.new(0, 110, 0, 35)
+Trigger_2.Font = Enum.Font.SourceSans
+Trigger_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_2.TextSize = 14.000
+Trigger_2.TextTransparency = 1.000
+
+Frame_3.Parent = FeaturesContainer
+Frame_3.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_3.BackgroundTransparency = 0.250
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.BorderSizePixel = 0
+Frame_3.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = Frame_3
+
+TextLabel_3.Parent = Frame_3
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_3.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_3.Font = Enum.Font.Jura
+TextLabel_3.Text = "Auto Bounty"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
+Indicator_3.Name = "Indicator"
+Indicator_3.Parent = Frame_3
+Indicator_3.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_3.BorderSizePixel = 0
+Indicator_3.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_3.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_9.CornerRadius = UDim.new(0, 5)
+UICorner_9.Parent = Indicator_3
+
+Trigger_3.Name = "Trigger"
+Trigger_3.Parent = Frame_3
+Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_3.BackgroundTransparency = 1.000
+Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.BorderSizePixel = 0
+Trigger_3.Size = UDim2.new(0, 110, 0, 35)
+Trigger_3.Font = Enum.Font.SourceSans
+Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.TextSize = 14.000
+Trigger_3.TextTransparency = 1.000
+
+Frame_4.Parent = FeaturesContainer
+Frame_4.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_4.BackgroundTransparency = 0.250
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.BorderSizePixel = 0
+Frame_4.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = Frame_4
+
+TextLabel_4.Parent = Frame_4
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_4.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_4.Font = Enum.Font.Jura
+TextLabel_4.Text = "Burn Shop Coal"
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 14.000
+
+Indicator_4.Name = "Indicator"
+Indicator_4.Parent = Frame_4
+Indicator_4.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_4.BorderSizePixel = 0
+Indicator_4.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_4.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = Indicator_4
+
+Trigger_4.Name = "Trigger"
+Trigger_4.Parent = Frame_4
+Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_4.BackgroundTransparency = 1.000
+Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.BorderSizePixel = 0
+Trigger_4.Size = UDim2.new(0, 110, 0, 35)
+Trigger_4.Font = Enum.Font.SourceSans
+Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.TextSize = 14.000
+Trigger_4.TextTransparency = 1.000
+
+Frame_5.Parent = FeaturesContainer
+Frame_5.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_5.BackgroundTransparency = 0.250
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = Frame_5
+
+TextLabel_5.Parent = Frame_5
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_5.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "Activate Dynamite"
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 14.000
+
+Indicator_5.Name = "Indicator"
+Indicator_5.Parent = Frame_5
+Indicator_5.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_5.BorderSizePixel = 0
+Indicator_5.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_5.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_13.CornerRadius = UDim.new(0, 5)
+UICorner_13.Parent = Indicator_5
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = Frame_5
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 110, 0, 35)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+Frame_6.Parent = FeaturesContainer
+Frame_6.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_6.BackgroundTransparency = 0.250
+Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_6.BorderSizePixel = 0
+Frame_6.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_14.CornerRadius = UDim.new(0, 4)
+UICorner_14.Parent = Frame_6
+
+TextLabel_6.Parent = Frame_6
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_6.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_6.Font = Enum.Font.Jura
+TextLabel_6.Text = "Bring Items - Train"
+TextLabel_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.TextSize = 14.000
+
+Indicator_6.Name = "Indicator"
+Indicator_6.Parent = Frame_6
+Indicator_6.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_6.BorderSizePixel = 0
+Indicator_6.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_6.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = Indicator_6
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = Frame_6
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 110, 0, 35)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+Frame_7.Parent = FeaturesContainer
+Frame_7.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_7.BackgroundTransparency = 0.250
+Frame_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_7.BorderSizePixel = 0
+Frame_7.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_16.CornerRadius = UDim.new(0, 4)
+UICorner_16.Parent = Frame_7
+
+TextLabel_7.Parent = Frame_7
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_7.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_7.Font = Enum.Font.Jura
+TextLabel_7.Text = "Instant Prompts"
+TextLabel_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.TextSize = 14.000
+
+Indicator_7.Name = "Indicator"
+Indicator_7.Parent = Frame_7
+Indicator_7.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_7.BorderSizePixel = 0
+Indicator_7.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_7.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_17.CornerRadius = UDim.new(0, 5)
+UICorner_17.Parent = Indicator_7
+
+Trigger_7.Name = "Trigger"
+Trigger_7.Parent = Frame_7
+Trigger_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_7.BackgroundTransparency = 1.000
+Trigger_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.BorderSizePixel = 0
+Trigger_7.Size = UDim2.new(0, 110, 0, 35)
+Trigger_7.Font = Enum.Font.SourceSans
+Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.TextSize = 14.000
+Trigger_7.TextTransparency = 1.000
+
+Frame_8.Parent = FeaturesContainer
+Frame_8.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_8.BackgroundTransparency = 0.250
+Frame_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_8.BorderSizePixel = 0
+Frame_8.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_18.CornerRadius = UDim.new(0, 4)
+UICorner_18.Parent = Frame_8
+
+TextLabel_8.Parent = Frame_8
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_8.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_8.Font = Enum.Font.Jura
+TextLabel_8.Text = "Auto Prompts"
+TextLabel_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.TextSize = 14.000
+
+Indicator_8.Name = "Indicator"
+Indicator_8.Parent = Frame_8
+Indicator_8.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_8.BorderSizePixel = 0
+Indicator_8.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_8.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_19.CornerRadius = UDim.new(0, 5)
+UICorner_19.Parent = Indicator_8
+
+Trigger_8.Name = "Trigger"
+Trigger_8.Parent = Frame_8
+Trigger_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_8.BackgroundTransparency = 1.000
+Trigger_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.BorderSizePixel = 0
+Trigger_8.Size = UDim2.new(0, 110, 0, 35)
+Trigger_8.Font = Enum.Font.SourceSans
+Trigger_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.TextSize = 14.000
+Trigger_8.TextTransparency = 1.000
+
+Frame_9.Parent = FeaturesContainer
+Frame_9.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_9.BackgroundTransparency = 0.250
+Frame_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_9.BorderSizePixel = 0
+Frame_9.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_20.CornerRadius = UDim.new(0, 4)
+UICorner_20.Parent = Frame_9
+
+TextLabel_9.Parent = Frame_9
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_9.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_9.Font = Enum.Font.Jura
+TextLabel_9.Text = "Auto Take Ammo"
+TextLabel_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.TextSize = 14.000
+
+Indicator_9.Name = "Indicator"
+Indicator_9.Parent = Frame_9
+Indicator_9.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_9.BorderSizePixel = 0
+Indicator_9.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_9.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_21.CornerRadius = UDim.new(0, 5)
+UICorner_21.Parent = Indicator_9
+
+Trigger_9.Name = "Trigger"
+Trigger_9.Parent = Frame_9
+Trigger_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_9.BackgroundTransparency = 1.000
+Trigger_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.BorderSizePixel = 0
+Trigger_9.Size = UDim2.new(0, 110, 0, 35)
+Trigger_9.Font = Enum.Font.SourceSans
+Trigger_9.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_9.TextSize = 14.000
+Trigger_9.TextTransparency = 1.000
+
+Frame_10.Parent = FeaturesContainer
+Frame_10.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_10.BackgroundTransparency = 0.250
+Frame_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_10.BorderSizePixel = 0
+Frame_10.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_22.CornerRadius = UDim.new(0, 4)
+UICorner_22.Parent = Frame_10
+
+TextLabel_10.Parent = Frame_10
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.BorderSizePixel = 0
+TextLabel_10.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_10.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_10.Font = Enum.Font.Jura
+TextLabel_10.Text = "Auto Take Guns"
+TextLabel_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_10.TextSize = 14.000
+
+Indicator_10.Name = "Indicator"
+Indicator_10.Parent = Frame_10
+Indicator_10.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_10.BorderSizePixel = 0
+Indicator_10.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_10.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_23.CornerRadius = UDim.new(0, 5)
+UICorner_23.Parent = Indicator_10
+
+Trigger_10.Name = "Trigger"
+Trigger_10.Parent = Frame_10
+Trigger_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_10.BackgroundTransparency = 1.000
+Trigger_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.BorderSizePixel = 0
+Trigger_10.Size = UDim2.new(0, 110, 0, 35)
+Trigger_10.Font = Enum.Font.SourceSans
+Trigger_10.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_10.TextSize = 14.000
+Trigger_10.TextTransparency = 1.000
+
+Frame_11.Parent = FeaturesContainer
+Frame_11.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_11.BackgroundTransparency = 0.250
+Frame_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_11.BorderSizePixel = 0
+Frame_11.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_24.CornerRadius = UDim.new(0, 4)
+UICorner_24.Parent = Frame_11
+
+TextLabel_11.Parent = Frame_11
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.BorderSizePixel = 0
+TextLabel_11.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_11.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_11.Font = Enum.Font.Jura
+TextLabel_11.Text = "Auto Take Bonds"
+TextLabel_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_11.TextSize = 14.000
+
+Indicator_11.Name = "Indicator"
+Indicator_11.Parent = Frame_11
+Indicator_11.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_11.BorderSizePixel = 0
+Indicator_11.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_11.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_25.CornerRadius = UDim.new(0, 5)
+UICorner_25.Parent = Indicator_11
+
+Trigger_11.Name = "Trigger"
+Trigger_11.Parent = Frame_11
+Trigger_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_11.BackgroundTransparency = 1.000
+Trigger_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_11.BorderSizePixel = 0
+Trigger_11.Size = UDim2.new(0, 110, 0, 35)
+Trigger_11.Font = Enum.Font.SourceSans
+Trigger_11.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_11.TextSize = 14.000
+Trigger_11.TextTransparency = 1.000
+
+Frame_12.Parent = FeaturesContainer
+Frame_12.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_12.BackgroundTransparency = 0.250
+Frame_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_12.BorderSizePixel = 0
+Frame_12.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_26.CornerRadius = UDim.new(0, 4)
+UICorner_26.Parent = Frame_12
+
+TextLabel_12.Parent = Frame_12
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.BorderSizePixel = 0
+TextLabel_12.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_12.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_12.Font = Enum.Font.Jura
+TextLabel_12.Text = "Auto Take Heal"
+TextLabel_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_12.TextSize = 14.000
+
+Indicator_12.Name = "Indicator"
+Indicator_12.Parent = Frame_12
+Indicator_12.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_12.BorderSizePixel = 0
+Indicator_12.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_12.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_27.CornerRadius = UDim.new(0, 5)
+UICorner_27.Parent = Indicator_12
+
+Trigger_12.Name = "Trigger"
+Trigger_12.Parent = Frame_12
+Trigger_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_12.BackgroundTransparency = 1.000
+Trigger_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_12.BorderSizePixel = 0
+Trigger_12.Size = UDim2.new(0, 110, 0, 35)
+Trigger_12.Font = Enum.Font.SourceSans
+Trigger_12.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_12.TextSize = 14.000
+Trigger_12.TextTransparency = 1.000
+
+Frame_13.Parent = FeaturesContainer
+Frame_13.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_13.BackgroundTransparency = 0.250
+Frame_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_13.BorderSizePixel = 0
+Frame_13.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_28.CornerRadius = UDim.new(0, 4)
+UICorner_28.Parent = Frame_13
+
+TextLabel_13.Parent = Frame_13
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.BorderSizePixel = 0
+TextLabel_13.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_13.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_13.Font = Enum.Font.Jura
+TextLabel_13.Text = "Instant Reload"
+TextLabel_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_13.TextSize = 14.000
+
+Indicator_13.Name = "Indicator"
+Indicator_13.Parent = Frame_13
+Indicator_13.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_13.BorderSizePixel = 0
+Indicator_13.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_13.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_29.CornerRadius = UDim.new(0, 5)
+UICorner_29.Parent = Indicator_13
+
+Trigger_13.Name = "Trigger"
+Trigger_13.Parent = Frame_13
+Trigger_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_13.BackgroundTransparency = 1.000
+Trigger_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_13.BorderSizePixel = 0
+Trigger_13.Size = UDim2.new(0, 110, 0, 35)
+Trigger_13.Font = Enum.Font.SourceSans
+Trigger_13.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_13.TextSize = 14.000
+Trigger_13.TextTransparency = 1.000
+
+Frame_14.Parent = FeaturesContainer
+Frame_14.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_14.BackgroundTransparency = 0.250
+Frame_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_14.BorderSizePixel = 0
+Frame_14.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_30.CornerRadius = UDim.new(0, 4)
+UICorner_30.Parent = Frame_14
+
+TextLabel_14.Parent = Frame_14
+TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_14.BackgroundTransparency = 1.000
+TextLabel_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.BorderSizePixel = 0
+TextLabel_14.Position = UDim2.new(0, 0, 0.0285714287, 0)
+TextLabel_14.Size = UDim2.new(0.999999821, 0, 0.671260715, 0)
+TextLabel_14.Font = Enum.Font.Jura
+TextLabel_14.Text = "Anti Spread"
+TextLabel_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_14.TextSize = 14.000
+
+Indicator_14.Name = "Indicator"
+Indicator_14.Parent = Frame_14
+Indicator_14.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_14.BorderSizePixel = 0
+Indicator_14.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_14.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_31.CornerRadius = UDim.new(0, 5)
+UICorner_31.Parent = Indicator_14
+
+Trigger_14.Name = "Trigger"
+Trigger_14.Parent = Frame_14
+Trigger_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_14.BackgroundTransparency = 1.000
+Trigger_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_14.BorderSizePixel = 0
+Trigger_14.Size = UDim2.new(0, 110, 0, 35)
+Trigger_14.Font = Enum.Font.SourceSans
+Trigger_14.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_14.TextSize = 14.000
+Trigger_14.TextTransparency = 1.000
+
+VisualsContainer.Name = "VisualsContainer"
+VisualsContainer.Parent = FunctionsBackground
+VisualsContainer.Active = true
+VisualsContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VisualsContainer.BackgroundTransparency = 1.000
+VisualsContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VisualsContainer.BorderSizePixel = 0
+VisualsContainer.Position = UDim2.new(0, 0, 0.00630914839, 0)
+VisualsContainer.Size = UDim2.new(0, 246, 0, 315)
+VisualsContainer.Visible = false
+VisualsContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+UIGridLayout_2.Parent = VisualsContainer
+UIGridLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_2.CellPadding = UDim2.new(0, 10, 0, 5)
+UIGridLayout_2.CellSize = UDim2.new(0, 110, 0, 35)
+
+UIPadding_2.Parent = VisualsContainer
+UIPadding_2.PaddingLeft = UDim.new(0, 8)
+UIPadding_2.PaddingTop = UDim.new(0, 3)
+
+Frame_15.Parent = VisualsContainer
+Frame_15.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_15.BackgroundTransparency = 0.250
+Frame_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_15.BorderSizePixel = 0
+Frame_15.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_32.CornerRadius = UDim.new(0, 4)
+UICorner_32.Parent = Frame_15
+
+TextLabel_15.Parent = Frame_15
+TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_15.BackgroundTransparency = 1.000
+TextLabel_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.BorderSizePixel = 0
+TextLabel_15.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_15.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_15.Font = Enum.Font.Jura
+TextLabel_15.Text = "Mob ESP"
+TextLabel_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_15.TextSize = 14.000
+
+Indicator_15.Name = "Indicator"
+Indicator_15.Parent = Frame_15
+Indicator_15.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_15.BorderSizePixel = 0
+Indicator_15.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_15.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_33.CornerRadius = UDim.new(0, 5)
+UICorner_33.Parent = Indicator_15
+
+Trigger_15.Name = "Trigger"
+Trigger_15.Parent = Frame_15
+Trigger_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_15.BackgroundTransparency = 1.000
+Trigger_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_15.BorderSizePixel = 0
+Trigger_15.Size = UDim2.new(0, 110, 0, 35)
+Trigger_15.Font = Enum.Font.SourceSans
+Trigger_15.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_15.TextSize = 14.000
+Trigger_15.TextTransparency = 1.000
+
+Frame_16.Parent = VisualsContainer
+Frame_16.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_16.BackgroundTransparency = 0.250
+Frame_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_16.BorderSizePixel = 0
+Frame_16.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_34.CornerRadius = UDim.new(0, 4)
+UICorner_34.Parent = Frame_16
+
+TextLabel_16.Parent = Frame_16
+TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_16.BackgroundTransparency = 1.000
+TextLabel_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.BorderSizePixel = 0
+TextLabel_16.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_16.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_16.Font = Enum.Font.Jura
+TextLabel_16.Text = "Items ESP"
+TextLabel_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_16.TextSize = 14.000
+
+Indicator_16.Name = "Indicator"
+Indicator_16.Parent = Frame_16
+Indicator_16.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_16.BorderSizePixel = 0
+Indicator_16.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_16.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_35.CornerRadius = UDim.new(0, 5)
+UICorner_35.Parent = Indicator_16
+
+Trigger_16.Name = "Trigger"
+Trigger_16.Parent = Frame_16
+Trigger_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_16.BackgroundTransparency = 1.000
+Trigger_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_16.BorderSizePixel = 0
+Trigger_16.Size = UDim2.new(0, 110, 0, 35)
+Trigger_16.Font = Enum.Font.SourceSans
+Trigger_16.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_16.TextSize = 14.000
+Trigger_16.TextTransparency = 1.000
+
+Frame_17.Parent = VisualsContainer
+Frame_17.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_17.BackgroundTransparency = 0.250
+Frame_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_17.BorderSizePixel = 0
+Frame_17.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_36.CornerRadius = UDim.new(0, 4)
+UICorner_36.Parent = Frame_17
+
+TextLabel_17.Parent = Frame_17
+TextLabel_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_17.BackgroundTransparency = 1.000
+TextLabel_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.BorderSizePixel = 0
+TextLabel_17.Position = UDim2.new(-0.0272705071, 0, 0.0285714287, 0)
+TextLabel_17.Size = UDim2.new(1.0000006, 0, 0.671260715, 0)
+TextLabel_17.Font = Enum.Font.Jura
+TextLabel_17.Text = "Flashlight"
+TextLabel_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_17.TextSize = 14.000
+
+Indicator_17.Name = "Indicator"
+Indicator_17.Parent = Frame_17
+Indicator_17.BackgroundColor3 = Color3.fromRGB(118, 10, 10)
+Indicator_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Indicator_17.BorderSizePixel = 0
+Indicator_17.Position = UDim2.new(0.0454545468, 0, 0.699999988, 0)
+Indicator_17.Size = UDim2.new(0, 100, 0, 5)
+
+UICorner_37.CornerRadius = UDim.new(0, 5)
+UICorner_37.Parent = Indicator_17
+
+Trigger_17.Name = "Trigger"
+Trigger_17.Parent = Frame_17
+Trigger_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_17.BackgroundTransparency = 1.000
+Trigger_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_17.BorderSizePixel = 0
+Trigger_17.Size = UDim2.new(0, 110, 0, 35)
+Trigger_17.Font = Enum.Font.SourceSans
+Trigger_17.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_17.TextSize = 14.000
+Trigger_17.TextTransparency = 1.000
+
+TeleportsContainer.Name = "TeleportsContainer"
+TeleportsContainer.Parent = FunctionsBackground
+TeleportsContainer.Active = true
+TeleportsContainer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TeleportsContainer.BackgroundTransparency = 1.000
+TeleportsContainer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TeleportsContainer.BorderSizePixel = 0
+TeleportsContainer.Position = UDim2.new(0, 0, 0.00630914839, 0)
+TeleportsContainer.Size = UDim2.new(0, 246, 0, 315)
+TeleportsContainer.Visible = false
+TeleportsContainer.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+UIGridLayout_3.Parent = TeleportsContainer
+UIGridLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+UIGridLayout_3.CellPadding = UDim2.new(0, 10, 0, 5)
+UIGridLayout_3.CellSize = UDim2.new(0, 110, 0, 35)
+
+UIPadding_3.Parent = TeleportsContainer
+UIPadding_3.PaddingLeft = UDim.new(0, 8)
+UIPadding_3.PaddingTop = UDim.new(0, 3)
+
+Frame_18.Parent = TeleportsContainer
+Frame_18.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_18.BackgroundTransparency = 0.250
+Frame_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_18.BorderSizePixel = 0
+Frame_18.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_38.CornerRadius = UDim.new(0, 4)
+UICorner_38.Parent = Frame_18
+
+TextLabel_18.Parent = Frame_18
+TextLabel_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_18.BackgroundTransparency = 1.000
+TextLabel_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.BorderSizePixel = 0
+TextLabel_18.Position = UDim2.new(0.0929248035, 0, 0, 0)
+TextLabel_18.Size = UDim2.new(0.907075167, 0, 1, 0)
+TextLabel_18.Font = Enum.Font.Jura
+TextLabel_18.Text = "Tesla Lab"
+TextLabel_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_18.TextSize = 14.000
+TextLabel_18.TextXAlignment = Enum.TextXAlignment.Left
+
+Trigger_18.Name = "Trigger"
+Trigger_18.Parent = Frame_18
+Trigger_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_18.BackgroundTransparency = 1.000
+Trigger_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_18.BorderSizePixel = 0
+Trigger_18.Size = UDim2.new(0, 110, 0, 35)
+Trigger_18.Font = Enum.Font.SourceSans
+Trigger_18.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_18.TextSize = 14.000
+Trigger_18.TextTransparency = 1.000
+
+Frame_19.Parent = TeleportsContainer
+Frame_19.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_19.BackgroundTransparency = 0.250
+Frame_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_19.BorderSizePixel = 0
+Frame_19.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_39.CornerRadius = UDim.new(0, 4)
+UICorner_39.Parent = Frame_19
+
+TextLabel_19.Parent = Frame_19
+TextLabel_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_19.BackgroundTransparency = 1.000
+TextLabel_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_19.BorderSizePixel = 0
+TextLabel_19.Position = UDim2.new(0.0929248035, 0, 0, 0)
+TextLabel_19.Size = UDim2.new(0.907075167, 0, 1, 0)
+TextLabel_19.Font = Enum.Font.Jura
+TextLabel_19.Text = "Castle"
+TextLabel_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_19.TextSize = 14.000
+TextLabel_19.TextXAlignment = Enum.TextXAlignment.Left
+
+Trigger_19.Name = "Trigger"
+Trigger_19.Parent = Frame_19
+Trigger_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_19.BackgroundTransparency = 1.000
+Trigger_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_19.BorderSizePixel = 0
+Trigger_19.Size = UDim2.new(0, 110, 0, 35)
+Trigger_19.Font = Enum.Font.SourceSans
+Trigger_19.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_19.TextSize = 14.000
+Trigger_19.TextTransparency = 1.000
+
+Frame_20.Parent = TeleportsContainer
+Frame_20.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_20.BackgroundTransparency = 0.250
+Frame_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_20.BorderSizePixel = 0
+Frame_20.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_40.CornerRadius = UDim.new(0, 4)
+UICorner_40.Parent = Frame_20
+
+TextLabel_20.Parent = Frame_20
+TextLabel_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_20.BackgroundTransparency = 1.000
+TextLabel_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_20.BorderSizePixel = 0
+TextLabel_20.Position = UDim2.new(0.0929248035, 0, 0, 0)
+TextLabel_20.Size = UDim2.new(0.907075167, 0, 1, 0)
+TextLabel_20.Font = Enum.Font.Jura
+TextLabel_20.Text = "Fort"
+TextLabel_20.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_20.TextSize = 14.000
+TextLabel_20.TextXAlignment = Enum.TextXAlignment.Left
+
+Trigger_20.Name = "Trigger"
+Trigger_20.Parent = Frame_20
+Trigger_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_20.BackgroundTransparency = 1.000
+Trigger_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_20.BorderSizePixel = 0
+Trigger_20.Size = UDim2.new(0, 110, 0, 35)
+Trigger_20.Font = Enum.Font.SourceSans
+Trigger_20.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_20.TextSize = 14.000
+Trigger_20.TextTransparency = 1.000
+
+Frame_21.Parent = TeleportsContainer
+Frame_21.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_21.BackgroundTransparency = 0.250
+Frame_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_21.BorderSizePixel = 0
+Frame_21.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_41.CornerRadius = UDim.new(0, 4)
+UICorner_41.Parent = Frame_21
+
+TextLabel_21.Parent = Frame_21
+TextLabel_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_21.BackgroundTransparency = 1.000
+TextLabel_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_21.BorderSizePixel = 0
+TextLabel_21.Position = UDim2.new(0.0929248035, 0, 0, 0)
+TextLabel_21.Size = UDim2.new(0.907075167, 0, 1, 0)
+TextLabel_21.Font = Enum.Font.Jura
+TextLabel_21.Text = "Jade Sword"
+TextLabel_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_21.TextSize = 14.000
+TextLabel_21.TextXAlignment = Enum.TextXAlignment.Left
+
+Trigger_21.Name = "Trigger"
+Trigger_21.Parent = Frame_21
+Trigger_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_21.BackgroundTransparency = 1.000
+Trigger_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_21.BorderSizePixel = 0
+Trigger_21.Size = UDim2.new(0, 110, 0, 35)
+Trigger_21.Font = Enum.Font.SourceSans
+Trigger_21.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_21.TextSize = 14.000
+Trigger_21.TextTransparency = 1.000
+
+Frame_22.Parent = TeleportsContainer
+Frame_22.BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+Frame_22.BackgroundTransparency = 0.250
+Frame_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_22.BorderSizePixel = 0
+Frame_22.Size = UDim2.new(0, 100, 0, 48)
+
+UICorner_42.CornerRadius = UDim.new(0, 4)
+UICorner_42.Parent = Frame_22
+
+TextLabel_22.Parent = Frame_22
+TextLabel_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_22.BackgroundTransparency = 1.000
+TextLabel_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_22.BorderSizePixel = 0
+TextLabel_22.Position = UDim2.new(0.0929248035, 0, 0, 0)
+TextLabel_22.Size = UDim2.new(0.907075167, 0, 1, 0)
+TextLabel_22.Font = Enum.Font.Jura
+TextLabel_22.Text = "Train"
+TextLabel_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_22.TextSize = 14.000
+TextLabel_22.TextXAlignment = Enum.TextXAlignment.Left
+
+Trigger_22.Name = "Trigger"
+Trigger_22.Parent = Frame_22
+Trigger_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_22.BackgroundTransparency = 1.000
+Trigger_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_22.BorderSizePixel = 0
+Trigger_22.Size = UDim2.new(0, 110, 0, 35)
+Trigger_22.Font = Enum.Font.SourceSans
+Trigger_22.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_22.TextSize = 14.000
+Trigger_22.TextTransparency = 1.000
+
+TabsBackground.Name = "TabsBackground"
+TabsBackground.Parent = Container
+TabsBackground.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+TabsBackground.BackgroundTransparency = 0.150
+TabsBackground.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TabsBackground.BorderSizePixel = 0
+TabsBackground.Position = UDim2.new(0.0250004362, 0, 0.123536475, 0)
+TabsBackground.Size = UDim2.new(0, 122, 0, 317)
+
+UICorner_43.Parent = TabsBackground
+
+ScrollingFrame.Parent = TabsBackground
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(5.54865039e-07, 0, 0, 0)
+ScrollingFrame.Size = UDim2.new(0, 122, 0, 328)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 3)
+
+UIPadding_4.Parent = ScrollingFrame
+UIPadding_4.PaddingTop = UDim.new(0, 5)
+
+Features.Name = "Features"
+Features.Parent = ScrollingFrame
+Features.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+Features.BackgroundTransparency = 0.250
+Features.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Features.BorderSizePixel = 3
+Features.Position = UDim2.new(0.0532786883, 0, 0, 0)
+Features.Size = UDim2.new(0, 109, 0, 42)
+
+Name.Name = "Name"
+Name.Parent = Features
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Size = UDim2.new(1, 0, 1, 0)
+Name.Font = Enum.Font.Unknown
+Name.Text = "Functions"
+Name.TextColor3 = Color3.fromRGB(59, 59, 59)
+Name.TextSize = 16.000
+Name.TextWrapped = true
+
+Trigger_23.Name = "Trigger"
+Trigger_23.Parent = Features
+Trigger_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_23.BackgroundTransparency = 1.000
+Trigger_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_23.BorderSizePixel = 0
+Trigger_23.Size = UDim2.new(1, 0, 1, 0)
+Trigger_23.Font = Enum.Font.SourceSans
+Trigger_23.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_23.TextSize = 14.000
+Trigger_23.TextTransparency = 1.000
+
+UICorner_44.CornerRadius = UDim.new(0, 5)
+UICorner_44.Parent = Features
+
+Visuals.Name = "Visuals"
+Visuals.Parent = ScrollingFrame
+Visuals.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Visuals.BackgroundTransparency = 0.250
+Visuals.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Visuals.BorderSizePixel = 3
+Visuals.Position = UDim2.new(0.0532786883, 0, 0, 0)
+Visuals.Size = UDim2.new(0, 109, 0, 42)
+
+Name_2.Name = "Name"
+Name_2.Parent = Visuals
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_2.BorderSizePixel = 0
+Name_2.Size = UDim2.new(1, 0, 1, 0)
+Name_2.Font = Enum.Font.Unknown
+Name_2.Text = "Visuals"
+Name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.TextSize = 16.000
+Name_2.TextWrapped = true
+
+Trigger_24.Name = "Trigger"
+Trigger_24.Parent = Visuals
+Trigger_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_24.BackgroundTransparency = 1.000
+Trigger_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_24.BorderSizePixel = 0
+Trigger_24.Size = UDim2.new(1, 0, 1, 0)
+Trigger_24.Font = Enum.Font.SourceSans
+Trigger_24.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_24.TextSize = 14.000
+Trigger_24.TextTransparency = 1.000
+
+UICorner_45.CornerRadius = UDim.new(0, 5)
+UICorner_45.Parent = Visuals
+
+Teleports.Name = "Teleports"
+Teleports.Parent = ScrollingFrame
+Teleports.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Teleports.BackgroundTransparency = 0.250
+Teleports.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleports.BorderSizePixel = 3
+Teleports.Position = UDim2.new(0.0532786883, 0, 0, 0)
+Teleports.Size = UDim2.new(0, 109, 0, 42)
+
+Name_3.Name = "Name"
+Name_3.Parent = Teleports
+Name_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.BackgroundTransparency = 1.000
+Name_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_3.BorderSizePixel = 0
+Name_3.Size = UDim2.new(1, 0, 1, 0)
+Name_3.Font = Enum.Font.Unknown
+Name_3.Text = "Teleports"
+Name_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.TextSize = 16.000
+Name_3.TextWrapped = true
+
+Trigger_25.Name = "Trigger"
+Trigger_25.Parent = Teleports
+Trigger_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_25.BackgroundTransparency = 1.000
+Trigger_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_25.BorderSizePixel = 0
+Trigger_25.Size = UDim2.new(1, 0, 1, 0)
+Trigger_25.Font = Enum.Font.SourceSans
+Trigger_25.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_25.TextSize = 14.000
+Trigger_25.TextTransparency = 1.000
+
+UICorner_46.CornerRadius = UDim.new(0, 5)
+UICorner_46.Parent = Teleports
+
+SpineWare.Name = "SpineWare"
+SpineWare.Parent = Container
+SpineWare.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpineWare.BackgroundTransparency = 1.000
+SpineWare.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpineWare.BorderSizePixel = 0
+SpineWare.Position = UDim2.new(0.0229591839, 0, 0.000810942787, 0)
+SpineWare.Size = UDim2.new(0, 123, 0, 42)
+SpineWare.Font = Enum.Font.Unknown
+SpineWare.Text = "SpineWare"
+SpineWare.TextColor3 = Color3.fromRGB(221, 221, 221)
+SpineWare.TextScaled = true
+SpineWare.TextSize = 32.000
+SpineWare.TextWrapped = true
+
+Frame_23.Parent = Container
+Frame_23.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Frame_23.BackgroundTransparency = 0.200
+Frame_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_23.BorderSizePixel = 0
+Frame_23.Position = UDim2.new(0.352040827, 0, 0.021999998, 0)
+Frame_23.Size = UDim2.new(0, 246, 0, 29)
+
+UICorner_47.CornerRadius = UDim.new(0, 5)
+UICorner_47.Parent = Frame_23
+
+Tips.Name = "Tips"
+Tips.Parent = Frame_23
+Tips.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+Tips.BackgroundTransparency = 1.000
+Tips.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tips.BorderSizePixel = 0
+Tips.Position = UDim2.new(0.0468486995, 0, -0.0132351583, 0)
+Tips.Size = UDim2.new(0, 221, 0, 26)
+Tips.Font = Enum.Font.Jura
+Tips.Text = "Hello!"
+Tips.TextColor3 = Color3.fromRGB(221, 221, 221)
+Tips.TextScaled = true
+Tips.TextSize = 18.000
+Tips.TextWrapped = true
+
+UICorner_48.CornerRadius = UDim.new(0, 5)
+UICorner_48.Parent = Tips
+
+-- Scripts:
+
+local function NJKRC_fake_script() -- Frame.Controlling 
+	local script = Instance.new('LocalScript', Frame)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local sellitemszone = nil
+	
+	workspace.DescendantAdded:Connect(function(children)
+		pcall(function()
+			if children.Name and children.Parent.Name then
+				if children.Name == "SellZone" and children.Parent.Name == "SellZones" then
+					sellitemszone = children
+				end
+			end
+		end)
+	end)
+	
+	pcall(function()
+		for i,v in game.Workspace:GetDescendants() do
+			if v.Name == "SellZone" and v.Parent.Name == "SellZones" then
+				sellitemszone = v
+				break
+			end
+		end
+	end)
+	
+	_G.return_part = function(SearchingObject)
+		local part = nil;
+		if not SearchingObject:FindFirstChild("HumanoidRootPart") then
+			for _, desc in SearchingObject:GetDescendants() do
+				if desc:IsA("Part") or desc:IsA("MeshPart") or desc:IsA("UnionOperation") then
+					part = desc
+					break
+				end
+			end
+		else 
+			part = SearchingObject:FindFirstChild("HumanoidRootPart")   
+		end
+		return part
+	end
+	_G.return_physic = function(SearchingObject)
+		local items = nil
+		for _, desc in SearchingObject:GetDescendants() do
+			if desc.Name == "DragAlignPosition" then
+				items = desc
+				break
+			end
+		end
+		return items
+	end
+	_G.return_position = function(SearchingObject)
+		local pos = nil;
+		for _, desc in SearchingObject:GetDescendants() do
+			if desc:IsA("Part") or desc:IsA("MeshPart") or desc:IsA("UnionOperation") then
+				pos = desc.Position
+				break
+			end
+		end
+		return pos
+	end
+	_G.firet = function(ToFire,Fire)
+		firetouchinterest(ToFire,Fire,0)
+		wait()
+		firetouchinterest(ToFire,Fire,1)
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				local runitems = game.Workspace.RuntimeItems
+				local char = game.Players.LocalPlayer.Character
+	
+				local fire = function(item)
+					if sellitemszone ~= nil then
+						local fire = sellitemszone
+						_G.firet(fire,item)
+					end
+				end
+	
+				for _, item in runitems:GetChildren() do
+					if item:GetAttribute("Value") ~= nil then
+						local returned_pos = _G.return_position(item)
+	
+						if returned_pos ~= nil then
+							if (char.HumanoidRootPart.Position - returned_pos).Magnitude <= 10 then
+								local physic = _G.return_physic(item)
+	
+								if physic ~= nil then
+									fire(_G.return_part(item))
+								else
+									local A_1 = item
+									game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStartDrag"):FireServer(A_1)
+									repeat task.wait() until _G.return_physic(item) ~= nil
+									fire(_G.return_part(item))
+								end
+							end
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(NJKRC_fake_script)()
+local function FWWYZVE_fake_script() -- Frame_2.Controlling 
+	local script = Instance.new('LocalScript', Frame_2)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				local runitems = game.Workspace.RuntimeItems
+				local char = game.Players.LocalPlayer.Character
+	
+				local fire = function(item)
+					if workspace.default.RequiredComponents.FuelZone ~= nil then
+						local fire = workspace.default.RequiredComponents.FuelZone
+						_G.firet(fire,item)
+					end
+				end
+	
+				for _, item in runitems:GetChildren() do
+					if item:GetAttribute("Fuel") ~= nil then
+						local returned_pos = _G.return_position(item)
+	
+						if returned_pos ~= nil then
+							if (char.HumanoidRootPart.Position - returned_pos).Magnitude <= 10 then
+								local physic = _G.return_physic(item)
+	
+								if physic ~= nil then
+									fire(_G.return_part(item))
+								else
+									local A_1 = item
+									game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStartDrag"):FireServer(A_1)
+									repeat task.wait() until _G.return_physic(item) ~= nil
+									fire(_G.return_part(item))
+								end
+							end
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(FWWYZVE_fake_script)()
+local function XJOZH_fake_script() -- Frame_3.Controlling 
+	local script = Instance.new('LocalScript', Frame_3)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local sellitemszone = nil
+	
+	workspace.DescendantAdded:Connect(function(children)
+		pcall(function()
+			if children.Name and children.Parent.Name then
+				if children.Name == "SellZone" and children.Parent.Name == "SheriffsOffice" then
+					sellitemszone = children
+				end
+			end
+		end)
+	end)
+	
+	pcall(function()
+		for i,v in game.Workspace:GetDescendants() do
+			if v.Name == "SellZone" and v.Parent.Name == "SheriffsOffice" then
+				sellitemszone = v
+				break
+			end
+		end
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				local runitems = game.Workspace.RuntimeItems
+				local char = game.Players.LocalPlayer.Character
+	
+				local fire = function(item)
+					if sellitemszone ~= nil then
+						local fire = sellitemszone
+						_G.firet(fire,item)
+					end
+				end
+	
+				for _, item in runitems:GetChildren() do
+					if item:GetAttribute("Bounty") ~= nil then
+						local returned_pos = _G.return_position(item)
+	
+						if returned_pos ~= nil then
+							if (char.HumanoidRootPart.Position - returned_pos).Magnitude <= 10 then
+								local physic = _G.return_physic(item)
+	
+								if physic ~= nil then
+									fire(_G.return_part(item))
+								else
+									local A_1 = item
+									game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStartDrag"):FireServer(A_1)
+									repeat task.wait() until _G.return_physic(item) ~= nil
+									fire(_G.return_part(item))
+								end
+							end
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(XJOZH_fake_script)()
+local function JTOV_fake_script() -- Frame_4.Controlling 
+	local script = Instance.new('LocalScript', Frame_4)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local ShopCoalPath = nil
+	
+	workspace.DescendantAdded:Connect(function(children)
+		pcall(function()
+			if children.Name and children.Parent.Name then
+				if children.Name == "ShopItems" and children.Parent.Name == "CommonLootTable" and children.Parent.Parent.Name == "GeneralStore" then
+					ShopCoalPath = children
+				end
+			end
+		end)
+	end)
+	
+	pcall(function()
+		for i,v in game.Workspace:GetDescendants() do
+			if v.Name == "ShopItems" and v.Parent.Name == "CommonLootTable" and v.Parent.Parent.Name == "GeneralStore" then
+				ShopCoalPath = v
+				break
+			end
+		end
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				local runitems = ShopCoalPath
+				local char = game.Players.LocalPlayer.Character
+	
+				local fire = function(item)
+					if workspace.default.RequiredComponents.FuelZone ~= nil then
+						local fire = workspace.default.RequiredComponents.FuelZone
+						_G.firet(fire,item)
+					end
+				end
+	
+				for _, item in runitems:GetChildren() do
+					if item:GetAttribute("Fuel") ~= nil then
+						local returned_pos = _G.return_position(item)
+	
+						if returned_pos ~= nil then
+							if (char.HumanoidRootPart.Position - returned_pos).Magnitude <= 10 then
+								local physic = _G.return_physic(item)
+	
+								if physic ~= nil then
+									fire(_G.return_part(item))
+								else
+									local A_1 = item
+									game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStartDrag"):FireServer(A_1)
+									repeat task.wait() until _G.return_physic(item) ~= nil
+									fire(_G.return_part(item))
+								end
+							end
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(JTOV_fake_script)()
+local function UPVUT_fake_script() -- Frame_5.Controlling 
+	local script = Instance.new('LocalScript', Frame_5)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				local dynamite;
+				local items = game.Workspace.RuntimeItems:GetChildren()
+	
+				for i,v in items do
+					if v.Name == "Dynamite" then
+						pcall(function()
+							if (v:FindFirstChildOfClass("MeshPart").Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 and return_physic(v) then
+								dynamite = v
+							end
+						end)
+					end
+				end
+	
+				if dynamite ~= nil then
+					local fire = workspace.default.RequiredComponents.FuelZone
+					local item = dynamite:FindFirstChildOfClass("MeshPart")
+					_G.firet(fire,item)
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(UPVUT_fake_script)()
+local function SHFTU_fake_script() -- Frame_6.Controlling 
+	local script = Instance.new('LocalScript', Frame_6)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local a:RemoteEvent = nil; local b:RemoteEvent = nil
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "RequestStartDrag" then
+			a = v
+		elseif v.Name == "RequestStopDrag" then
+			b = v
+		end
+	end
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i,v in game.Workspace.RuntimeItems:GetChildren() do
+					if (_G.return_part(v).Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 10 then
+						local A_1 = v
+						if a ~= nil then
+							a:FireServer(A_1)
+						else
+							game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStartDrag"):FireServer(A_1)
+						end
+						repeat task.wait() until _G.return_physic(v) ~= nil
+						_G.return_part(v).CFrame = workspace.default.Train.Platform:GetChildren()[20].CFrame 
+						wait(0.01)
+						if b ~= nil then
+							b:FireServer(A_1)
+						else
+							game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemoteEvent"):WaitForChild("RequestStopDrag"):FireServer()
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(SHFTU_fake_script)()
+local function BACFK_fake_script() -- Frame_7.Controlling 
+	local script = Instance.new('LocalScript', Frame_7)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i:number,v:ProximityPrompt in workspace:GetDescendants() do
+					if v:IsA("ProximityPrompt") then
+						v.HoldDuration = 0
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(BACFK_fake_script)()
+local function RVGIH_fake_script() -- Frame_8.Controlling 
+	local script = Instance.new('LocalScript', Frame_8)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i:number,v:ProximityPrompt in workspace:GetDescendants() do
+					if v:IsA("ProximityPrompt") then
+						if (game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").Position - v.Parent.Position).Magnitude <= v.MaxActivationDistance then
+							fireproximityprompt(v,0)
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(RVGIH_fake_script)()
+local function ROBSS_fake_script() -- Frame_9.Controlling 
+	local script = Instance.new('LocalScript', Frame_9)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "C_ActivateObject" then
+			event = v
+		end
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i, v in workspace.RuntimeItems:GetChildren() do
+					if string.find(v.Name, "Ammo") or string.find(v.Name:lower(),"shells") then
+						if event ~= nil then
+							event:FireServer(unpack({[1] = v}))
+						else
+							game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Network"):WaitForChild("RemotePromise"):WaitForChild("Remotes"):WaitForChild("C_ActivateObject"):FireServer(unpack({[1] = v}))
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(ROBSS_fake_script)()
+local function KHGT_fake_script() -- Frame_10.Controlling 
+	local script = Instance.new('LocalScript', Frame_10)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "PickUpTool" then
+			event = v
+		end
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i, v in workspace.RuntimeItems:GetDescendants() do
+					if v.Name == 'ObjectInfo' then
+						if v.TextLabel.Text == 'Gun' then
+							if event ~= nil then
+								event:FireServer(unpack({[1] = v.Parent}))
+							else
+								game.ReplicatedStorage.Remotes.Tool.PickUpTool:FireServer(unpack({[1] = v.Parent}))
+							end
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(KHGT_fake_script)()
+local function UDOQHA_fake_script() -- Frame_11.Controlling 
+	local script = Instance.new('LocalScript', Frame_11)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "C_ActivateObject" then
+			event = v
+		end
+	end
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i,v in workspace.RuntimeItems:GetChildren() do
+					if v.Name == ('Bond') then
+						local args = {[1] = v}
+						if event ~= nil then
+							event:FireServer(unpack(args))
+						else
+							game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("RemotePromise"):WaitForChild("Remotes"):WaitForChild("C_ActivateObject"):FireServer(unpack(args))
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(UDOQHA_fake_script)()
+local function GUNEC_fake_script() -- Frame_12.Controlling 
+	local script = Instance.new('LocalScript', Frame_12)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "PickUpTool" then
+			event = v
+		end
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i, v in game.Workspace.RuntimeItems:GetChildren() do
+					if v.Name == 'Bandage' or v.Name == 'Snake Oil' then
+						if event ~= nil then
+							event:FireServer(unpack({[1] = v}))
+						else
+							game.ReplicatedStorage.Remotes.Tool.PickUpTool:FireServer(unpack({[1] = v}))
+						end
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(GUNEC_fake_script)()
+local function TDLHL_fake_script() -- Frame_13.Controlling 
+	local script = Instance.new('LocalScript', Frame_13)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "PickUpTool" then
+			event = v
+		end
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i, v in game.Players.LocalPlayer.Character:GetDescendants() do
+					if v.Name == 'ReloadDuration' then
+						v.Value = 0.1
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(TDLHL_fake_script)()
+local function ZEKXOK_fake_script() -- Frame_14.Controlling 
+	local script = Instance.new('LocalScript', Frame_14)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local event:RemoteEvent = nil
+	
+	for i,v in game.ReplicatedStorage:GetDescendants() do
+		if v.Name == "PickUpTool" then
+			event = v
+		end
+	end
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			pcall(function()
+				for i, v in game.Players.LocalPlayer.Character:GetDescendants() do
+					if v.Name == 'SpreadAngle' then
+						v.Value = 0.1
+					end
+				end
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(ZEKXOK_fake_script)()
+local function XHZS_fake_script() -- Frame_15.Controlling 
+	local script = Instance.new('LocalScript', Frame_15)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local Objects = {}
+	
+	local function drawObj(objectClass, objectProperties)
+		local obj = Drawing.new(objectClass)
+		table.insert(Objects, obj)
+	
+		for i, v in pairs(objectProperties) do
+			obj[i] = v
+		end
+	
+		objectProperties = nil
+		return obj
+	end
+	
+	local function createMOBESP(player)
+		if not player.Head then return end
+		local head = player:FindFirstChild("Head")
+	
+		local playerNameText = drawObj("Text", {
+			Position = Vector2.new(0, 0),
+			Text = player.Name,
+			Size = 16,
+			Font = Drawing.Fonts.UI,
+			Color = Color3.fromRGB(255, 255, 255),
+			Transparency = 0,
+			Outline = true,
+			Visible = false,
+			OutlineColor = Color3.fromRGB(0, 0, 0),
+		})
+	
+		local distanceText = drawObj("Text", {
+			Position = Vector2.new(0, 0),
+			Size = 14,
+			Font = Drawing.Fonts.UI,
+			Color = Color3.fromRGB(255, 255, 255),
+			Transparency = 0,
+			Outline = true,
+			OutlineColor = Color3.fromRGB(0, 0, 0),
+		})
+	
+		game:GetService("RunService").RenderStepped:Connect(function()
+			pcall(function()
+				if player and head and head:IsDescendantOf(workspace) and player.Humanoid.Health ~= 0 and status then
+					local headPosition = head.Position
+					local localHead = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Head")
+	
+					if localHead then
+						local localHeadPosition = localHead.Position
+						local screenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(headPosition)
+	
+						if onScreen then
+							local distance = (localHeadPosition - headPosition).Magnitude
+	
+							local targetTransparency = distance > 200 and 0 or 1
+							local currentTransparency = playerNameText.Transparency
+	
+							if math.abs(currentTransparency - targetTransparency) > 0.05 then
+								playerNameText.Transparency = currentTransparency + (targetTransparency - currentTransparency) * 0.1
+								distanceText.Transparency = playerNameText.Transparency
+							else
+								playerNameText.Transparency = targetTransparency
+								distanceText.Transparency = targetTransparency
+							end
+	
+							playerNameText.Position = Vector2.new(screenPosition.X, screenPosition.Y)
+							distanceText.Position = Vector2.new(screenPosition.X, screenPosition.Y + 15)
+							distanceText.Text = string.format("[%.1fm]", distance)
+	
+							playerNameText.Visible = true
+							distanceText.Visible = true
+						else
+							playerNameText.Visible = false
+							distanceText.Visible = false
+						end
+					else
+						playerNameText.Visible = false
+						distanceText.Visible = false
+					end
+				else
+					playerNameText.Visible = false
+					distanceText.Visible = false
+				end
+			end)
+		end)
+	end
+	
+	pcall(function()
+		for _, v in pairs(game.workspace:GetDescendants()) do
+			if v:IsA('Model') and v:GetAttribute('DangerScore') then
+				createMOBESP(v)
+			end
+		end
+	end)
+	
+	pcall(function()
+		game.Workspace.DescendantAdded:Connect(function(v)
+			if v:IsA('Model') and v:GetAttribute('DangerScore') then
+				createMOBESP(v)
+			end
+		end)
+	end)
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while game:GetService("RunService").Heartbeat:Wait() and status do
+	
+		end
+	end)
+end
+coroutine.wrap(XHZS_fake_script)()
+local function LAXYJQV_fake_script() -- Frame_16.Controlling 
+	local script = Instance.new('LocalScript', Frame_16)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	local Objects = {}
+	
+	local function drawObj(objectClass, objectProperties)
+		local obj = Drawing.new(objectClass)
+		table.insert(Objects, obj)
+	
+		for i, v in pairs(objectProperties) do
+			obj[i] = v
+		end
+	
+		objectProperties = nil
+		return obj
+	end
+	
+	local function createESP(model)
+		local object = model:FindFirstChildWhichIsA("BasePart")
+		if not object then return end
+	
+		local desc = string.lower(model.Name)
+	
+		pcall(function()
+			for _, v in ipairs(model.ObjectInfo:GetChildren()) do
+				if v.Name == "TextLabel" then
+					local attributeMap = {
+						Fuel = "l",
+						Value = "$",
+						Bounty = "$"
+					}
+	
+					for attribute, suffix in pairs(attributeMap) do
+						local value = model:GetAttribute(attribute)
+	
+						if value and v.Text == attribute then
+							desc = ("%s [%s %s %s]"):format(desc, string.lower(v.Text), value, suffix)
+							break
+						end
+					end
+					if not desc:find("%[") then
+						desc = ("%s [%s]"):format(desc, string.lower(v.Text))
+					end
+				end
+			end
+		end)
+	
+		local objectNameText = drawObj("Text", {
+			Position = Vector2.new(0, 0),
+			Text = desc,
+			Size = 15,
+			Font = Drawing.Fonts.UI,
+			Color = Color3.fromRGB(255, 255, 255),
+			Transparency = 0,
+			Outline = true,
+			OutlineColor = Color3.fromRGB(0, 0, 0),
+		})
+	
+		local distanceText = drawObj("Text", {
+			Position = Vector2.new(0, 0),
+			Size = 14,
+			Font = Drawing.Fonts.UI,
+			Color = Color3.fromRGB(255, 255, 255),
+			Transparency = 0,
+			Outline = true,
+			OutlineColor = Color3.fromRGB(0, 0, 0),
+		})
+	
+		game:GetService("RunService").RenderStepped:Connect(function()
+			if model and object and object:IsDescendantOf(workspace) and status then
+				local objectPosition = object.Position
+				local localHead = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:FindFirstChild("Head")
+	
+				if localHead then
+					local localHeadPosition = localHead.Position
+					local screenPosition, onScreen = workspace.CurrentCamera:WorldToScreenPoint(objectPosition)
+	
+					if onScreen then
+						local distance = (localHeadPosition - objectPosition).Magnitude
+	
+						local targetTransparency = distance > 175 and 0 or 1
+						local currentTransparency = objectNameText.Transparency
+	
+						if math.abs(currentTransparency - targetTransparency) > 0.05 then
+							objectNameText.Transparency = currentTransparency + (targetTransparency - currentTransparency) * 0.1
+							distanceText.Transparency = objectNameText.Transparency
+						else
+							objectNameText.Transparency = targetTransparency
+							distanceText.Transparency = targetTransparency
+						end
+	
+						objectNameText.Position = Vector2.new(screenPosition.X, screenPosition.Y)
+						distanceText.Position = Vector2.new(screenPosition.X, screenPosition.Y + 15)
+						distanceText.Text = string.format("[%.1fm]", distance)
+	
+						objectNameText.Visible = true
+						distanceText.Visible = true
+					else
+						objectNameText.Visible = false
+						distanceText.Visible = false
+					end
+				else
+					objectNameText.Visible = false
+					distanceText.Visible = false
+				end
+			else
+				objectNameText.Visible = false
+				distanceText.Visible = false
+			end
+		end)
+	end
+	
+	pcall(function()
+		for _, model in ipairs(workspace.RuntimeItems:GetChildren()) do
+			if model:IsA("Model") then
+				createESP(model)
+			end
+		end
+	
+		workspace.RuntimeItems.ChildAdded:Connect(function(model)
+			if model:IsA("Model") then
+				createESP(model)
+			end
+		end)
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		while status do
+			
+			wait()
+		end
+	end)
+end
+coroutine.wrap(LAXYJQV_fake_script)()
+local function YHPZACB_fake_script() -- Frame_17.Controlling 
+	local script = Instance.new('LocalScript', Frame_17)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local status = false
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		status = not status
+	
+		if status then
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.215686, 0.52549, 0.105882)}):Play()
+		else
+			ts:Create(script.Parent.Indicator,info,{BackgroundColor3 = Color3.new(0.462745, 0.0392157, 0.0392157)}):Play()		
+		end
+		
+		if status then
+			pcall(function()
+				local flashlight = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild('flashlight')
+	
+				if not flashlight then
+						flashlight = Instance.new("PointLight")
+						flashlight.Name = 'flashlight'
+						flashlight.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+						flashlight.Range = 60
+				end
+			end)
+			wait()
+		else
+			pcall(function()
+				local flashlight = game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character.HumanoidRootPart:FindFirstChild('flashlight')
+	
+				if flashlight then
+					flashlight.Range = 0
+				end
+			end)
+		end
+	end)
+end
+coroutine.wrap(YHPZACB_fake_script)()
+local function STDHNB_fake_script() -- Frame_18.Controlling 
+	local script = Instance.new('LocalScript', Frame_18)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local button:Frame = triggerbutton.Parent
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	local size_resize = function(valid)
+		task.spawn(function()
+			if valid then
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.286275, 0.74902, 0.203922)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			else
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.713725, 0.121569, 0.121569)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			end
+		end)
+	end
+	
+	button.MouseEnter:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.529412, 0.529412, 0.529412)}):Play()
+	end)
+	button.MouseLeave:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)}):Play()
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		local success, _ = pcall(function()
+			local connection = nil
+			local cannon = nil
+			local pivot = workspace.TeslaLab.WorldPivot
+	
+			local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(3),{CFrame =	pivot})
+			tween:Play()
+	
+			repeat 
+				game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(1),{CFrame = pivot}):Play()
+				for i,v in game.Workspace.RuntimeItems:GetDescendants() do
+					if (v:IsA("Seat") or v:IsA("VehicleSeat")) and (v.Position - game.Workspace.TeslaLab.Generator.Base.Position).Magnitude <= 200 then
+						cannon = v 
+						break
+					end
+				end
+				wait()
+			until cannon ~= nil 
+			cannon.Disabled = false
+			repeat wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cannon.CFrame; cannon:Sit(game.Players.LocalPlayer.Character.Humanoid) until cannon.Occupant == game.Players.LocalPlayer.Character.Humanoid
+		end)
+		
+		size_resize(success)
+	end)
+end
+coroutine.wrap(STDHNB_fake_script)()
+local function SGYWR_fake_script() -- Frame_19.Controlling 
+	local script = Instance.new('LocalScript', Frame_19)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local button:Frame = triggerbutton.Parent
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	local size_resize = function(valid)
+		task.spawn(function()
+			if valid then
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.286275, 0.74902, 0.203922)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			else
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.713725, 0.121569, 0.121569)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			end
+		end)
+	end
+	
+	button.MouseEnter:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.529412, 0.529412, 0.529412)}):Play()
+	end)
+	button.MouseLeave:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)}):Play()
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		local success, e = pcall(function()
+			local connection = nil
+			local cannon = nil
+			local pivot = CFrame.new(237.264694, 18.7499943, -9082.00879, -0.334256768, -7.33955396e-10, 0.942482054, 1.02018411e-07, 1, 3.69601736e-08, -0.942482054, 1.08504707e-07, -0.334256768)
+	
+			local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(3),{CFrame =	pivot})
+			tween:Play()
+	
+			repeat 
+				game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(1),{CFrame = pivot}):Play()
+				for i,v in game.Workspace.RuntimeItems:GetDescendants() do
+					if (v:IsA("Seat") or v:IsA("VehicleSeat")) and (v.Position - Vector3.new(237,18,-9082)).Magnitude <= 100 then
+						cannon = v 
+						break
+					end
+				end
+				wait()
+			until cannon ~= nil 
+			cannon.Disabled = false
+			repeat wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cannon.CFrame; cannon:Sit(game.Players.LocalPlayer.Character.Humanoid) until cannon.Occupant == game.Players.LocalPlayer.Character.Humanoid
+		end)
+		print(success,e)
+		size_resize(success)
+	end)
+end
+coroutine.wrap(SGYWR_fake_script)()
+local function AOBNOJW_fake_script() -- Frame_20.Controlling 
+	local script = Instance.new('LocalScript', Frame_20)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local button:Frame = triggerbutton.Parent
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	local size_resize = function(valid)
+		task.spawn(function()
+			if valid then
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.286275, 0.74902, 0.203922)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			else
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.713725, 0.121569, 0.121569)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			end
+		end)
+	end
+	
+	button.MouseEnter:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.529412, 0.529412, 0.529412)}):Play()
+	end)
+	button.MouseLeave:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)}):Play()
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		local success, _ = pcall(function()
+			local connection = nil
+			connection = game.Players.LocalPlayer.Character.Humanoid.Changed:Connect(function()
+				if game.Players.LocalPlayer.Character.Humanoid.Sit == true then
+					game.Players.LocalPlayer.Character.Humanoid.Jump = true
+				end
+			end)
+	
+			local tween = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(35),{CFrame = CFrame.new(40.67202, 10.2194242, -50000, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+			tween:Play()
+			repeat wait() until game.Workspace:FindFirstChild("FortConstitution")
+			tween:Pause()
+			local cannon = nil
+			local pivot = game.Workspace:FindFirstChild("FortConstitution").WorldPivot
+			repeat 
+				game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart,TweenInfo.new(1),{CFrame = pivot}):Play()
+				for i,v in game.Workspace.RuntimeItems:GetDescendants() do
+					if (v:IsA("VehicleSeat") or v:IsA("Seat")) and v.Parent.Name == "Cannon" then
+						cannon = v 
+						break
+					end
+				end
+				wait()
+			until cannon ~= nil 
+			cannon.Disabled = false
+			repeat wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = cannon.CFrame; cannon:Sit(game.Players.LocalPlayer.Character.Humanoid) until cannon.Occupant == game.Players.LocalPlayer.Character.Humanoid
+			connection:Disconnect()    
+		end)
+		
+		size_resize(success)
+	end)
+end
+coroutine.wrap(AOBNOJW_fake_script)()
+local function OUWWGPK_fake_script() -- Frame_21.Controlling 
+	local script = Instance.new('LocalScript', Frame_21)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local button:Frame = triggerbutton.Parent
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	local size_resize = function(valid)
+		task.spawn(function()
+			if valid then
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.286275, 0.74902, 0.203922)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			else
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.713725, 0.121569, 0.121569)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			end
+		end)
+	end
+	
+	button.MouseEnter:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.529412, 0.529412, 0.529412)}):Play()
+	end)
+	button.MouseLeave:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)}):Play()
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		local success, _ = pcall(function()
+			local char = game.Players.LocalPlayer.Character
+			local chair = nil
+			
+			local chair_place = CFrame.new(237.264694, 18.7499943, -9082.00879, -0.334256768, -7.33955396e-10, 0.942482054, 1.02018411e-07, 1, 3.69601736e-08, -0.942482054, 1.08504707e-07, -0.334256768)
+			repeat char.HumanoidRootPart.CFrame = chair_place wait() until workspace.RuntimeItems:FindFirstChild("Chair") and workspace.RuntimeItems:FindFirstChild("Chair"):FindFirstChild("Seat")
+			chair = workspace.RuntimeItems:FindFirstChild("Chair")
+			
+			local tween = game:GetService("TweenService"):Create(char.HumanoidRootPart,TweenInfo.new(35),{CFrame = char.HumanoidRootPart.CFrame*CFrame.new(Vector3.new(100,0,-55000))})
+			tween:Play()
+			repeat wait() until game.Workspace:FindFirstChild("Sterling")
+			tween:Pause()
+	
+			local pivot = game.Workspace:FindFirstChild("Sterling").WorldPivot
+			local breakwait = false
+			local seat;
+			
+			task.spawn(function()
+				repeat 
+					game:GetService("TweenService"):Create(char.HumanoidRootPart,TweenInfo.new(1),{CFrame = pivot}):Play()
+					task.wait()
+				until breakwait
+			end)
+			
+			repeat wait() until workspace.RuntimeItems:FindFirstChild("Jade Sword")
+			breakwait = true
+			task.spawn(function()
+				seat = chair.Seat
+				repeat
+						seat.Disabled = false
+						game:GetService("TweenService"):Create(seat,TweenInfo.new(0.3),{CFrame =workspace.RuntimeItems["Jade Sword"].WorldPivot }):Play()
+						seat:Sit(char.Humanoid)
+						task.wait()
+				until char.Humanoid.Sit == true
+			end)
+			
+			
+			repeat
+				char.HumanoidRootPart.CFrame = workspace.RuntimeItems["Jade Sword"].WorldPivot - Vector3.new(0,1,0)
+				wait()
+			until char.Humanoid.Sit == true
+	
+			repeat wait() char.HumanoidRootPart.CFrame = seat.CFrame; if seat then seat:Sit(char.Humanoid) end until seat.Occupant == char.Humanoid or not seat
+		end)
+		
+		size_resize(success)
+	end)
+end
+coroutine.wrap(OUWWGPK_fake_script)()
+local function FSBMOM_fake_script() -- Frame_22.Controlling 
+	local script = Instance.new('LocalScript', Frame_22)
+
+	local triggerbutton:TextButton = script.Parent:FindFirstChild("Trigger")
+	local button:Frame = triggerbutton.Parent
+	
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(2)
+	
+	local size_resize = function(valid)
+		task.spawn(function()
+			if valid then
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.286275, 0.74902, 0.203922)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			else
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0.713725, 0.121569, 0.121569)}):Play()
+				task.wait(3)
+				ts:Create(button:FindFirstChildOfClass("TextLabel"),info,{TextColor3 = Color3.new(0, 0, 0)}):Play()
+			end
+		end)
+	end
+	
+	button.MouseEnter:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.529412, 0.529412, 0.529412)}):Play()
+	end)
+	button.MouseLeave:Connect(function()
+		ts:Create(button,info,{BackgroundColor3 = Color3.new(0.678431, 0.678431, 0.678431)}):Play()
+	end)
+	
+	triggerbutton.MouseButton1Click:Connect(function()
+		local success, e = pcall(function()
+			local conductor_seat = nil
+			
+			for i,v in workspace:GetDescendants() do
+				if v.Name == "ConductorSeat" then
+					conductor_seat = v:FindFirstChildOfClass("VehicleSeat") or v:FindFirstChildOfClass("Seat")
+				end
+			end
+			
+			repeat 
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = conductor_seat.CFrame
+				conductor_seat:Sit(game.Players.LocalPlayer.Character.Humanoid)
+				wait()
+			until game.Players.LocalPlayer.Character.Humanoid.Sit == true or conductor_seat.Occupant == game.Players.LocalPlayer.Character.Humanoid
+		end)
+		print(success,e)
+		size_resize(success)
+	end)
+end
+coroutine.wrap(FSBMOM_fake_script)()
+local function LDGEU_fake_script() -- ScrollingFrame.Hook 
+	local script = Instance.new('LocalScript', ScrollingFrame)
+
+	local folder : Instance  = script.Parent
+	local ts = game:GetService("TweenService")
+	
+	local active = Color3.new(0.784314, 0.784314, 0.784314)
+	local inactive = Color3.new(0.231373, 0.231373, 0.231373)
+	
+	pcall(function()
+		for i,v in folder:GetChildren() do
+			if v:IsA("Frame") then
+				local named : TextLabel = v:FindFirstChildOfClass("TextLabel")
+				named.Font = Enum.Font.Jura
+				named.RichText = true
+				local oldtext = named.Text
+				named.Text = string.format("<b>%s</b>",oldtext)
+			end
+		end
+	end)
+	
+	
+	local all_control = function(correct:Frame)
+		task.spawn(function()
+			local containers = script.Parent.Parent.Parent.FunctionsBackground
+			for _, animationframe:Frame in folder:GetChildren()	do
+				if animationframe:IsA("Frame") then
+					if animationframe ~= correct then
+						ts:Create(animationframe,TweenInfo.new(1),{BorderColor3 = active}):Play()
+						ts:Create(animationframe,TweenInfo.new(1),{BackgroundColor3 = inactive}):Play()
+						ts:Create(animationframe:FindFirstChildOfClass("TextLabel"),TweenInfo.new(1),{TextColor3 = active}):Play()
+						containers:FindFirstChild(string.format("%sContainer",animationframe.Name)).Visible = false
+					else
+						ts:Create(animationframe,TweenInfo.new(1),{BorderColor3 = inactive}):Play()
+						ts:Create(animationframe,TweenInfo.new(1),{BackgroundColor3 = active}):Play()
+						ts:Create(animationframe:FindFirstChildOfClass("TextLabel"),TweenInfo.new(1),{TextColor3 = inactive}):Play()
+						containers:FindFirstChild(string.format("%sContainer",animationframe.Name)).Visible = true
+					end
+				end
+			end	
+		end)
+	end
+	
+	for _:number, hold:Frame in folder:GetChildren() do
+		if hold:IsA("Frame") then
+			local trigger : TextButton = hold:FindFirstChildOfClass("TextButton")
+			
+			trigger.MouseButton1Click:Connect(function()
+				all_control(hold)
+			end)
+		end
+	end 
+end
+coroutine.wrap(LDGEU_fake_script)()
+local function MQAKD_fake_script() -- SpineWare.Controller 
+	local script = Instance.new('LocalScript', SpineWare)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1)
+	script.Parent.Font = Enum.Font.Michroma
+	script.Parent.MouseEnter:Connect(function()
+		pcall(function()
+			ts:Create(script.Parent,info,{TextColor3 = Color3.new(math.random(0.1,1),math.random(0.1,1),math.random(0.1,1))}):Play()
+		end)
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		pcall(function()
+			ts:Create(script.Parent,info,{TextColor3 = Color3.new(1,1,1)}):Play()
+		end)
+	end)
+end
+coroutine.wrap(MQAKD_fake_script)()
+local function IAKKD_fake_script() -- Tips.Controller 
+	local script = Instance.new('LocalScript', Tips)
+
+	local exp = ""
+	xpcall(function()
+		exp = identifyexecutor()
+	end,function() exp = "-" end)
+	
+	local tips = {
+		"Join our discord!",
+		"https://discord.gg/Pk7VQqZvZr",
+		"Close GUI by Insert!",
+		"Enjoy!",
+		"Supported by 90% of exploits!",
+		"Your exploit: "..exp,
+		"Follow us on ScriptBlox!",
+		"Script is optimized!",
+		"Minimal ban risk!",
+		string.format("Happy %s!",os.date("%A")),
+		"https://scriptblox.com/u/visual",
+		"Script support >70 games!",
+		"Error? Send it in our discord!",
+		"Made by hacker & SpineZik"
+	}
+	
+	pcall(function()
+		
+	end)
+	local previous_tip = ""
+	
+	while wait(6.5) do
+		local optimalcolor = Color3.new(0.972549, 0.980392, 0.980392)
+		if math.random(1,2) == 1 then
+			optimalcolor = Color3.new(0.67451, 0.67451, 0.67451)
+		end
+		game:GetService("TweenService"):Create(script.Parent,TweenInfo.new(2),{TextColor3 = optimalcolor}):Play()
+		local randomTip = tips[math.random(1, #tips)]
+		
+		if randomTip == previous_tip then
+			repeat randomTip = tips[math.random(1, #tips)] wait() until randomTip ~= previous_tip
+		end
+		
+		for i = 1, string.len(randomTip) do
+			script.Parent.Text = string.sub(randomTip, 1, i)
+			wait(0.05)
+		end
+		previous_tip = randomTip
+	end
+end
+coroutine.wrap(IAKKD_fake_script)()
+local function JNLDZD_fake_script() -- Container.Mains 
+	local script = Instance.new('LocalScript', Container)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent.Parent
+	
+	local dragToggle = nil
+	local dragSpeed = 0.45
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+	pcall(function()
+		for _, v in pairs(script.Parent:GetDescendants()) do
+			if v:IsA("ScrollingFrame") then
+				v.ScrollBarImageTransparency =1 
+			end
+		end
+	end)
+	
+	local nothide = true
+	
+	UIS.InputBegan:Connect(function(button,process)
+		if process then return end
+	
+		if button.KeyCode == Enum.KeyCode.Insert then
+			nothide = not nothide
+			script.Parent.Parent.Parent.Enabled = nothide
+		end
+	end)
+	
+	local list = {
+	
+	}
+	
+	local sucess, err = pcall(function()
+		--элементы убирают у себя transparency
+		for _, e in pairs(script.Parent.Parent.Parent:GetDescendants()) do
+			--проверка
+			if e:IsA("TextBox") or e:IsA("TextLabel") or e:IsA("TextButton") then
+				table.insert(list,{e,e.BackgroundTransparency,e.TextTransparency})
+				e.BackgroundTransparency = 1
+				e.TextTransparency = 1
+			elseif e:IsA("ImageLabel") or e:IsA("ImageButton") then
+				table.insert(list,{e,e.BackgroundTransparency,e.ImageTransparency})
+				e.BackgroundTransparency = 1
+				e.ImageTransparency = 1
+			elseif e:IsA("Frame") or e:IsA("ScrollingFrame") then
+				table.insert(list,{e,e.BackgroundTransparency})
+				e.BackgroundTransparency = 1
+			else
+	
+			end
+		end
+	end)
+	
+	if not sucess then print(err) end
+	
+	local a,b = pcall(function()
+		wait(3.5)
+		--выставление аргументов
+		local ts = game:GetService("TweenService")
+		local info = TweenInfo.new(3.5)
+	
+		for _, t in pairs(list) do
+			pcall(function()
+				if t[1]:IsA("TextBox") or t[1]:IsA("TextLabel") or t[1]:IsA("TextButton") then
+					ts:Create(t[1],info,{BackgroundTransparency = t[2]}):Play()
+					ts:Create(t[1],info,{TextTransparency = t[3]}):Play()
+					if t[3] == nil then
+						ts:Create(t[1],info,{TextTransparency = 0})
+					end
+				elseif t[1]:IsA("ImageLabel") or t[1]:IsA("ImageButton") then
+					ts:Create(t[1],info,{BackgroundTransparency = t[2]}):Play()
+					ts:Create(t[1],info,{ImageTransparency = t[3]}):Play()
+				elseif t[1]:IsA("ScrollingFrame") or t[1]:IsA("Frame") then
+					ts:Create(t[1],info,{BackgroundTransparency = t[2]}):Play()       
+				end
+			end)
+		end
+	end)
+end
+coroutine.wrap(JNLDZD_fake_script)()
