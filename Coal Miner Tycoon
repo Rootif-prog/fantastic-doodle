@@ -376,7 +376,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function ZOGAC_fake_script() -- Trigger.Controller 
+local function KHDHDHU_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -463,8 +463,8 @@ local function ZOGAC_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(ZOGAC_fake_script)()
-local function YDUGW_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(KHDHDHU_fake_script)()
+local function ZYSCF_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -490,61 +490,59 @@ local function YDUGW_fake_script() -- Trigger_2.Controller
 				local character = player.Character or player.CharacterAdded:Wait()
 				local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
 	
-				-- Сохраняем исходную позицию
-				local originalPosition = humanoidRootPart.Position
-				local originalCFrame = humanoidRootPart.CFrame
-	
-				-- Функция для поиска объекта по пути
-				local function findObject(path)
-					local current = workspace
-					for _, partName in ipairs(path) do
-						current = current:FindFirstChild(partName)
-						if not current then return nil end
-					end
-					return current
-				end
-	
-				-- Функция для получения тикона игрока
 				local function getPlayerTycoon()
-					local tycoonObject = player:FindFirstChild("Tycoon")
-					if not tycoonObject or not tycoonObject:IsA("ObjectValue") then
-						warn("Tycoon не найден у игрока!")
-						return nil
+					local tycoonObj = player:FindFirstChild("Tycoon")
+					if tycoonObj and tycoonObj:IsA("ObjectValue") then
+						return tycoonObj.Value
 					end
-					return tycoonObject.Value
+					warn("❌ Не удалось определить Tycoon игрока!")
+					return nil
 				end
 	
-				-- Получаем тикон игрока
-				local playerTycoon = getPlayerTycoon()
-				if not playerTycoon then return end
+				local function simulateTouch(part)
+					local touchPart = humanoidRootPart
+					if not touchPart or not part then return end
 	
-				-- Определяем цвет команды (название тикона)
-				local tycoonName = playerTycoon.Name
-				print("Игрок находится в тиконе:", tycoonName)
-	
-				-- Путь к целевому объекту (с автоматическим определением цвета)
-				local targetPath = {"TycoonKit", "Tycoons", tycoonName, "Essentials", "CurrencyCollector", "Giver", "TouchInterest"}
-				local targetPart = findObject(targetPath)
-	
-				if targetPart then
-					-- Телепортация к целевому объекту
-					humanoidRootPart.CFrame = targetPart.Parent.CFrame + Vector3.new(0, 3, 0) -- Смещение по высоте
-	
-					-- Ждем 2 секунды
-					wait(0.5)
-	
-					-- Возвращаемся на исходную позицию
-					humanoidRootPart.CFrame = originalCFrame
-				else
-					warn("Не удалось найти целевой объект по пути: TycoonKit.Tycoons." .. tycoonName .. ".Essentials.CurrencyCollector.Giver.TouchInterest")
+					firetouchinterest(touchPart, part, 0) -- Touch begin
+					task.wait(0.1)
+					firetouchinterest(touchPart, part, 1) -- Touch end
 				end
+	
+				local function triggerGiverTouch()
+					local tycoon = getPlayerTycoon()
+					if not tycoon then return end
+	
+					local path = tycoon:FindFirstChild("Essentials")
+					if not path then
+						warn("❌ Essentials не найден в Tycoon!")
+						return
+					end
+	
+					local currencyCollector = path:FindFirstChild("CurrencyCollector")
+					if not currencyCollector then
+						warn("❌ CurrencyCollector не найден в Essentials!")
+						return
+					end
+	
+					local giver = currencyCollector:FindFirstChild("Giver")
+					if not giver or not giver:IsA("BasePart") then
+						warn("❌ Giver не найден или не является BasePart!")
+						return
+					end
+	
+					simulateTouch(giver)
+					print("✅ Успешно симулирован TouchInterest на Giver!")
+				end
+	
+				-- Запуск
+				triggerGiverTouch()
 			end)
 			wait()
 		end
 	end)
 end
-coroutine.wrap(YDUGW_fake_script)()
-local function IOXH_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(ZYSCF_fake_script)()
+local function CEFXFZ_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -612,8 +610,8 @@ local function IOXH_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(IOXH_fake_script)()
-local function YDIERQ_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(CEFXFZ_fake_script)()
+local function TZMDW_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -699,8 +697,8 @@ local function YDIERQ_fake_script() -- Trigger_4.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(YDIERQ_fake_script)()
-local function QAGX_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(TZMDW_fake_script)()
+local function TKBNS_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -763,8 +761,8 @@ local function QAGX_fake_script() -- Trigger_5.Controller
 		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.219608, 0.219608, 0.219608)}):Play()
 	end
 end
-coroutine.wrap(QAGX_fake_script)()
-local function IICRIKE_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(TKBNS_fake_script)()
+local function LSOGIGE_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -782,8 +780,8 @@ local function IICRIKE_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(IICRIKE_fake_script)()
-local function WHUTWCL_fake_script() -- Toggle.Controller 
+coroutine.wrap(LSOGIGE_fake_script)()
+local function TAEJWN_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -826,8 +824,8 @@ local function WHUTWCL_fake_script() -- Toggle.Controller
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(WHUTWCL_fake_script)()
-local function TWMBJJA_fake_script() -- ImageButton.Controller 
+coroutine.wrap(TAEJWN_fake_script)()
+local function MHYYPSG_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -836,8 +834,8 @@ local function TWMBJJA_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(TWMBJJA_fake_script)()
-local function IVTAI_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(MHYYPSG_fake_script)()
+local function KNDDKI_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -919,8 +917,8 @@ local function IVTAI_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(IVTAI_fake_script)()
-local function HTDHIAA_fake_script() -- CoalMinerTycoonNEW.Controller 
+coroutine.wrap(KNDDKI_fake_script)()
+local function PMTEHOY_fake_script() -- CoalMinerTycoonNEW.Controller 
 	local script = Instance.new('LocalScript', CoalMinerTycoonNEW)
 
 	local list = {
@@ -976,4 +974,4 @@ local function HTDHIAA_fake_script() -- CoalMinerTycoonNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(HTDHIAA_fake_script)()
+coroutine.wrap(PMTEHOY_fake_script)()
