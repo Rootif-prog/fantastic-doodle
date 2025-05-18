@@ -482,7 +482,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function ZSLVJTL_fake_script() -- Trigger.Controller 
+local function MFHYBBU_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -530,8 +530,8 @@ local function ZSLVJTL_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(ZSLVJTL_fake_script)()
-local function IMUFXQ_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(MFHYBBU_fake_script)()
+local function ZQMQSL_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -562,8 +562,8 @@ local function IMUFXQ_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(IMUFXQ_fake_script)()
-local function ATZQDO_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(ZQMQSL_fake_script)()
+local function HOLWR_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -600,6 +600,18 @@ local function ATZQDO_fake_script() -- Trigger_3.Controller
 				local A_1 = 7
 				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
 				Event:InvokeServer(A_1)
+				local A_1 = 5
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
+				Event:InvokeServer(A_1)
+				local A_1 = 5
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
+				Event:InvokeServer(A_1)
+				local A_1 = 6
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
+				Event:InvokeServer(A_1)
+				local A_1 = 6
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
+				Event:InvokeServer(A_1)
 				local A_1 = 7
 				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.PlaytimeRewardService.RF.ClaimReward
 				Event:InvokeServer(A_1)
@@ -611,8 +623,8 @@ local function ATZQDO_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(ATZQDO_fake_script)()
-local function XCCRDQ_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(HOLWR_fake_script)()
+local function AYOPI_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -644,8 +656,8 @@ local function XCCRDQ_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(XCCRDQ_fake_script)()
-local function NSLUGU_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(AYOPI_fake_script)()
+local function PQSRJMH_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -678,8 +690,8 @@ local function NSLUGU_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(NSLUGU_fake_script)()
-local function FOFJTQ_fake_script() -- Trigger_6.Controller 
+coroutine.wrap(PQSRJMH_fake_script)()
+local function GJHR_fake_script() -- Trigger_6.Controller 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
@@ -711,6 +723,38 @@ local function FOFJTQ_fake_script() -- Trigger_6.Controller
 				Event:InvokeServer()
 				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
 				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
+				local Event = game:GetService("ReplicatedStorage").Packages["_Index"]["sleitnick_knit@1.7.0"].knit.Services.AuraService.RF.RequestRoll
+				Event:InvokeServer()
 	
 	
 			end)
@@ -718,8 +762,8 @@ local function FOFJTQ_fake_script() -- Trigger_6.Controller
 		end
 	end)
 end
-coroutine.wrap(FOFJTQ_fake_script)()
-local function HIXETE_fake_script() -- TextLabel_7.Controller 
+coroutine.wrap(GJHR_fake_script)()
+local function DWKDQ_fake_script() -- TextLabel_7.Controller 
 	local script = Instance.new('LocalScript', TextLabel_7)
 
 	local ts = game:GetService("TweenService")
@@ -737,8 +781,8 @@ local function HIXETE_fake_script() -- TextLabel_7.Controller
 		end)
 	end)
 end
-coroutine.wrap(HIXETE_fake_script)()
-local function YFPQCT_fake_script() -- Toggle.Controller 
+coroutine.wrap(DWKDQ_fake_script)()
+local function ZOFFBXT_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -781,8 +825,8 @@ local function YFPQCT_fake_script() -- Toggle.Controller
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(YFPQCT_fake_script)()
-local function TJDBWB_fake_script() -- ImageButton.Controller 
+coroutine.wrap(ZOFFBXT_fake_script)()
+local function MOTYKYT_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -791,8 +835,8 @@ local function TJDBWB_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(TJDBWB_fake_script)()
-local function NZEBV_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(MOTYKYT_fake_script)()
+local function TVHM_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -874,8 +918,8 @@ local function NZEBV_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(NZEBV_fake_script)()
-local function NYVQ_fake_script() -- WorkoutSimulatorNEW.Controller 
+coroutine.wrap(TVHM_fake_script)()
+local function FHFPJ_fake_script() -- WorkoutSimulatorNEW.Controller 
 	local script = Instance.new('LocalScript', WorkoutSimulatorNEW)
 
 	local list = {
@@ -931,4 +975,4 @@ local function NYVQ_fake_script() -- WorkoutSimulatorNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(NYVQ_fake_script)()
+coroutine.wrap(FHFPJ_fake_script)()
