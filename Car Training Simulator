@@ -61,7 +61,6 @@ local ImageButton = Instance.new("ImageButton")
 
 CarTrainingSimulatorNEW.Name = "Car Training Simulator NEW ВЛАДОС ТЕБЕ СЮДА"
 CarTrainingSimulatorNEW.Parent = game.CoreGui
-CarTrainingSimulatorNEW.Enabled = false
 
 ImageLabel.Parent = CarTrainingSimulatorNEW
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
