@@ -234,7 +234,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function PZCPC_fake_script() -- Trigger.Controller 
+local function FAWSAEH_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -386,8 +386,8 @@ local function PZCPC_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(PZCPC_fake_script)()
-local function VYKHRKA_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(FAWSAEH_fake_script)()
+local function RGZBUSQ_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -540,8 +540,8 @@ local function VYKHRKA_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(VYKHRKA_fake_script)()
-local function OQPLVSU_fake_script() -- TextLabel_3.Controller 
+coroutine.wrap(RGZBUSQ_fake_script)()
+local function ASCWOGK_fake_script() -- TextLabel_3.Controller 
 	local script = Instance.new('LocalScript', TextLabel_3)
 
 	local ts = game:GetService("TweenService")
@@ -559,10 +559,9 @@ local function OQPLVSU_fake_script() -- TextLabel_3.Controller
 		end)
 	end)
 	
-	script.Parent.Text = "NIGGAWARE"
 end
-coroutine.wrap(OQPLVSU_fake_script)()
-local function QCHIK_fake_script() -- Toggle.Controller 
+coroutine.wrap(ASCWOGK_fake_script)()
+local function QNRSK_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -605,8 +604,8 @@ local function QCHIK_fake_script() -- Toggle.Controller
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(QCHIK_fake_script)()
-local function SDABM_fake_script() -- ImageButton.Controller 
+coroutine.wrap(QNRSK_fake_script)()
+local function ZZSN_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -615,8 +614,8 @@ local function SDABM_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(SDABM_fake_script)()
-local function YAWFVSM_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(ZZSN_fake_script)()
+local function WWFCPWK_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -698,8 +697,8 @@ local function YAWFVSM_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(YAWFVSM_fake_script)()
-local function IBFXFM_fake_script() -- RaftTycoonNEW.Controller 
+coroutine.wrap(WWFCPWK_fake_script)()
+local function ISNPO_fake_script() -- RaftTycoonNEW.Controller 
 	local script = Instance.new('LocalScript', RaftTycoonNEW)
 
 	local list = {
@@ -755,4 +754,4 @@ local function IBFXFM_fake_script() -- RaftTycoonNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(IBFXFM_fake_script)()
+coroutine.wrap(ISNPO_fake_script)()
