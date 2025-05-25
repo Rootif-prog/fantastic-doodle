@@ -276,7 +276,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function VTYPRXM_fake_script() -- Trigger.Controller 
+local function CFPJYUH_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -310,8 +310,8 @@ local function VTYPRXM_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(VTYPRXM_fake_script)()
-local function PGMF_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(CFPJYUH_fake_script)()
+local function PVKJ_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -400,8 +400,8 @@ local function PGMF_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(PGMF_fake_script)()
-local function VLKTQWZ_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(PVKJ_fake_script)()
+local function OBNE_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -413,10 +413,6 @@ local function VLKTQWZ_fake_script() -- Trigger_3.Controller
 	end)
 	
 	script.Parent.MouseButton1Click:Connect(function()
-		local sucess, err = pcall(function()
-			
-		end)
-		
 		if not sucess then
 			local A_1 = "train_start"
 			local A_2 = 
@@ -429,8 +425,8 @@ local function VLKTQWZ_fake_script() -- Trigger_3.Controller
 	end)
 	
 end
-coroutine.wrap(VLKTQWZ_fake_script)()
-local function EHZWCFE_fake_script() -- TextLabel_4.Controller 
+coroutine.wrap(OBNE_fake_script)()
+local function LUHCGFN_fake_script() -- TextLabel_4.Controller 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
@@ -448,8 +444,8 @@ local function EHZWCFE_fake_script() -- TextLabel_4.Controller
 		end)
 	end)
 end
-coroutine.wrap(EHZWCFE_fake_script)()
-local function CKEW_fake_script() -- Toggle.Controller 
+coroutine.wrap(LUHCGFN_fake_script)()
+local function SJQK_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -519,8 +515,8 @@ local function CKEW_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(CKEW_fake_script)()
-local function TGNMGI_fake_script() -- ImageButton.Controller 
+coroutine.wrap(SJQK_fake_script)()
+local function NRAUK_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -529,8 +525,8 @@ local function TGNMGI_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(TGNMGI_fake_script)()
-local function LHUV_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(NRAUK_fake_script)()
+local function NELAR_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -612,8 +608,8 @@ local function LHUV_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(LHUV_fake_script)()
-local function AFYHN_fake_script() -- ITIALIANRACE.Controller 
+coroutine.wrap(NELAR_fake_script)()
+local function EBVXP_fake_script() -- ITIALIANRACE.Controller 
 	local script = Instance.new('LocalScript', ITIALIANRACE)
 
 	local list = {
@@ -669,4 +665,4 @@ local function AFYHN_fake_script() -- ITIALIANRACE.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(AFYHN_fake_script)()
+coroutine.wrap(EBVXP_fake_script)()
