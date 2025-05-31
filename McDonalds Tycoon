@@ -402,7 +402,7 @@ ImageButton.ScaleType = Enum.ScaleType.Fit
 
 -- Scripts:
 
-local function PAUXYGH_fake_script() -- Trigger.Controller 
+local function LWJYFYJ_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -443,10 +443,44 @@ local function PAUXYGH_fake_script() -- Trigger.Controller
 							-- Проверяем, совпадает ли имя владельца с ником игрока
 							if ownerName == playerName then
 								print("Найден ваш тайкун: " .. tycoon.Name)  -- Выводим название тайкуна, если имя совпадает
-								-- Если да, то возвращаем найденный тайкун и его ClickDetector
-								local clicker = tycoon.PurchasedObjects.Dropper1:GetChildren()[3].Clicker
-								local clickDetector = clicker:FindFirstChild("ClickDetector")
-								return tycoon, clickDetector
+	
+								-- Проверка на наличие "PurchasedObjects" в тайкуне
+								local purchasedObjects = tycoon:FindFirstChild("PurchasedObjects")
+								if purchasedObjects then
+									-- Проверяем модель Dropper1
+									local dropper1 = purchasedObjects:FindFirstChild("Dropper1")
+									if dropper1 then
+										print("Найден Dropper1 в PurchasedObjects!")
+	
+										-- Проходим по всем моделям внутри Dropper1
+										for _, model in pairs(dropper1:GetChildren()) do
+											if model:IsA("Model") then  -- Проверяем, что это модель
+												print("Проверка модели: " .. model.Name)  -- Отладочный вывод
+	
+												-- Ищем Clicker внутри каждой модели
+												local clicker = model:FindFirstChild("Clicker")
+												if clicker then
+													-- Ищем ClickDetector в Clicker
+													local clickDetector = clicker:FindFirstChild("ClickDetector")
+													if clickDetector then
+														print("Найден ClickDetector в модели " .. model.Name)
+														-- Эмулируем клик на ClickDetector
+														fireclickdetector(clickDetector)
+														return tycoon, clickDetector  -- Возвращаем тайкун и его ClickDetector
+													else
+														print("ClickDetector не найден в Clicker в модели " .. model.Name)
+													end
+												else
+													print("Clicker не найден в модели " .. model.Name)
+												end
+											end
+										end
+									else
+										print("Dropper1 не найден в PurchasedObjects!")
+									end
+								else
+									print("PurchasedObjects не найден в тайкуне!")
+								end
 							else
 								print("Тайкун " .. tostring(tycoon.Name) .. " не ваш. Владельцем является: " .. ownerName)  -- Выводим для других тайкунов
 							end
@@ -472,8 +506,8 @@ local function PAUXYGH_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(PAUXYGH_fake_script)()
-local function QPKGZD_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(LWJYFYJ_fake_script)()
+local function FDBFR_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -546,8 +580,8 @@ local function QPKGZD_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(QPKGZD_fake_script)()
-local function HIARSCX_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(FDBFR_fake_script)()
+local function GLXQJ_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -596,8 +630,8 @@ local function HIARSCX_fake_script() -- Trigger_3.Controller
 	end)
 	
 end
-coroutine.wrap(HIARSCX_fake_script)()
-local function WEGKLB_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(GLXQJ_fake_script)()
+local function VKCH_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -638,8 +672,8 @@ local function WEGKLB_fake_script() -- Trigger_4.Controller
 	end)
 	
 end
-coroutine.wrap(WEGKLB_fake_script)()
-local function WJENYPM_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(VKCH_fake_script)()
+local function UANJZ_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local TweenService = game:GetService("TweenService")
@@ -683,8 +717,8 @@ local function WJENYPM_fake_script() -- Trigger_5.Controller
 	end)
 	
 end
-coroutine.wrap(WJENYPM_fake_script)()
-local function INSUTKS_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(UANJZ_fake_script)()
+local function KNFKKQ_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -702,8 +736,8 @@ local function INSUTKS_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(INSUTKS_fake_script)()
-local function HCPLJA_fake_script() -- Toggle.Controller 
+coroutine.wrap(KNFKKQ_fake_script)()
+local function EAYOTZK_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -773,8 +807,8 @@ local function HCPLJA_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(HCPLJA_fake_script)()
-local function EVCZ_fake_script() -- ImageButton.Controller 
+coroutine.wrap(EAYOTZK_fake_script)()
+local function JFBFJDN_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -783,8 +817,8 @@ local function EVCZ_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(EVCZ_fake_script)()
-local function RPIRZ_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(JFBFJDN_fake_script)()
+local function MVNAT_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -866,8 +900,8 @@ local function RPIRZ_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(RPIRZ_fake_script)()
-local function HOIFCGA_fake_script() -- McDonaldsTycoonNEWPOSTED.Controller 
+coroutine.wrap(MVNAT_fake_script)()
+local function SPUTWW_fake_script() -- McDonaldsTycoonNEWPOSTED.Controller 
 	local script = Instance.new('LocalScript', McDonaldsTycoonNEWPOSTED)
 
 	local list = {
@@ -923,4 +957,4 @@ local function HOIFCGA_fake_script() -- McDonaldsTycoonNEWPOSTED.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(HOIFCGA_fake_script)()
+coroutine.wrap(SPUTWW_fake_script)()
