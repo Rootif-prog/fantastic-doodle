@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local ITIALIANRACE = Instance.new("ScreenGui")
+local ITIALIANRACENEW = Instance.new("ScreenGui")
 local ImageLabel = Instance.new("ImageLabel")
 local Container = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -46,19 +46,34 @@ local UICorner_13 = Instance.new("UICorner")
 local Frame_4 = Instance.new("Frame")
 local UICorner_14 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
+local Rebirth = Instance.new("Frame")
 local UICorner_15 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
+local Trigger_6 = Instance.new("TextButton")
+local In_5 = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
+local Frame_5 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
 local TextLabel_6 = Instance.new("TextLabel")
+local SelectRebirth = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local TextBox = Instance.new("TextBox")
+local UICorner_19 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
+local PhoneManager = Instance.new("ImageButton")
+local UICorner_22 = Instance.new("UICorner")
 
 --Properties:
 
-ITIALIANRACE.Name = "ITIALIAN RACE"
-ITIALIANRACE.Parent = game.CoreGui
+ITIALIANRACENEW.Name = "ITIALIAN RACE NEW"
+ITIALIANRACENEW.Parent = game.CoreGui
 
-ImageLabel.Parent = ITIALIANRACE
+ImageLabel.Parent = ITIALIANRACENEW
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
@@ -88,6 +103,7 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456284, 0)
 ContainerList.Size = UDim2.new(0, 289, 0, 240)
+ContainerList.CanvasPosition = Vector2.new(0, 140)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -355,7 +371,101 @@ TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 20.000
 TextLabel_5.TextWrapped = true
 
-UICorner_15.Parent = ImageLabel
+Rebirth.Name = "Rebirth"
+Rebirth.Parent = ContainerList
+Rebirth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rebirth.BackgroundTransparency = 0.800
+Rebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Rebirth.BorderSizePixel = 0
+Rebirth.Size = UDim2.new(0, 258, 0, 44)
+
+UICorner_15.Parent = Rebirth
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = Rebirth
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 282, 0, 44)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+In_5.Name = "In"
+In_5.Parent = Rebirth
+In_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+In_5.BackgroundTransparency = 0.600
+In_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+In_5.BorderSizePixel = 0
+In_5.Position = UDim2.new(0.797041416, 0, 0.305023879, 0)
+In_5.Size = UDim2.new(0, 37, 0, 17)
+
+UICorner_16.Parent = In_5
+
+Frame_5.Parent = In_5
+Frame_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.BorderSizePixel = 0
+Frame_5.Position = UDim2.new(-2.47439812e-06, 0, 0, 0)
+Frame_5.Size = UDim2.new(0, 18, 0, 17)
+
+UICorner_17.Parent = Frame_5
+
+TextLabel_6.Parent = Rebirth
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.011363646, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 220, 0, 44)
+TextLabel_6.Font = Enum.Font.Jura
+TextLabel_6.Text = "Auto Rebirth"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 20.000
+TextLabel_6.TextWrapped = true
+
+SelectRebirth.Name = "Select Rebirth"
+SelectRebirth.Parent = ContainerList
+SelectRebirth.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SelectRebirth.BackgroundTransparency = 0.800
+SelectRebirth.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SelectRebirth.BorderSizePixel = 0
+SelectRebirth.Position = UDim2.new(0, 0, 0.431623936, 0)
+SelectRebirth.Size = UDim2.new(0, 258, 0, 48)
+
+UICorner_18.Parent = SelectRebirth
+
+TextLabel_7.Parent = SelectRebirth
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.0247349832, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 224, 0, 48)
+TextLabel_7.Font = Enum.Font.Jura
+TextLabel_7.Text = "Select Rebirth"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 20.000
+TextLabel_7.TextWrapped = true
+
+TextBox.Parent = SelectRebirth
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BackgroundTransparency = 0.600
+TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextBox.BorderSizePixel = 0
+TextBox.Position = UDim2.new(0.798084676, 0, 0.205043793, 0)
+TextBox.Size = UDim2.new(0, 36, 0, 24)
+TextBox.Font = Enum.Font.Jura
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextSize = 16.000
+TextBox.TextWrapped = true
+
+UICorner_19.Parent = TextBox
+
+UICorner_20.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -366,19 +476,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(1.05233028e-07, 0, 0, 0)
 Top.Size = UDim2.new(0, 289, 0, 40)
 
-UICorner_16.Parent = Top
+UICorner_21.Parent = Top
 
-TextLabel_6.Parent = Top
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_6.BorderSizePixel = 0
-TextLabel_6.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
-TextLabel_6.Size = UDim2.new(0, 181, 0, 36)
-TextLabel_6.Font = Enum.Font.Unknown
-TextLabel_6.Text = "SpineWare"
-TextLabel_6.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_6.TextSize = 18.000
+TextLabel_8.Parent = Top
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
+TextLabel_8.Size = UDim2.new(0, 181, 0, 36)
+TextLabel_8.Font = Enum.Font.Unknown
+TextLabel_8.Text = "SpineWare"
+TextLabel_8.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_8.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -400,9 +510,22 @@ ImageButton.Size = UDim2.new(0, 44, 0, 29)
 ImageButton.Image = "rbxassetid://78665648888960"
 ImageButton.ScaleType = Enum.ScaleType.Fit
 
+PhoneManager.Name = "PhoneManager"
+PhoneManager.Parent = ITIALIANRACENEW
+PhoneManager.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PhoneManager.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PhoneManager.BorderSizePixel = 0
+PhoneManager.Position = UDim2.new(0.409124345, 0, 0.125670508, 0)
+PhoneManager.Size = UDim2.new(0, 78, 0, 78)
+PhoneManager.Visible = false
+PhoneManager.Image = "rbxassetid://122294771135712"
+
+UICorner_22.CornerRadius = UDim.new(0, 5)
+UICorner_22.Parent = PhoneManager
+
 -- Scripts:
 
-local function ZBEQBC_fake_script() -- Trigger.Controller 
+local function FYYBYF_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -436,8 +559,8 @@ local function ZBEQBC_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(ZBEQBC_fake_script)()
-local function ELCI_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(FYYBYF_fake_script)()
+local function XKAW_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -526,8 +649,8 @@ local function ELCI_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(ELCI_fake_script)()
-local function ZELVD_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(XKAW_fake_script)()
+local function MLULTGF_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -551,8 +674,8 @@ local function ZELVD_fake_script() -- Trigger_3.Controller
 	end)
 	
 end
-coroutine.wrap(ZELVD_fake_script)()
-local function MTHM_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(MLULTGF_fake_script)()
+local function JRTYA_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -608,8 +731,8 @@ local function MTHM_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(MTHM_fake_script)()
-local function FCKP_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(JRTYA_fake_script)()
+local function DSOP_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -643,9 +766,79 @@ local function FCKP_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(FCKP_fake_script)()
-local function MTUE_fake_script() -- TextLabel_6.Controller 
-	local script = Instance.new('LocalScript', TextLabel_6)
+coroutine.wrap(DSOP_fake_script)()
+local function JEWCS_fake_script() -- Trigger_6.Controller 
+	local script = Instance.new('LocalScript', Trigger_6)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if not status then
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,24,0,0)}):Play()
+			status = true
+			
+		else
+			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
+			status = false
+		end
+		
+		while status do
+			pcall(function()
+				local A_1 = "reborn_as_lv"
+				local A_2 = 
+					{
+						["1"] = _G.Stage
+					}
+				local Event = game:GetService("ReplicatedStorage").RemoteEvent
+				Event:FireServer(A_1, A_2)
+			end)
+			wait()
+		end
+	end)
+end
+coroutine.wrap(JEWCS_fake_script)()
+local function EVZH_fake_script() -- TextBox.Controller 
+	local script = Instance.new('LocalScript', TextBox)
+
+	local ts = game:GetService("TweenService")
+	local info = TweenInfo.new(1.3)
+	local x=  TweenInfo.new(0.7)
+	local status = false
+	
+	script.Parent.Focused:Connect(function()
+		pcall(function()
+			ts:Create(script.Parent,info,{BackgroundColor3 = Color3.new(0.439216, 0.439216, 0.439216)}):Play()
+		end)
+	end)
+	
+	script.Parent.FocusLost:Connect(function()
+		local sucess, err = pcall(function()
+			ts:Create(script.Parent,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			local textbox = script.Parent
+			local text = textbox.Text
+	
+			local tonum = tonumber(text)
+	
+			if tonum ~= nil then
+				_G.Stage = tonum
+			else
+				ts:Create(textbox,x,{BackgroundColor3 = Color3.new(0.698039, 0.0705882, 0.164706)}):Play()
+				wait()
+				ts:Create(textbox,x,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
+			end
+		end)
+		
+		if not sucess then print(err) end
+	end)
+end
+coroutine.wrap(EVZH_fake_script)()
+local function VWLFLM_fake_script() -- TextLabel_8.Controller 
+	local script = Instance.new('LocalScript', TextLabel_8)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -662,8 +855,8 @@ local function MTUE_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(MTUE_fake_script)()
-local function FXJKN_fake_script() -- Toggle.Controller 
+coroutine.wrap(VWLFLM_fake_script)()
+local function DIPOUQU_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -733,8 +926,8 @@ local function FXJKN_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(FXJKN_fake_script)()
-local function TJWOYJ_fake_script() -- ImageButton.Controller 
+coroutine.wrap(DIPOUQU_fake_script)()
+local function UXNEMH_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -743,8 +936,8 @@ local function TJWOYJ_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(TJWOYJ_fake_script)()
-local function TVWL_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(UXNEMH_fake_script)()
+local function OHMYH_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -826,9 +1019,9 @@ local function TVWL_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(TVWL_fake_script)()
-local function LRUKW_fake_script() -- ITIALIANRACE.Controller 
-	local script = Instance.new('LocalScript', ITIALIANRACE)
+coroutine.wrap(OHMYH_fake_script)()
+local function FUQNH_fake_script() -- ITIALIANRACENEW.Controller 
+	local script = Instance.new('LocalScript', ITIALIANRACENEW)
 
 	local list = {
 	
@@ -883,4 +1076,83 @@ local function LRUKW_fake_script() -- ITIALIANRACE.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(LRUKW_fake_script)()
+coroutine.wrap(FUQNH_fake_script)()
+local function ZOYEFS_fake_script() -- PhoneManager.Controller 
+	local script = Instance.new('LocalScript', PhoneManager)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	
+	local dragToggle = nil
+	local dragSpeed = 0.45
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	
+	end
+	
+	
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+	local GuiService = game:GetService("GuiService")
+	local UserInputService = game:GetService("UserInputService")
+	function getplatform()
+		if (GuiService:IsTenFootInterface()) then
+			return "Console"
+		elseif (UserInputService.TouchEnabled and not UserInputService.MouseEnabled) then
+			local DeviceSize = workspace.CurrentCamera.ViewportSize; 
+			if ( DeviceSize.Y > 600 ) then
+				return "Mobile (tablet)"
+			else
+				return "Mobile (phone)"
+			end
+		else
+			return "Desktop"
+		end
+	end
+	
+	local platform = getplatform()
+	local status = false
+	
+	if string.find(platform,"Mobile") then
+		script.Parent.Visible = true
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			if not status then
+				script.Parent.Parent.ImageLabel.Visible = false
+				status = true
+			else
+				script.Parent.Parent.ImageLabel.Visible = true
+				status = false
+			end
+		end)
+	end
+end
+coroutine.wrap(ZOYEFS_fake_script)()
