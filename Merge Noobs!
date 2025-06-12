@@ -377,7 +377,7 @@ UICorner_16.Parent = PhoneManager
 
 -- Scripts:
 
-local function FKRGBN_fake_script() -- Trigger.Controller 
+local function POOHP_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -423,8 +423,8 @@ local function FKRGBN_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(FKRGBN_fake_script)()
-local function LFSETMK_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(POOHP_fake_script)()
+local function NFDFAY_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -582,8 +582,8 @@ local function LFSETMK_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(LFSETMK_fake_script)()
-local function XHXKKPZ_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(NFDFAY_fake_script)()
+local function NBUKKBL_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -642,8 +642,8 @@ local function XHXKKPZ_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(XHXKKPZ_fake_script)()
-local function FYGNC_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(NBUKKBL_fake_script)()
+local function EFNY_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -690,27 +690,39 @@ local function FYGNC_fake_script() -- Trigger_4.Controller
 				end
 	
 				local function findOwnerAndFireClicks()
-					-- Получаем объект владельца базы
-					local ownerValue = workspace.Area.Base5.Values.Owner
+					-- Проходим по всем базам в папке Area
+					local areaFolder = workspace.Area
+					for _, base in pairs(areaFolder:GetChildren()) do
+						-- Ищем объект Owner внутри каждой базы
+						local ownerValue = base:FindFirstChild("Values") and base.Values:FindFirstChild("Owner")
 	
-					-- Проверяем, если ownerValue существует и его Value является объектом игрока
-					if ownerValue and ownerValue.Value and ownerValue.Value:IsA("Player") then
-						local ownerName = ownerValue.Value.Name  -- Получаем имя владельца
+						if ownerValue and ownerValue.Value then
+							-- Проверяем, если ownerValue существует и его Value является объектом игрока
+							if ownerValue.Value:IsA("Player") then
+								local ownerName = ownerValue.Value.Name  -- Получаем имя владельца
 	
-						-- Для отладки: выводим имя владельца и имя текущего игрока
-						print("Owner name: " .. ownerName)
-						print("Local player name: " .. game.Players.LocalPlayer.Name)
+								-- Для отладки: выводим имя владельца и имя текущего игрока
+								print("Owner name: " .. ownerName)
+								print("Local player name: " .. game.Players.LocalPlayer.Name)
 	
-						-- Проверяем, является ли текущий игрок владельцем базы
-						if ownerName == game.Players.LocalPlayer.Name then
-							-- Вызываем функцию для папки "Noobs"
-							local noobsFolder = workspace.Area.Base5.Spawner.Noobs
-							fireClickDetectorRecursive(noobsFolder, ownerName)
+								-- Проверяем, является ли текущий игрок владельцем базы
+								if ownerName == game.Players.LocalPlayer.Name then
+									-- Вызываем функцию для папки "Noobs" в найденной базе
+									local noobsFolder = base.Spawner and base.Spawner:FindFirstChild("Noobs")
+									if noobsFolder then
+										fireClickDetectorRecursive(noobsFolder, ownerName)
+									else
+										print("No 'Noobs' folder found in base: " .. base.Name)
+									end
+								else
+									print("You do not own this base: " .. base.Name)  -- Сообщение, если игрок не является владельцем
+								end
+							else
+								print("Owner value is not referencing a Player object in base: " .. base.Name)
+							end
 						else
-							print("You do not own this base.")  -- Сообщение, если игрок не является владельцем
+							print("Owner value is not set properly or does not exist in base: " .. base.Name)
 						end
-					else
-						print("Owner value is not set properly or does not reference a player.")
 					end
 				end
 	
@@ -721,8 +733,8 @@ local function FYGNC_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(FYGNC_fake_script)()
-local function JQQPDN_fake_script() -- TextLabel_5.Controller 
+coroutine.wrap(EFNY_fake_script)()
+local function IEHEZX_fake_script() -- TextLabel_5.Controller 
 	local script = Instance.new('LocalScript', TextLabel_5)
 
 	local ts = game:GetService("TweenService")
@@ -740,8 +752,8 @@ local function JQQPDN_fake_script() -- TextLabel_5.Controller
 		end)
 	end)
 end
-coroutine.wrap(JQQPDN_fake_script)()
-local function STMNAHZ_fake_script() -- Toggle.Controller 
+coroutine.wrap(IEHEZX_fake_script)()
+local function XTWHC_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -811,8 +823,8 @@ local function STMNAHZ_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(STMNAHZ_fake_script)()
-local function LZOH_fake_script() -- ImageButton.Controller 
+coroutine.wrap(XTWHC_fake_script)()
+local function MTBK_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -821,8 +833,8 @@ local function LZOH_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(LZOH_fake_script)()
-local function ABWBHL_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(MTBK_fake_script)()
+local function GNWYWNK_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -904,8 +916,8 @@ local function ABWBHL_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(ABWBHL_fake_script)()
-local function YEGDQFE_fake_script() -- MergeNoobNEW.Controller 
+coroutine.wrap(GNWYWNK_fake_script)()
+local function PYFFS_fake_script() -- MergeNoobNEW.Controller 
 	local script = Instance.new('LocalScript', MergeNoobNEW)
 
 	local list = {
@@ -961,8 +973,8 @@ local function YEGDQFE_fake_script() -- MergeNoobNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(YEGDQFE_fake_script)()
-local function JVYKGQ_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(PYFFS_fake_script)()
+local function SINDX_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1040,4 +1052,4 @@ local function JVYKGQ_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(JVYKGQ_fake_script)()
+coroutine.wrap(SINDX_fake_script)()
