@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local newnewnewnewnwe = Instance.new("ScreenGui")
+local PoopYourselfNEWPOSTED = Instance.new("ScreenGui")
 local ImageLabel = Instance.new("ImageLabel")
 local Container = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -61,10 +61,10 @@ local UICorner_19 = Instance.new("UICorner")
 
 --Properties:
 
-newnewnewnewnwe.Name = "Poop Yourself!"
-newnewnewnewnwe.Parent = game.CoreGui
+PoopYourselfNEWPOSTED.Name = "Poop Yourself! NEW POSTED"
+PoopYourselfNEWPOSTED.Parent = game.CoreGui
 
-ImageLabel.Parent = newnewnewnewnwe
+ImageLabel.Parent = PoopYourselfNEWPOSTED
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
@@ -94,6 +94,7 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456284, 0)
 ContainerList.Size = UDim2.new(0, 289, 0, 240)
+ContainerList.CanvasPosition = Vector2.new(0, 140)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -426,7 +427,7 @@ ImageButton.Image = "rbxassetid://78665648888960"
 ImageButton.ScaleType = Enum.ScaleType.Fit
 
 PhoneManager.Name = "PhoneManager"
-PhoneManager.Parent = newnewnewnewnwe
+PhoneManager.Parent = PoopYourselfNEWPOSTED
 PhoneManager.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PhoneManager.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PhoneManager.BorderSizePixel = 0
@@ -440,7 +441,7 @@ UICorner_19.Parent = PhoneManager
 
 -- Scripts:
 
-local function HDCGHB_fake_script() -- Trigger.Controller 
+local function JVFAF_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -479,8 +480,8 @@ local function HDCGHB_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(HDCGHB_fake_script)()
-local function TXPU_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(JVFAF_fake_script)()
+local function JMIXMQA_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -526,8 +527,8 @@ local function TXPU_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(TXPU_fake_script)()
-local function AELCUN_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(JMIXMQA_fake_script)()
+local function TVDATRE_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -573,8 +574,8 @@ local function AELCUN_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(AELCUN_fake_script)()
-local function PCFAH_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(TVDATRE_fake_script)()
+local function YITS_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -596,32 +597,16 @@ local function PCFAH_fake_script() -- Trigger_4.Controller
 		
 		while status do
 			pcall(function()
-				-- Получаем объект, на который хотим сымитировать касание
-				local targetPart = workspace.Rebirth
-				local touchInterest = targetPart:FindFirstChild("TouchInterest")
-	
-				-- Проверяем наличие TouchInterest
-				if touchInterest then
-					local player = game.Players.LocalPlayer
-					local character = player.Character or player.CharacterAdded:Wait()
-					local rootPart = character:WaitForChild("HumanoidRootPart")
-	
-					-- Симулируем касание
-					firetouchinterest(targetPart, rootPart, 0)
-					task.wait()
-					firetouchinterest(targetPart, rootPart, 1)
-	
-					print("TouchInterest в Rebirth был активирован дистанционно!")
-				else
-					warn("TouchInterest не найден в объекте Rebirth!")
-				end
+				local ReplicatedStorage = game:GetService("ReplicatedStorage")
+				local RebirthingEvent = ReplicatedStorage.RebirthingEvent -- RemoteEvent 
+				RebirthingEvent:FireServer()
 			end)
 			wait()
 		end
 	end)
 end
-coroutine.wrap(PCFAH_fake_script)()
-local function JCZZFF_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(YITS_fake_script)()
+local function VJKO_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -651,8 +636,8 @@ local function JCZZFF_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(JCZZFF_fake_script)()
-local function KREHNEP_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(VJKO_fake_script)()
+local function WDFJY_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -670,8 +655,8 @@ local function KREHNEP_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(KREHNEP_fake_script)()
-local function XRAID_fake_script() -- Toggle.Controller 
+coroutine.wrap(WDFJY_fake_script)()
+local function TUAEF_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -741,8 +726,8 @@ local function XRAID_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(XRAID_fake_script)()
-local function NIYJ_fake_script() -- ImageButton.Controller 
+coroutine.wrap(TUAEF_fake_script)()
+local function TEOHRL_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -751,8 +736,8 @@ local function NIYJ_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(NIYJ_fake_script)()
-local function OMPC_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(TEOHRL_fake_script)()
+local function HECOLR_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -834,9 +819,9 @@ local function OMPC_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(OMPC_fake_script)()
-local function AGZW_fake_script() -- newnewnewnewnwe.Controller 
-	local script = Instance.new('LocalScript', newnewnewnewnwe)
+coroutine.wrap(HECOLR_fake_script)()
+local function PJQTT_fake_script() -- PoopYourselfNEWPOSTED.Controller 
+	local script = Instance.new('LocalScript', PoopYourselfNEWPOSTED)
 
 	local list = {
 	
@@ -891,8 +876,8 @@ local function AGZW_fake_script() -- newnewnewnewnwe.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(AGZW_fake_script)()
-local function TXIU_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(PJQTT_fake_script)()
+local function NMZV_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -970,4 +955,4 @@ local function TXIU_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(TXIU_fake_script)()
+coroutine.wrap(NMZV_fake_script)()
