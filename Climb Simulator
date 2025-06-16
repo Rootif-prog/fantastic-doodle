@@ -435,7 +435,7 @@ UICorner_19.Parent = PhoneManager
 
 -- Scripts:
 
-local function OEGR_fake_script() -- Trigger.Controller 
+local function PKKBT_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -477,8 +477,8 @@ local function OEGR_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(OEGR_fake_script)()
-local function CCKC_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(PKKBT_fake_script)()
+local function XWEZG_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -537,8 +537,8 @@ local function CCKC_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(CCKC_fake_script)()
-local function RUQREV_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(XWEZG_fake_script)()
+local function SXCCORX_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -580,8 +580,8 @@ local function RUQREV_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(RUQREV_fake_script)()
-local function KRWA_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(SXCCORX_fake_script)()
+local function IQTH_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -623,8 +623,8 @@ local function KRWA_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(KRWA_fake_script)()
-local function KRRDTHA_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(IQTH_fake_script)()
+local function BTNVBU_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -669,6 +669,10 @@ local function KRRDTHA_fake_script() -- Trigger_5.Controller
 					["DinosaurEgg Hitbox"] = "Dinosaur",
 					["SharkEgg Hitbox"] = "Shark",
 					["IceEgg Hitbox"] = "Ice",
+					["FoxEgg Hitbox"] = "Fox",
+					["ForestEgg Hitbox"] = "Forest",
+					["PirateEgg Hitbox"] = "Pirate",
+					["CoralEgg Hitbox"] = "Coral",
 	
 				}
 	
@@ -710,8 +714,8 @@ local function KRRDTHA_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(KRRDTHA_fake_script)()
-local function WKKVT_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(BTNVBU_fake_script)()
+local function PWQEU_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -729,8 +733,8 @@ local function WKKVT_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(WKKVT_fake_script)()
-local function AZRCAIX_fake_script() -- Toggle.Controller 
+coroutine.wrap(PWQEU_fake_script)()
+local function KVWRCZ_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle = script.Parent
@@ -773,8 +777,8 @@ local function AZRCAIX_fake_script() -- Toggle.Controller
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(AZRCAIX_fake_script)()
-local function MSLIX_fake_script() -- ImageButton.Controller 
+coroutine.wrap(KVWRCZ_fake_script)()
+local function XYYCL_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -783,8 +787,8 @@ local function MSLIX_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(MSLIX_fake_script)()
-local function EEHBI_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(XYYCL_fake_script)()
+local function QTDRC_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -866,8 +870,8 @@ local function EEHBI_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(EEHBI_fake_script)()
-local function BLZELVB_fake_script() -- CLIMBSIMNEWPOSTED.Controller 
+coroutine.wrap(QTDRC_fake_script)()
+local function MHDFJ_fake_script() -- CLIMBSIMNEWPOSTED.Controller 
 	local script = Instance.new('LocalScript', CLIMBSIMNEWPOSTED)
 
 	local list = {
@@ -923,8 +927,8 @@ local function BLZELVB_fake_script() -- CLIMBSIMNEWPOSTED.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(BLZELVB_fake_script)()
-local function JHKFXO_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(MHDFJ_fake_script)()
+local function UOHSY_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1002,4 +1006,4 @@ local function JHKFXO_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(JHKFXO_fake_script)()
+coroutine.wrap(UOHSY_fake_script)()
