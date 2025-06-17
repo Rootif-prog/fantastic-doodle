@@ -26,18 +26,22 @@ local UICorner_6 = Instance.new("UICorner")
 local Frame_2 = Instance.new("Frame")
 local UICorner_7 = Instance.new("UICorner")
 local TextLabel_2 = Instance.new("TextLabel")
+local infcoins = Instance.new("Frame")
 local UICorner_8 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_9 = Instance.new("UICorner")
+local Trigger_3 = Instance.new("TextButton")
 local TextLabel_3 = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 local PhoneManager = Instance.new("ImageButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 
 --Properties:
 
-ChopTreesNEWPOSTED.Name = "Chop Trees! NEW"
+ChopTreesNEWPOSTED.Name = "Chop Trees! NEW POSTED"
 ChopTreesNEWPOSTED.Parent = game.CoreGui
 
 ImageLabel.Parent = ChopTreesNEWPOSTED
@@ -191,7 +195,43 @@ TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 20.000
 TextLabel_2.TextWrapped = true
 
-UICorner_8.Parent = ImageLabel
+infcoins.Name = "inf coins"
+infcoins.Parent = ContainerList
+infcoins.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+infcoins.BackgroundTransparency = 0.800
+infcoins.BorderColor3 = Color3.fromRGB(0, 0, 0)
+infcoins.BorderSizePixel = 0
+infcoins.Position = UDim2.new(0, 0, 0.209401712, 0)
+infcoins.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_8.Parent = infcoins
+
+Trigger_3.Name = "Trigger"
+Trigger_3.Parent = infcoins
+Trigger_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_3.BackgroundTransparency = 1.000
+Trigger_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.BorderSizePixel = 0
+Trigger_3.Size = UDim2.new(0, 176, 0, 38)
+Trigger_3.Font = Enum.Font.SourceSans
+Trigger_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_3.TextSize = 14.000
+Trigger_3.TextTransparency = 1.000
+
+TextLabel_3.Parent = infcoins
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_3.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_3.Font = Enum.Font.Jura
+TextLabel_3.Text = "Inf Coins"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 20.000
+TextLabel_3.TextWrapped = true
+
+UICorner_9.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -202,19 +242,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(1.05233028e-07, 0, 0, 0)
 Top.Size = UDim2.new(0, 289, 0, 40)
 
-UICorner_9.Parent = Top
+UICorner_10.Parent = Top
 
-TextLabel_3.Parent = Top
-TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_3.BackgroundTransparency = 1.000
-TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_3.BorderSizePixel = 0
-TextLabel_3.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
-TextLabel_3.Size = UDim2.new(0, 181, 0, 36)
-TextLabel_3.Font = Enum.Font.Unknown
-TextLabel_3.Text = "SpineWare"
-TextLabel_3.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_3.TextSize = 18.000
+TextLabel_4.Parent = Top
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
+TextLabel_4.Size = UDim2.new(0, 181, 0, 36)
+TextLabel_4.Font = Enum.Font.Unknown
+TextLabel_4.Text = "SpineWare"
+TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_4.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -246,12 +286,12 @@ PhoneManager.Size = UDim2.new(0, 78, 0, 78)
 PhoneManager.Visible = false
 PhoneManager.Image = "rbxassetid://122294771135712"
 
-UICorner_10.CornerRadius = UDim.new(0, 5)
-UICorner_10.Parent = PhoneManager
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = PhoneManager
 
 -- Scripts:
 
-local function VSPWCD_fake_script() -- Trigger.Controller 
+local function HTXMPKM_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -288,8 +328,8 @@ local function VSPWCD_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(VSPWCD_fake_script)()
-local function RNELH_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(HTXMPKM_fake_script)()
+local function IJBQF_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -319,9 +359,41 @@ local function RNELH_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(RNELH_fake_script)()
-local function RTFETBW_fake_script() -- TextLabel_3.Controller 
-	local script = Instance.new('LocalScript', TextLabel_3)
+coroutine.wrap(IJBQF_fake_script)()
+local function EIVJHG_fake_script() -- Trigger_3.Controller 
+	local script = Instance.new('LocalScript', Trigger_3)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			local a = {1e999999}
+			local b = game:GetService("ReplicatedStorage")
+			local c = b:WaitForChild("AwardCoins")
+			c:FireServer(unpack(a))
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(EIVJHG_fake_script)()
+local function UNHS_fake_script() -- TextLabel_4.Controller 
+	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -338,8 +410,8 @@ local function RTFETBW_fake_script() -- TextLabel_3.Controller
 		end)
 	end)
 end
-coroutine.wrap(RTFETBW_fake_script)()
-local function RKVJ_fake_script() -- Toggle.Controller 
+coroutine.wrap(UNHS_fake_script)()
+local function MZVYDP_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -409,8 +481,8 @@ local function RKVJ_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(RKVJ_fake_script)()
-local function IMQLYE_fake_script() -- ImageButton.Controller 
+coroutine.wrap(MZVYDP_fake_script)()
+local function GTBVG_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -419,8 +491,8 @@ local function IMQLYE_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(IMQLYE_fake_script)()
-local function CJVGKBO_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(GTBVG_fake_script)()
+local function YVLLAC_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -502,8 +574,8 @@ local function CJVGKBO_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(CJVGKBO_fake_script)()
-local function PNWTNS_fake_script() -- ChopTreesNEWPOSTED.Controller 
+coroutine.wrap(YVLLAC_fake_script)()
+local function DZZX_fake_script() -- ChopTreesNEWPOSTED.Controller 
 	local script = Instance.new('LocalScript', ChopTreesNEWPOSTED)
 
 	local list = {
@@ -559,8 +631,8 @@ local function PNWTNS_fake_script() -- ChopTreesNEWPOSTED.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(PNWTNS_fake_script)()
-local function EDCUHAB_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(DZZX_fake_script)()
+local function HAPRCRL_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -638,4 +710,4 @@ local function EDCUHAB_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(EDCUHAB_fake_script)()
+coroutine.wrap(HAPRCRL_fake_script)()
