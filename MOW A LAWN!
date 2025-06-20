@@ -9,7 +9,7 @@ local Container = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local ContainerList = Instance.new("ScrollingFrame")
 local UIListLayout = Instance.new("UIListLayout")
-local AutoCoin = Instance.new("Frame")
+local AutoMoney = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local Trigger = Instance.new("TextButton")
 local In = Instance.new("Frame")
@@ -85,18 +85,18 @@ UIListLayout.Parent = ContainerList
 UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 UIListLayout.Padding = UDim.new(0, 5)
 
-AutoCoin.Name = "Auto Coin"
-AutoCoin.Parent = ContainerList
-AutoCoin.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AutoCoin.BackgroundTransparency = 0.800
-AutoCoin.BorderColor3 = Color3.fromRGB(0, 0, 0)
-AutoCoin.BorderSizePixel = 0
-AutoCoin.Size = UDim2.new(0, 258, 0, 44)
+AutoMoney.Name = "Auto Money"
+AutoMoney.Parent = ContainerList
+AutoMoney.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AutoMoney.BackgroundTransparency = 0.800
+AutoMoney.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AutoMoney.BorderSizePixel = 0
+AutoMoney.Size = UDim2.new(0, 258, 0, 44)
 
-UICorner_2.Parent = AutoCoin
+UICorner_2.Parent = AutoMoney
 
 Trigger.Name = "Trigger"
-Trigger.Parent = AutoCoin
+Trigger.Parent = AutoMoney
 Trigger.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Trigger.BackgroundTransparency = 1.000
 Trigger.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -108,7 +108,7 @@ Trigger.TextSize = 14.000
 Trigger.TextTransparency = 1.000
 
 In.Name = "In"
-In.Parent = AutoCoin
+In.Parent = AutoMoney
 In.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 In.BackgroundTransparency = 0.600
 In.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -127,7 +127,7 @@ Frame.Size = UDim2.new(0, 18, 0, 17)
 
 UICorner_4.Parent = Frame
 
-TextLabel.Parent = AutoCoin
+TextLabel.Parent = AutoMoney
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -135,7 +135,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.011363646, 0, 0, 0)
 TextLabel.Size = UDim2.new(0, 220, 0, 44)
 TextLabel.Font = Enum.Font.Jura
-TextLabel.Text = "Auto Coin"
+TextLabel.Text = "Auto Money"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 20.000
 TextLabel.TextWrapped = true
@@ -314,7 +314,7 @@ UICorner_13.Parent = PhoneManager
 
 -- Scripts:
 
-local function JLUOPX_fake_script() -- Trigger.Controller 
+local function WSRHT_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -351,8 +351,8 @@ local function JLUOPX_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(JLUOPX_fake_script)()
-local function GHOABHD_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(WSRHT_fake_script)()
+local function NYOO_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -394,8 +394,8 @@ local function GHOABHD_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(GHOABHD_fake_script)()
-local function VOYFA_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(NYOO_fake_script)()
+local function DPUWQLX_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -434,8 +434,8 @@ local function VOYFA_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(VOYFA_fake_script)()
-local function OBLPWR_fake_script() -- TextLabel_4.Controller 
+coroutine.wrap(DPUWQLX_fake_script)()
+local function HETFKKT_fake_script() -- TextLabel_4.Controller 
 	local script = Instance.new('LocalScript', TextLabel_4)
 
 	local ts = game:GetService("TweenService")
@@ -453,8 +453,8 @@ local function OBLPWR_fake_script() -- TextLabel_4.Controller
 		end)
 	end)
 end
-coroutine.wrap(OBLPWR_fake_script)()
-local function KHZY_fake_script() -- Toggle.Controller 
+coroutine.wrap(HETFKKT_fake_script)()
+local function ARRE_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -524,8 +524,8 @@ local function KHZY_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(KHZY_fake_script)()
-local function VHFB_fake_script() -- ImageButton.Controller 
+coroutine.wrap(ARRE_fake_script)()
+local function MYVMU_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -534,8 +534,8 @@ local function VHFB_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(VHFB_fake_script)()
-local function IQCH_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(MYVMU_fake_script)()
+local function OQUMU_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -617,8 +617,8 @@ local function IQCH_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(IQCH_fake_script)()
-local function IJUKSS_fake_script() -- MOWALAWNNEW.Controller 
+coroutine.wrap(OQUMU_fake_script)()
+local function TFNNM_fake_script() -- MOWALAWNNEW.Controller 
 	local script = Instance.new('LocalScript', MOWALAWNNEW)
 
 	local list = {
@@ -674,8 +674,8 @@ local function IJUKSS_fake_script() -- MOWALAWNNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(IJUKSS_fake_script)()
-local function KDAUDYV_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(TFNNM_fake_script)()
+local function CUYNRU_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -753,4 +753,4 @@ local function KDAUDYV_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(KDAUDYV_fake_script)()
+coroutine.wrap(CUYNRU_fake_script)()
