@@ -440,7 +440,7 @@ UICorner_19.Parent = PhoneManager
 
 -- Scripts:
 
-local function IZSHGAW_fake_script() -- Trigger.Controller 
+local function QRJJSQ_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -473,8 +473,8 @@ local function IZSHGAW_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(IZSHGAW_fake_script)()
-local function BOFNRUO_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(QRJJSQ_fake_script)()
+local function ITFUCUT_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -536,8 +536,8 @@ local function BOFNRUO_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(BOFNRUO_fake_script)()
-local function QOMI_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(ITFUCUT_fake_script)()
+local function ZOSOZ_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -599,8 +599,8 @@ local function QOMI_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(QOMI_fake_script)()
-local function UOHFC_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(ZOSOZ_fake_script)()
+local function OILD_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -662,8 +662,8 @@ local function UOHFC_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(UOHFC_fake_script)()
-local function LJRJZ_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(OILD_fake_script)()
+local function GWDN_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -688,7 +688,7 @@ local function LJRJZ_fake_script() -- Trigger_5.Controller
 				local player = game.Players.LocalPlayer
 				local character = player.Character or player.CharacterAdded:Wait()
 	
-				local zoneFolder = workspace.Map.Technical.Zones.Zone4
+				local zoneFolder = workspace.Map.Technical.Zones.Zone5
 	
 				local rootPart = character:WaitForChild("HumanoidRootPart")
 				local targetCFrame = rootPart.CFrame * CFrame.new(0, 0, -5)
@@ -725,8 +725,8 @@ local function LJRJZ_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(LJRJZ_fake_script)()
-local function TCWGT_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(GWDN_fake_script)()
+local function ACMWZY_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -744,8 +744,8 @@ local function TCWGT_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(TCWGT_fake_script)()
-local function XVWKDV_fake_script() -- Toggle.Controller 
+coroutine.wrap(ACMWZY_fake_script)()
+local function ECQK_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -815,8 +815,8 @@ local function XVWKDV_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(XVWKDV_fake_script)()
-local function CDWHFZ_fake_script() -- ImageButton.Controller 
+coroutine.wrap(ECQK_fake_script)()
+local function HGAS_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -825,8 +825,8 @@ local function CDWHFZ_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(CDWHFZ_fake_script)()
-local function CDWS_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(HGAS_fake_script)()
+local function EOZJ_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -908,8 +908,8 @@ local function CDWS_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(CDWS_fake_script)()
-local function BTDV_fake_script() -- STEALSELLNEWPOSTED.Controller 
+coroutine.wrap(EOZJ_fake_script)()
+local function UOSWB_fake_script() -- STEALSELLNEWPOSTED.Controller 
 	local script = Instance.new('LocalScript', STEALSELLNEWPOSTED)
 
 	local list = {
@@ -965,8 +965,8 @@ local function BTDV_fake_script() -- STEALSELLNEWPOSTED.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(BTDV_fake_script)()
-local function HGYVDQZ_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(UOSWB_fake_script)()
+local function GCFQZRA_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1044,4 +1044,4 @@ local function HGYVDQZ_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(HGYVDQZ_fake_script)()
+coroutine.wrap(GCFQZRA_fake_script)()
