@@ -42,14 +42,22 @@ local UICorner_12 = Instance.new("UICorner")
 local Frame_4 = Instance.new("Frame")
 local UICorner_13 = Instance.new("UICorner")
 local TextLabel_4 = Instance.new("TextLabel")
+local BuyperkX2DAMAGE4K = Instance.new("Frame")
 local UICorner_14 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_15 = Instance.new("UICorner")
+local Trigger_5 = Instance.new("TextButton")
 local TextLabel_5 = Instance.new("TextLabel")
+local BuyperkGunUp5250 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Trigger_6 = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 local PhoneManager = Instance.new("ImageButton")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 
 --Properties:
 
@@ -86,6 +94,7 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456284, 0)
 ContainerList.Size = UDim2.new(0, 289, 0, 240)
+ContainerList.CanvasPosition = Vector2.new(0, 140)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -317,7 +326,79 @@ TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 20.000
 TextLabel_4.TextWrapped = true
 
-UICorner_14.Parent = ImageLabel
+BuyperkX2DAMAGE4K.Name = "Buy perk X2 DAMAGE(4K$)"
+BuyperkX2DAMAGE4K.Parent = ContainerList
+BuyperkX2DAMAGE4K.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyperkX2DAMAGE4K.BackgroundTransparency = 0.800
+BuyperkX2DAMAGE4K.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BuyperkX2DAMAGE4K.BorderSizePixel = 0
+BuyperkX2DAMAGE4K.Position = UDim2.new(0, 0, 0.209401712, 0)
+BuyperkX2DAMAGE4K.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_14.Parent = BuyperkX2DAMAGE4K
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = BuyperkX2DAMAGE4K
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 176, 0, 38)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+TextLabel_5.Parent = BuyperkX2DAMAGE4K
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "Buy perk X2 DAMAGE(4K$)"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
+
+BuyperkGunUp5250.Name = "Buy perk Gun Up(5250$)"
+BuyperkGunUp5250.Parent = ContainerList
+BuyperkGunUp5250.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BuyperkGunUp5250.BackgroundTransparency = 0.800
+BuyperkGunUp5250.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BuyperkGunUp5250.BorderSizePixel = 0
+BuyperkGunUp5250.Position = UDim2.new(0, 0, 0.209401712, 0)
+BuyperkGunUp5250.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_15.Parent = BuyperkGunUp5250
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = BuyperkGunUp5250
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 176, 0, 38)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+TextLabel_6.Parent = BuyperkGunUp5250
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_6.Font = Enum.Font.Jura
+TextLabel_6.Text = "Buy perk Gun Up(5250$)"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 20.000
+TextLabel_6.TextWrapped = true
+
+UICorner_16.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -328,19 +409,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(1.05233028e-07, 0, 0, 0)
 Top.Size = UDim2.new(0, 289, 0, 40)
 
-UICorner_15.Parent = Top
+UICorner_17.Parent = Top
 
-TextLabel_5.Parent = Top
-TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_5.BorderSizePixel = 0
-TextLabel_5.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
-TextLabel_5.Size = UDim2.new(0, 181, 0, 36)
-TextLabel_5.Font = Enum.Font.Unknown
-TextLabel_5.Text = "SpineWare"
-TextLabel_5.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_5.TextSize = 18.000
+TextLabel_7.Parent = Top
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
+TextLabel_7.Size = UDim2.new(0, 181, 0, 36)
+TextLabel_7.Font = Enum.Font.Unknown
+TextLabel_7.Text = "SpineWare"
+TextLabel_7.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_7.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -372,15 +453,15 @@ PhoneManager.Size = UDim2.new(0, 78, 0, 78)
 PhoneManager.Visible = false
 PhoneManager.Image = "rbxassetid://122294771135712"
 
-UICorner_16.CornerRadius = UDim.new(0, 5)
-UICorner_16.Parent = PhoneManager
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = PhoneManager
 
 -- Scripts:
 
-local function FGUT_fake_script() -- Trigger.Controller 
+local function JYQXZQQ_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
-	
+	-- LocalScript в твоём GUI-кнопке
 	
 	local TweenService      = game:GetService("TweenService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -391,18 +472,18 @@ local function FGUT_fake_script() -- Trigger.Controller
 	local frame     = button.Parent.In
 	local indicator = frame.Frame
 	
-	
+	-- GUI-твины
 	local ts    = function(obj, info, props) return TweenService:Create(obj, info, props) end
 	local big   = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	
+	-- Состояние
 	local enabled     = false
 	local childConn   -- мы всё ещё слушаем появление новых врагов
 	local shooting    = false  -- флаг автоповтора
 	local LOOP_DELAY  = 0.9    -- задержка между циклами
 	
-	
+	-- Список частей для попаданий
 	local bodyParts = {
 		"Head","UpperTorso","LowerTorso",
 		"LeftUpperArm","RightUpperArm",
@@ -411,7 +492,7 @@ local function FGUT_fake_script() -- Trigger.Controller
 	local nextIndex = 1
 	local rand = Random.new()
 	
-	
+	-- Стрельба в одну модель
 	local function send(enemy)
 		local partName = bodyParts[nextIndex]
 		nextIndex = nextIndex % #bodyParts + 1
@@ -430,31 +511,31 @@ local function FGUT_fake_script() -- Trigger.Controller
 		ShootEnemy:FireServer(enemy, part, part.Position + jitter, 0, "B9")
 	end
 	
-	
+	-- Один проход по всем врагам
 	local function shootAll()
 		for _, e in ipairs(EnemiesFolder:GetChildren()) do
 			send(e)
 		end
 	end
 	
-	
+	-- Запуск автоповтора и подписка на новых
 	local function startShooting()
 		shooting = true
-		
+		-- корутина автоповтора
 		spawn(function()
 			while shooting do
 				shootAll()
 				wait(LOOP_DELAY)
 			end
 		end)
-		
+		-- на случай новых врагов — стреляем сразу в них
 		childConn = EnemiesFolder.ChildAdded:Connect(function(newEnemy)
 			wait(0.9)
 			send(newEnemy)
 		end)
 	end
 	
-	
+	-- Остановка всего
 	local function stopShooting()
 		shooting = false
 		if childConn then
@@ -463,16 +544,16 @@ local function FGUT_fake_script() -- Trigger.Controller
 		end
 	end
 	
-	
+	-- GUI-клик
 	button.MouseButton1Click:Connect(function()
 		if not enabled then
-			
+			-- включаем
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.568627,0.85098,0)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 			startShooting()
 			enabled = true
 		else
-			
+			-- выключаем
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.239216,0.239216,0.239216)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 			stopShooting()
@@ -481,8 +562,8 @@ local function FGUT_fake_script() -- Trigger.Controller
 	end)
 	
 end
-coroutine.wrap(FGUT_fake_script)()
-local function CPXXWMM_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(JYQXZQQ_fake_script)()
+local function BMPXQK_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local Players      = game:GetService("Players")
@@ -493,19 +574,19 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 	local guiFrame     = guiButton.Parent.In
 	local guiIndicator = guiFrame.Frame
 	
-	
+	-- GUI-твины: обёртка-функция + параметры
 	local ts    = function(obj, tweenInfo, props) return TweenService:Create(obj, tweenInfo, props) end
 	local info  = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	
+	-- Hover-настройки
 	local HOVER_HEIGHT = 30
 	
-	
+	-- Сохраним оригинальный HipHeight и коннектор
 	local originalHipHeight
 	local charConn
 	
-	
+	-- Применить hover-эффект к персонажу
 	local function applyHover(character)
 		local humanoid = character:FindFirstChildOfClass("Humanoid")
 		if not humanoid then return end
@@ -515,7 +596,7 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 		humanoid.HipHeight = HOVER_HEIGHT
 	end
 	
-	
+	-- Убрать hover-эффект и вернуть HipHeight
 	local function removeHover()
 		if charConn then
 			charConn:Disconnect()
@@ -535,20 +616,20 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 	
 	guiButton.MouseButton1Click:Connect(function()
 		if not status then
-			
+			-- Включаем GUI-индикатор
 			ts(guiFrame, info, {BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
 			ts(guiIndicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 	
-			
+			-- Применяем hover к текущему персонажу
 			if player.Character then
 				applyHover(player.Character)
 			end
-			
+			-- Подписываемся на будущие спавны
 			charConn = player.CharacterAdded:Connect(applyHover)
 	
 			status = true
 		else
-			
+			-- Выключаем GUI-индикатор
 			ts(guiFrame, info, {BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
 			ts(guiIndicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 	
@@ -558,8 +639,8 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 	end)
 	
 end
-coroutine.wrap(CPXXWMM_fake_script)()
-local function XSKEE_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(BMPXQK_fake_script)()
+local function HPZAQ_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -589,11 +670,11 @@ local function XSKEE_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(XSKEE_fake_script)()
-local function XWAQN_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(HPZAQ_fake_script)()
+local function ZJYJ_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
-	-- LocalScript
+	-- LocalScript в твоём GUI-кнопке
 	
 	local TweenService      = game:GetService("TweenService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -609,16 +690,16 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 	local big   = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	
+	-- Состояние
 	local enabled    = false
 	local childConn  -- слушаем новых врагов
-	local shooting   = false  
-	local LOOP_DELAY = 0.9    
+	local shooting   = false  -- флаг автоповтора
+	local LOOP_DELAY = 0.9    -- задержка между циклами
 	
+	-- Настройка пакетов попаданий
+	local PACKETS_PER_TARGET = 10  -- сколько «пакетов» шлём за один цикл
 	
-	local PACKETS_PER_TARGET = 10  
-	
-	
+	-- Генератор случайного дрожания позиции
 	local rand = Random.new()
 	
 	-- Стрельба в голову одной модели (один пакет)
@@ -634,7 +715,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		ShootEnemy:FireServer(enemy, head, head.Position + jitter, 0, "B9")
 	end
 	
-	
+	-- Один проход по всем врагам, шлём по несколько пакетов на каждого
 	local function shootAll()
 		for _, e in ipairs(EnemiesFolder:GetChildren()) do
 			for i = 1, PACKETS_PER_TARGET do
@@ -643,7 +724,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end
 	end
 	
-	
+	-- Запуск автоповтора и подписка на новых
 	local function startShooting()
 		shooting = true
 		-- корутина автоповтора
@@ -653,7 +734,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 				wait(LOOP_DELAY)
 			end
 		end)
-		
+		-- на случай новых врагов — шлём им сразу по пакетам
 		childConn = EnemiesFolder.ChildAdded:Connect(function(newEnemy)
 			wait(0.9)
 			for i = 1, PACKETS_PER_TARGET do
@@ -662,7 +743,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end)
 	end
 	
-	
+	-- Остановка всего
 	local function stopShooting()
 		shooting = false
 		if childConn then
@@ -671,16 +752,16 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end
 	end
 	
-	
+	-- Обработчик клика по кнопке
 	button.MouseButton1Click:Connect(function()
 		if not enabled then
-			
+			-- включаем
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 			startShooting()
 			enabled = true
 		else
-			
+			-- выключаем
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 			stopShooting()
@@ -689,9 +770,149 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 	end)
 	
 end
-coroutine.wrap(XWAQN_fake_script)()
-local function ZFLRG_fake_script() -- TextLabel_5.Controller 
-	local script = Instance.new('LocalScript', TextLabel_5)
+coroutine.wrap(ZJYJ_fake_script)()
+local function DBDUTNN_fake_script() -- Trigger_5.Controller 
+	local script = Instance.new('LocalScript', Trigger_5)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript в StarterPlayerScripts
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			-- дождёмся персонажа и HRP
+			local char = player.Character or player.CharacterAdded:Wait()
+			local hrp  = char:WaitForChild("HumanoidRootPart")
+	
+			-- функция активации 2X DMG MACHINE
+			local function activate2x()
+				-- сохраняем исходную позицию
+				local originalCFrame = hrp.CFrame
+	
+				-- находим промпт
+				local prompt = workspace
+					:WaitForChild("Interactable")
+					:WaitForChild("2X DMG MACHINE")
+					:WaitForChild("Base")
+					:WaitForChild("ProximityPrompt")
+	
+				-- убираем ограничения
+				prompt.RequiresLineOfSight   = false
+				prompt.MaxActivationDistance = 1e4
+				prompt.HoldDuration          = 0
+	
+				-- телепортируемся чуть выше базы
+				local baseCFrame = prompt.Parent.CFrame
+				hrp.CFrame = baseCFrame + Vector3.new(0, 3, 0)
+	
+				-- ждём пару фреймов, чтобы телепорт «подхватился»
+				task.wait(1)
+	
+				-- активируем
+				fireproximityprompt(prompt)
+	
+				-- возвращаемся назад
+				hrp.CFrame = originalCFrame
+			end
+	
+			-- запустим сразу (или подвесь на кнопку GUI)
+			activate2x()
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(DBDUTNN_fake_script)()
+local function WJEF_fake_script() -- Trigger_6.Controller 
+	local script = Instance.new('LocalScript', Trigger_6)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript в StarterPlayerScripts
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			-- дождёмся персонажа и HRP
+			local char = player.Character or player.CharacterAdded:Wait()
+			local hrp  = char:WaitForChild("HumanoidRootPart")
+	
+			-- функция активации Enhance-промпта
+			local function activateEnhance()
+				-- сохраняем исходную позицию
+				local originalCFrame = hrp.CFrame
+	
+				-- находим Enhance-промпт
+				local prompt = workspace
+					:WaitForChild("Interactable")
+					:WaitForChild("Enhance")
+					:WaitForChild("Root")
+					:WaitForChild("ProximityPrompt")
+	
+				-- убираем ограничения
+				prompt.RequiresLineOfSight   = false
+				prompt.MaxActivationDistance = 1e4
+				prompt.HoldDuration          = 0
+	
+				-- телепортируемся чуть выше базы промпта
+				local baseCFrame = prompt.Parent.CFrame
+				hrp.CFrame = baseCFrame + Vector3.new(0, 3, 0)
+	
+				-- ждём один тик, чтобы телепорт применился
+				task.wait(1)
+	
+				-- активируем
+				fireproximityprompt(prompt)
+	
+				-- возвращаемся к исходной позиции
+				hrp.CFrame = originalCFrame
+			end
+	
+			-- Запускаем сразу (или вызовите эту функцию по своему триггеру)
+			activateEnhance()
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(WJEF_fake_script)()
+local function AJDKE_fake_script() -- TextLabel_7.Controller 
+	local script = Instance.new('LocalScript', TextLabel_7)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -708,8 +929,8 @@ local function ZFLRG_fake_script() -- TextLabel_5.Controller
 		end)
 	end)
 end
-coroutine.wrap(ZFLRG_fake_script)()
-local function MSHY_fake_script() -- Toggle.Controller 
+coroutine.wrap(AJDKE_fake_script)()
+local function VZWXOF_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -779,8 +1000,8 @@ local function MSHY_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(MSHY_fake_script)()
-local function MXACPUK_fake_script() -- ImageButton.Controller 
+coroutine.wrap(VZWXOF_fake_script)()
+local function UTQFCE_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -789,8 +1010,8 @@ local function MXACPUK_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(MXACPUK_fake_script)()
-local function QSRNGLK_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(UTQFCE_fake_script)()
+local function ZUGOO_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -872,8 +1093,8 @@ local function QSRNGLK_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(QSRNGLK_fake_script)()
-local function QOXWVQ_fake_script() -- POLYZRNGZombieSurvivalNEW.Controller 
+coroutine.wrap(ZUGOO_fake_script)()
+local function DGPB_fake_script() -- POLYZRNGZombieSurvivalNEW.Controller 
 	local script = Instance.new('LocalScript', POLYZRNGZombieSurvivalNEW)
 
 	local list = {
@@ -929,8 +1150,8 @@ local function QOXWVQ_fake_script() -- POLYZRNGZombieSurvivalNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(QOXWVQ_fake_script)()
-local function CXNHWK_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(DGPB_fake_script)()
+local function NKPADV_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1008,4 +1229,4 @@ local function CXNHWK_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(CXNHWK_fake_script)()
+coroutine.wrap(NKPADV_fake_script)()
