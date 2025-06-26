@@ -380,7 +380,7 @@ UICorner_16.Parent = PhoneManager
 local function FGUT_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
-	-- LocalScript в твоём GUI-кнопке
+	
 	
 	local TweenService      = game:GetService("TweenService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -391,18 +391,18 @@ local function FGUT_fake_script() -- Trigger.Controller
 	local frame     = button.Parent.In
 	local indicator = frame.Frame
 	
-	-- GUI-твины
+	
 	local ts    = function(obj, info, props) return TweenService:Create(obj, info, props) end
 	local big   = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	-- Состояние
+	
 	local enabled     = false
 	local childConn   -- мы всё ещё слушаем появление новых врагов
 	local shooting    = false  -- флаг автоповтора
 	local LOOP_DELAY  = 0.9    -- задержка между циклами
 	
-	-- Список частей для попаданий
+	
 	local bodyParts = {
 		"Head","UpperTorso","LowerTorso",
 		"LeftUpperArm","RightUpperArm",
@@ -411,7 +411,7 @@ local function FGUT_fake_script() -- Trigger.Controller
 	local nextIndex = 1
 	local rand = Random.new()
 	
-	-- Стрельба в одну модель
+	
 	local function send(enemy)
 		local partName = bodyParts[nextIndex]
 		nextIndex = nextIndex % #bodyParts + 1
@@ -430,31 +430,31 @@ local function FGUT_fake_script() -- Trigger.Controller
 		ShootEnemy:FireServer(enemy, part, part.Position + jitter, 0, "B9")
 	end
 	
-	-- Один проход по всем врагам
+	
 	local function shootAll()
 		for _, e in ipairs(EnemiesFolder:GetChildren()) do
 			send(e)
 		end
 	end
 	
-	-- Запуск автоповтора и подписка на новых
+	
 	local function startShooting()
 		shooting = true
-		-- корутина автоповтора
+		
 		spawn(function()
 			while shooting do
 				shootAll()
 				wait(LOOP_DELAY)
 			end
 		end)
-		-- на случай новых врагов — стреляем сразу в них
+		
 		childConn = EnemiesFolder.ChildAdded:Connect(function(newEnemy)
 			wait(0.9)
 			send(newEnemy)
 		end)
 	end
 	
-	-- Остановка всего
+	
 	local function stopShooting()
 		shooting = false
 		if childConn then
@@ -463,16 +463,16 @@ local function FGUT_fake_script() -- Trigger.Controller
 		end
 	end
 	
-	-- GUI-клик
+	
 	button.MouseButton1Click:Connect(function()
 		if not enabled then
-			-- включаем
+			
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.568627,0.85098,0)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 			startShooting()
 			enabled = true
 		else
-			-- выключаем
+			
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.239216,0.239216,0.239216)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 			stopShooting()
@@ -493,19 +493,19 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 	local guiFrame     = guiButton.Parent.In
 	local guiIndicator = guiFrame.Frame
 	
-	-- GUI-твины: обёртка-функция + параметры
+	
 	local ts    = function(obj, tweenInfo, props) return TweenService:Create(obj, tweenInfo, props) end
 	local info  = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	-- Hover-настройки
+	
 	local HOVER_HEIGHT = 30
 	
-	-- Сохраним оригинальный HipHeight и коннектор
+	
 	local originalHipHeight
 	local charConn
 	
-	-- Применить hover-эффект к персонажу
+	
 	local function applyHover(character)
 		local humanoid = character:FindFirstChildOfClass("Humanoid")
 		if not humanoid then return end
@@ -515,7 +515,7 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 		humanoid.HipHeight = HOVER_HEIGHT
 	end
 	
-	-- Убрать hover-эффект и вернуть HipHeight
+	
 	local function removeHover()
 		if charConn then
 			charConn:Disconnect()
@@ -535,20 +535,20 @@ local function CPXXWMM_fake_script() -- Trigger_2.Controller
 	
 	guiButton.MouseButton1Click:Connect(function()
 		if not status then
-			-- Включаем GUI-индикатор
+			
 			ts(guiFrame, info, {BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
 			ts(guiIndicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 	
-			-- Применяем hover к текущему персонажу
+			
 			if player.Character then
 				applyHover(player.Character)
 			end
-			-- Подписываемся на будущие спавны
+			
 			charConn = player.CharacterAdded:Connect(applyHover)
 	
 			status = true
 		else
-			-- Выключаем GUI-индикатор
+			
 			ts(guiFrame, info, {BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
 			ts(guiIndicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 	
@@ -593,7 +593,7 @@ coroutine.wrap(XSKEE_fake_script)()
 local function XWAQN_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
-	-- LocalScript в твоём GUI-кнопке
+	-- LocalScript
 	
 	local TweenService      = game:GetService("TweenService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
@@ -609,16 +609,16 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 	local big   = TweenInfo.new(1.3)
 	local small = TweenInfo.new(0.7)
 	
-	-- Состояние
+	
 	local enabled    = false
 	local childConn  -- слушаем новых врагов
-	local shooting   = false  -- флаг автоповтора
-	local LOOP_DELAY = 0.9    -- задержка между циклами
+	local shooting   = false  
+	local LOOP_DELAY = 0.9    
 	
-	-- Настройка пакетов попаданий
-	local PACKETS_PER_TARGET = 15  -- сколько «пакетов» шлём за один цикл
 	
-	-- Генератор случайного дрожания позиции
+	local PACKETS_PER_TARGET = 10  
+	
+	
 	local rand = Random.new()
 	
 	-- Стрельба в голову одной модели (один пакет)
@@ -634,7 +634,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		ShootEnemy:FireServer(enemy, head, head.Position + jitter, 0, "B9")
 	end
 	
-	-- Один проход по всем врагам, шлём по несколько пакетов на каждого
+	
 	local function shootAll()
 		for _, e in ipairs(EnemiesFolder:GetChildren()) do
 			for i = 1, PACKETS_PER_TARGET do
@@ -643,7 +643,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end
 	end
 	
-	-- Запуск автоповтора и подписка на новых
+	
 	local function startShooting()
 		shooting = true
 		-- корутина автоповтора
@@ -653,7 +653,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 				wait(LOOP_DELAY)
 			end
 		end)
-		-- на случай новых врагов — шлём им сразу по пакетам
+		
 		childConn = EnemiesFolder.ChildAdded:Connect(function(newEnemy)
 			wait(0.9)
 			for i = 1, PACKETS_PER_TARGET do
@@ -662,7 +662,7 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end)
 	end
 	
-	-- Остановка всего
+	
 	local function stopShooting()
 		shooting = false
 		if childConn then
@@ -671,16 +671,16 @@ local function XWAQN_fake_script() -- Trigger_4.Controller
 		end
 	end
 	
-	-- Обработчик клика по кнопке
+	
 	button.MouseButton1Click:Connect(function()
 		if not enabled then
-			-- включаем
+			
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,24,0,0)}):Play()
 			startShooting()
 			enabled = true
 		else
-			-- выключаем
+			
 			ts(frame, big,   {BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
 			ts(indicator, small, {Position = UDim2.new(0,0,0,0)}):Play()
 			stopShooting()
