@@ -3,7 +3,7 @@
 
 -- Instances:
 
-local EvolveRise = Instance.new("ScreenGui")
+local EvolveRiseNEWPOSTED = Instance.new("ScreenGui")
 local ImageLabel = Instance.new("ImageLabel")
 local Container = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -34,21 +34,41 @@ local UICorner_9 = Instance.new("UICorner")
 local Frame_3 = Instance.new("Frame")
 local UICorner_10 = Instance.new("UICorner")
 local TextLabel_3 = Instance.new("TextLabel")
+local TP1WORLD = Instance.new("Frame")
 local UICorner_11 = Instance.new("UICorner")
-local Top = Instance.new("Frame")
-local UICorner_12 = Instance.new("UICorner")
+local Trigger_4 = Instance.new("TextButton")
 local TextLabel_4 = Instance.new("TextLabel")
+local TP2WORLD = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Trigger_5 = Instance.new("TextButton")
+local TextLabel_5 = Instance.new("TextLabel")
+local TP3WORLD = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local Trigger_6 = Instance.new("TextButton")
+local TextLabel_6 = Instance.new("TextLabel")
+local TP4WORLD = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local Trigger_7 = Instance.new("TextButton")
+local TextLabel_7 = Instance.new("TextLabel")
+local TP5WORLD = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local Trigger_8 = Instance.new("TextButton")
+local TextLabel_8 = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local Top = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
 local Toggle = Instance.new("ImageButton")
 local ImageButton = Instance.new("ImageButton")
 local PhoneManager = Instance.new("ImageButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 
 --Properties:
 
-EvolveRise.Name = "Evolve&Rise"
-EvolveRise.Parent = game.CoreGui
+EvolveRiseNEWPOSTED.Name = "Evolve&Rise NEW POSTED"
+EvolveRiseNEWPOSTED.Parent = game.CoreGui
 
-ImageLabel.Parent = EvolveRise
+ImageLabel.Parent = EvolveRiseNEWPOSTED
 ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ImageLabel.BorderSizePixel = 0
@@ -78,6 +98,7 @@ ContainerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ContainerList.BorderSizePixel = 0
 ContainerList.Position = UDim2.new(0, 0, 0.0290456284, 0)
 ContainerList.Size = UDim2.new(0, 289, 0, 240)
+ContainerList.CanvasPosition = Vector2.new(0, 140)
 ContainerList.TopImage = ""
 ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 
@@ -254,7 +275,187 @@ TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 20.000
 TextLabel_3.TextWrapped = true
 
-UICorner_11.Parent = ImageLabel
+TP1WORLD.Name = "TP 1 WORLD"
+TP1WORLD.Parent = ContainerList
+TP1WORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP1WORLD.BackgroundTransparency = 0.800
+TP1WORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TP1WORLD.BorderSizePixel = 0
+TP1WORLD.Position = UDim2.new(0, 0, 0.209401712, 0)
+TP1WORLD.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_11.Parent = TP1WORLD
+
+Trigger_4.Name = "Trigger"
+Trigger_4.Parent = TP1WORLD
+Trigger_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_4.BackgroundTransparency = 1.000
+Trigger_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.BorderSizePixel = 0
+Trigger_4.Size = UDim2.new(0, 176, 0, 38)
+Trigger_4.Font = Enum.Font.SourceSans
+Trigger_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_4.TextSize = 14.000
+Trigger_4.TextTransparency = 1.000
+
+TextLabel_4.Parent = TP1WORLD
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_4.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_4.Font = Enum.Font.Jura
+TextLabel_4.Text = "TP 1 WORLD"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 20.000
+TextLabel_4.TextWrapped = true
+
+TP2WORLD.Name = "TP 2 WORLD"
+TP2WORLD.Parent = ContainerList
+TP2WORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP2WORLD.BackgroundTransparency = 0.800
+TP2WORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TP2WORLD.BorderSizePixel = 0
+TP2WORLD.Position = UDim2.new(0, 0, 0.209401712, 0)
+TP2WORLD.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_12.Parent = TP2WORLD
+
+Trigger_5.Name = "Trigger"
+Trigger_5.Parent = TP2WORLD
+Trigger_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_5.BackgroundTransparency = 1.000
+Trigger_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.BorderSizePixel = 0
+Trigger_5.Size = UDim2.new(0, 176, 0, 38)
+Trigger_5.Font = Enum.Font.SourceSans
+Trigger_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_5.TextSize = 14.000
+Trigger_5.TextTransparency = 1.000
+
+TextLabel_5.Parent = TP2WORLD
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_5.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_5.Font = Enum.Font.Jura
+TextLabel_5.Text = "TP 2 WORLD"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 20.000
+TextLabel_5.TextWrapped = true
+
+TP3WORLD.Name = "TP 3 WORLD"
+TP3WORLD.Parent = ContainerList
+TP3WORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP3WORLD.BackgroundTransparency = 0.800
+TP3WORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TP3WORLD.BorderSizePixel = 0
+TP3WORLD.Position = UDim2.new(0, 0, 0.209401712, 0)
+TP3WORLD.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_13.Parent = TP3WORLD
+
+Trigger_6.Name = "Trigger"
+Trigger_6.Parent = TP3WORLD
+Trigger_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_6.BackgroundTransparency = 1.000
+Trigger_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.BorderSizePixel = 0
+Trigger_6.Size = UDim2.new(0, 176, 0, 38)
+Trigger_6.Font = Enum.Font.SourceSans
+Trigger_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_6.TextSize = 14.000
+Trigger_6.TextTransparency = 1.000
+
+TextLabel_6.Parent = TP3WORLD
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_6.BorderSizePixel = 0
+TextLabel_6.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_6.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_6.Font = Enum.Font.Jura
+TextLabel_6.Text = "TP 3 WORLD"
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.TextSize = 20.000
+TextLabel_6.TextWrapped = true
+
+TP4WORLD.Name = "TP 4 WORLD"
+TP4WORLD.Parent = ContainerList
+TP4WORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP4WORLD.BackgroundTransparency = 0.800
+TP4WORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TP4WORLD.BorderSizePixel = 0
+TP4WORLD.Position = UDim2.new(0, 0, 0.209401712, 0)
+TP4WORLD.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_14.Parent = TP4WORLD
+
+Trigger_7.Name = "Trigger"
+Trigger_7.Parent = TP4WORLD
+Trigger_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_7.BackgroundTransparency = 1.000
+Trigger_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.BorderSizePixel = 0
+Trigger_7.Size = UDim2.new(0, 176, 0, 38)
+Trigger_7.Font = Enum.Font.SourceSans
+Trigger_7.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_7.TextSize = 14.000
+Trigger_7.TextTransparency = 1.000
+
+TextLabel_7.Parent = TP4WORLD
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_7.BorderSizePixel = 0
+TextLabel_7.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_7.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_7.Font = Enum.Font.Jura
+TextLabel_7.Text = "TP 4 WORLD"
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.TextSize = 20.000
+TextLabel_7.TextWrapped = true
+
+TP5WORLD.Name = "TP 5 WORLD"
+TP5WORLD.Parent = ContainerList
+TP5WORLD.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TP5WORLD.BackgroundTransparency = 0.800
+TP5WORLD.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TP5WORLD.BorderSizePixel = 0
+TP5WORLD.Position = UDim2.new(0, 0, 0.209401712, 0)
+TP5WORLD.Size = UDim2.new(0, 258, 0, 47)
+
+UICorner_15.Parent = TP5WORLD
+
+Trigger_8.Name = "Trigger"
+Trigger_8.Parent = TP5WORLD
+Trigger_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Trigger_8.BackgroundTransparency = 1.000
+Trigger_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.BorderSizePixel = 0
+Trigger_8.Size = UDim2.new(0, 176, 0, 38)
+Trigger_8.Font = Enum.Font.SourceSans
+Trigger_8.TextColor3 = Color3.fromRGB(0, 0, 0)
+Trigger_8.TextSize = 14.000
+Trigger_8.TextTransparency = 1.000
+
+TextLabel_8.Parent = TP5WORLD
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_8.BorderSizePixel = 0
+TextLabel_8.Position = UDim2.new(0.0113637764, 0, 0, 0)
+TextLabel_8.Size = UDim2.new(0, 255, 0, 47)
+TextLabel_8.Font = Enum.Font.Jura
+TextLabel_8.Text = "TP 5 WORLD"
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.TextSize = 20.000
+TextLabel_8.TextWrapped = true
+
+UICorner_16.Parent = ImageLabel
 
 Top.Name = "Top"
 Top.Parent = ImageLabel
@@ -265,19 +466,19 @@ Top.BorderSizePixel = 0
 Top.Position = UDim2.new(1.05233028e-07, 0, 0, 0)
 Top.Size = UDim2.new(0, 289, 0, 40)
 
-UICorner_12.Parent = Top
+UICorner_17.Parent = Top
 
-TextLabel_4.Parent = Top
-TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_4.BackgroundTransparency = 1.000
-TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-TextLabel_4.BorderSizePixel = 0
-TextLabel_4.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
-TextLabel_4.Size = UDim2.new(0, 181, 0, 36)
-TextLabel_4.Font = Enum.Font.Unknown
-TextLabel_4.Text = "SpineWare"
-TextLabel_4.TextColor3 = Color3.fromRGB(236, 236, 236)
-TextLabel_4.TextSize = 18.000
+TextLabel_9.Parent = Top
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_9.BorderSizePixel = 0
+TextLabel_9.Position = UDim2.new(0.188150272, 0, 0.0404762253, 0)
+TextLabel_9.Size = UDim2.new(0, 181, 0, 36)
+TextLabel_9.Font = Enum.Font.Unknown
+TextLabel_9.Text = "SpineWare"
+TextLabel_9.TextColor3 = Color3.fromRGB(236, 236, 236)
+TextLabel_9.TextSize = 18.000
 
 Toggle.Name = "Toggle"
 Toggle.Parent = Top
@@ -300,7 +501,7 @@ ImageButton.Image = "rbxassetid://78665648888960"
 ImageButton.ScaleType = Enum.ScaleType.Fit
 
 PhoneManager.Name = "PhoneManager"
-PhoneManager.Parent = EvolveRise
+PhoneManager.Parent = EvolveRiseNEWPOSTED
 PhoneManager.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 PhoneManager.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PhoneManager.BorderSizePixel = 0
@@ -309,12 +510,12 @@ PhoneManager.Size = UDim2.new(0, 78, 0, 78)
 PhoneManager.Visible = false
 PhoneManager.Image = "rbxassetid://122294771135712"
 
-UICorner_13.CornerRadius = UDim.new(0, 5)
-UICorner_13.Parent = PhoneManager
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = PhoneManager
 
 -- Scripts:
 
-local function BFVTS_fake_script() -- Trigger.Controller 
+local function ETJUS_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -348,8 +549,8 @@ local function BFVTS_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(BFVTS_fake_script)()
-local function LIZDWM_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(ETJUS_fake_script)()
+local function BLPMDI_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -379,8 +580,8 @@ local function LIZDWM_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(LIZDWM_fake_script)()
-local function UVCPUUQ_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(BLPMDI_fake_script)()
+local function ZWVHVZ_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -421,9 +622,286 @@ local function UVCPUUQ_fake_script() -- Trigger_3.Controller
 	end)
 	
 end
-coroutine.wrap(UVCPUUQ_fake_script)()
-local function XONWQZL_fake_script() -- TextLabel_4.Controller 
-	local script = Instance.new('LocalScript', TextLabel_4)
+coroutine.wrap(ZWVHVZ_fake_script)()
+local function YIGWR_fake_script() -- Trigger_4.Controller 
+	local script = Instance.new('LocalScript', Trigger_4)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript (например, в StarterPlayerScripts)
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			-- Целевая CFrame
+			local targetCFrame = CFrame.new(
+				171.462387, 0.754895687, -1259.3623,
+				-0.115598917, 0, 0.993295968,
+				0,           1, 0,
+				-0.993295968, 0, -0.115598917
+			)
+	
+			-- Функция телепорта
+			local function teleportCharacter(char)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					hrp.CFrame = targetCFrame
+				end
+			end
+	
+			-- Телепорт сразу, если персонаж уже загружен
+			if player.Character then
+				teleportCharacter(player.Character)
+			end
+	
+			-- И при каждом респавне
+			player.CharacterAdded:Connect(teleportCharacter)
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(YIGWR_fake_script)()
+local function LPYMHVQ_fake_script() -- Trigger_5.Controller 
+	local script = Instance.new('LocalScript', Trigger_5)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript (например, в StarterPlayerScripts)
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			local targetCFrame = CFrame.new(
+				1015.6449, 24.3006935, -1483.14551,
+				-0.14542222, 0, -0.989369929,
+				0,          1,  0,
+				0.989369929, 0, -0.14542222
+	           )
+	
+			-- Функция телепорта
+			local function teleportCharacter(char)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					hrp.CFrame = targetCFrame
+				end
+			end
+	
+			-- Телепорт сразу, если персонаж уже загружен
+			if player.Character then
+				teleportCharacter(player.Character)
+			end
+	
+			-- И при каждом респавне
+			player.CharacterAdded:Connect(teleportCharacter)
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(LPYMHVQ_fake_script)()
+local function TIUNC_fake_script() -- Trigger_6.Controller 
+	local script = Instance.new('LocalScript', Trigger_6)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript (например, в StarterPlayerScripts)
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			local targetCFrame = CFrame.new(
+				2525.83691,  -- X
+				-0.047285527,-- Y
+				-1233.38245  -- Z
+			)
+	
+			-- Функция телепорта
+			local function teleportCharacter(char)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					hrp.CFrame = targetCFrame
+				end
+			end
+	
+			-- Телепорт сразу, если персонаж уже загружен
+			if player.Character then
+				teleportCharacter(player.Character)
+			end
+	
+			-- И при каждом респавне
+			player.CharacterAdded:Connect(teleportCharacter)
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(TIUNC_fake_script)()
+local function BPLTX_fake_script() -- Trigger_7.Controller 
+	local script = Instance.new('LocalScript', Trigger_7)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript (например, в StarterPlayerScripts)
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			-- Целевая CFrame
+			local targetCFrame = CFrame.new(
+				2880.93042, 37.510582, -683.108643,
+				1, 0, 0,
+				0, 1, 0,
+				0, 0, 1
+			)
+	
+			-- Функция телепорта
+			local function teleportCharacter(char)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					hrp.CFrame = targetCFrame
+				end
+			end
+	
+			-- Телепорт сразу, если персонаж уже загружен
+			if player.Character then
+				teleportCharacter(player.Character)
+			end
+	
+			-- И при каждом респавне
+			player.CharacterAdded:Connect(teleportCharacter)
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(BPLTX_fake_script)()
+local function KYUE_fake_script() -- Trigger_8.Controller 
+	local script = Instance.new('LocalScript', Trigger_8)
+
+	script.Parent.MouseEnter:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.5}):Play()
+	end)
+	
+	script.Parent.MouseLeave:Connect(function()
+		game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(1),{BackgroundTransparency = 0.8}):Play()
+	end)
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local sucess, err = pcall(function()
+			-- LocalScript (например, в StarterPlayerScripts)
+	
+			local Players = game:GetService("Players")
+			local player  = Players.LocalPlayer
+	
+			-- Целевая CFrame
+			local targetCFrame = CFrame.new(
+				3935.48193, 102.32196, -1427.54199,
+				-0.995817363, 2.8690675e-08,  0.0913662985,
+				3.34826531e-08, 1,            5.09151832e-08,
+				-0.0913662985, 5.37614078e-08, -0.995817363
+			)
+	
+			-- Функция телепорта
+			local function teleportCharacter(char)
+				local hrp = char:FindFirstChild("HumanoidRootPart")
+				if hrp then
+					hrp.CFrame = targetCFrame
+				end
+			end
+	
+			-- Телепорт сразу, если персонаж уже загружен
+			if player.Character then
+				teleportCharacter(player.Character)
+			end
+	
+			-- И при каждом респавне
+			player.CharacterAdded:Connect(teleportCharacter)
+		end)
+		
+		if not sucess then
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.709804, 0.113725, 0.0705882)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()		
+		else
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(0.12549, 0.615686, 0.141176)}):Play()
+			wait()
+			game:GetService("TweenService"):Create(script.Parent.Parent,TweenInfo.new(2),{BackgroundColor3 = Color3.new(1,1,1)}):Play()
+		end
+	end)
+	
+end
+coroutine.wrap(KYUE_fake_script)()
+local function NVOOR_fake_script() -- TextLabel_9.Controller 
+	local script = Instance.new('LocalScript', TextLabel_9)
 
 	local ts = game:GetService("TweenService")
 	local info = TweenInfo.new(1)
@@ -440,8 +918,8 @@ local function XONWQZL_fake_script() -- TextLabel_4.Controller
 		end)
 	end)
 end
-coroutine.wrap(XONWQZL_fake_script)()
-local function ZXKUGBP_fake_script() -- Toggle.Controller 
+coroutine.wrap(NVOOR_fake_script)()
+local function YFLRHJU_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -511,8 +989,8 @@ local function ZXKUGBP_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(ZXKUGBP_fake_script)()
-local function BVEE_fake_script() -- ImageButton.Controller 
+coroutine.wrap(YFLRHJU_fake_script)()
+local function NYKVM_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -521,8 +999,8 @@ local function BVEE_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(BVEE_fake_script)()
-local function ZKGPR_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(NYKVM_fake_script)()
+local function TMTXSK_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -604,9 +1082,9 @@ local function ZKGPR_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(ZKGPR_fake_script)()
-local function ZAFK_fake_script() -- EvolveRise.Controller 
-	local script = Instance.new('LocalScript', EvolveRise)
+coroutine.wrap(TMTXSK_fake_script)()
+local function ISIOU_fake_script() -- EvolveRiseNEWPOSTED.Controller 
+	local script = Instance.new('LocalScript', EvolveRiseNEWPOSTED)
 
 	local list = {
 	
@@ -661,8 +1139,8 @@ local function ZAFK_fake_script() -- EvolveRise.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(ZAFK_fake_script)()
-local function NHIMXHL_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(ISIOU_fake_script)()
+local function UKPQWU_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -740,4 +1218,4 @@ local function NHIMXHL_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(NHIMXHL_fake_script)()
+coroutine.wrap(UKPQWU_fake_script)()
