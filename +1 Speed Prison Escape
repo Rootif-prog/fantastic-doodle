@@ -394,7 +394,7 @@ UICorner_15.Parent = PhoneManager
 
 -- Scripts:
 
-local function STOBML_fake_script() -- Trigger.Controller 
+local function XZNAOW_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -416,18 +416,61 @@ local function STOBML_fake_script() -- Trigger.Controller
 		
 		while status do
 			pcall(function()
-				task.spawn(function() 
+				local Players           = game:GetService("Players")
 				local ReplicatedStorage = game:GetService("ReplicatedStorage")
-				local GetWinRewards = ReplicatedStorage.Remotes.RemoteFunctions.GetWinRewards
-				GetWinRewards:InvokeServer()
-	            end)
+				local player = Players.LocalPlayer
+				assert(player, "1")
+				local worldPivot = CFrame.new(
+					-33.7125931, 16.1623135, 3800.14966,
+					0, 1,  0,
+					-1, 0,  0,
+					0, 0,  1
+				)
+	
+	
+				local GetWinRewards = ReplicatedStorage
+					:WaitForChild("Remotes")
+					:WaitForChild("RemoteFunctions")
+					:WaitForChild("GetWinRewards")
+	
+				local function doTeleport(character)
+					local hrp = character:FindFirstChild("HumanoidRootPart")
+					if not hrp then
+						warn("HumanoidRootPart не найден в Character")
+						return
+					end
+	
+	
+					hrp.CFrame = worldPivot
+	
+	
+					local ok, result = pcall(function()
+						return GetWinRewards:InvokeServer()
+					end)
+					if ok then
+						print("Награды получены:", result)
+					else
+						warn("Ошибка GetWinRewards:", result)
+					end
+				end
+	
+	
+				if player.Character then
+					doTeleport(player.Character)
+				end
+	
+	
+				player.CharacterAdded:Connect(function(char)
+					char:WaitForChild("HumanoidRootPart", 5)
+					doTeleport(char)
+				end)
 			end)
 			wait()
 		end
 	end)
 end
-coroutine.wrap(STOBML_fake_script)()
-local function ESOKEKW_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(XZNAOW_fake_script)()
+local function BHAP_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -462,8 +505,8 @@ local function ESOKEKW_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(ESOKEKW_fake_script)()
-local function EHYZSCQ_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(BHAP_fake_script)()
+local function PMXAP_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -493,8 +536,8 @@ local function EHYZSCQ_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(EHYZSCQ_fake_script)()
-local function ZSQLFU_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(PMXAP_fake_script)()
+local function VWEI_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -524,8 +567,8 @@ local function ZSQLFU_fake_script() -- Trigger_4.Controller
 	end)
 	
 end
-coroutine.wrap(ZSQLFU_fake_script)()
-local function BWWLFN_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(VWEI_fake_script)()
+local function ONPUIC_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	script.Parent.MouseEnter:Connect(function()
@@ -555,8 +598,8 @@ local function BWWLFN_fake_script() -- Trigger_5.Controller
 	end)
 	
 end
-coroutine.wrap(BWWLFN_fake_script)()
-local function JYPN_fake_script() -- TextLabel_6.Controller 
+coroutine.wrap(ONPUIC_fake_script)()
+local function PWCD_fake_script() -- TextLabel_6.Controller 
 	local script = Instance.new('LocalScript', TextLabel_6)
 
 	local ts = game:GetService("TweenService")
@@ -574,8 +617,8 @@ local function JYPN_fake_script() -- TextLabel_6.Controller
 		end)
 	end)
 end
-coroutine.wrap(JYPN_fake_script)()
-local function NAMHD_fake_script() -- Toggle.Controller 
+coroutine.wrap(PWCD_fake_script)()
+local function YKDDQZB_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -645,8 +688,8 @@ local function NAMHD_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(NAMHD_fake_script)()
-local function JUWW_fake_script() -- ImageButton.Controller 
+coroutine.wrap(YKDDQZB_fake_script)()
+local function BBVSV_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -655,8 +698,8 @@ local function JUWW_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(JUWW_fake_script)()
-local function KDFXFF_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(BBVSV_fake_script)()
+local function HKOZPKX_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -738,8 +781,8 @@ local function KDFXFF_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(KDFXFF_fake_script)()
-local function RBTSPM_fake_script() -- _1SpeedPrisonEscapeNEW.Controller 
+coroutine.wrap(HKOZPKX_fake_script)()
+local function SWCXORV_fake_script() -- _1SpeedPrisonEscapeNEW.Controller 
 	local script = Instance.new('LocalScript', _1SpeedPrisonEscapeNEW)
 
 	local list = {
@@ -795,8 +838,8 @@ local function RBTSPM_fake_script() -- _1SpeedPrisonEscapeNEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(RBTSPM_fake_script)()
-local function ZTLRUEQ_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(SWCXORV_fake_script)()
+local function NMKX_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -874,4 +917,4 @@ local function ZTLRUEQ_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(ZTLRUEQ_fake_script)()
+coroutine.wrap(NMKX_fake_script)()
