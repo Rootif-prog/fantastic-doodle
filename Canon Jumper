@@ -567,7 +567,7 @@ UICorner_25.Parent = PhoneManager
 
 -- Scripts:
 
-local function UTYHKSZ_fake_script() -- Trigger.Controller 
+local function XGLOP_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -627,8 +627,8 @@ local function UTYHKSZ_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(UTYHKSZ_fake_script)()
-local function UZELO_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(XGLOP_fake_script)()
+local function NSGL_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -688,8 +688,8 @@ local function UZELO_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(UZELO_fake_script)()
-local function KEQUUNV_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(NSGL_fake_script)()
+local function ZCCKS_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -749,8 +749,8 @@ local function KEQUUNV_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(KEQUUNV_fake_script)()
-local function DVXFR_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(ZCCKS_fake_script)()
+local function MEWBNL_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -810,8 +810,8 @@ local function DVXFR_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(DVXFR_fake_script)()
-local function DDWT_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(MEWBNL_fake_script)()
+local function ZWVPUSN_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -843,8 +843,8 @@ local function DDWT_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(DDWT_fake_script)()
-local function NIXPIET_fake_script() -- Trigger_6.Controller 
+coroutine.wrap(ZWVPUSN_fake_script)()
+local function NQDXGG_fake_script() -- Trigger_6.Controller 
 	local script = Instance.new('LocalScript', Trigger_6)
 
 	local ts = game:GetService("TweenService")
@@ -886,80 +886,87 @@ local function NIXPIET_fake_script() -- Trigger_6.Controller
 		end
 	end)
 end
-coroutine.wrap(NIXPIET_fake_script)()
-local function HIVHFA_fake_script() -- Trigger_7.Controller 
+coroutine.wrap(NQDXGG_fake_script)()
+local function BBEL_fake_script() -- Trigger_7.Controller 
 	local script = Instance.new('LocalScript', Trigger_7)
 
-	local ts = game:GetService("TweenService")
+	-- LocalScript (поместить в StarterPlayerScripts)
+	
+	local TweenService      = game:GetService("TweenService")
+	local RunService        = game:GetService("RunService")
+	local Players           = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	
+	-- Анимация кнопки
 	local info = TweenInfo.new(1.3)
-	local x=  TweenInfo.new(0.7)
-	local status = false
+	local x    = TweenInfo.new(0.7)
 	
-	script.Parent.MouseButton1Click:Connect(function()
-		if not status then
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,24,0,0)}):Play()
-			status = true
-			
-		else
-			ts:Create(script.Parent.Parent.In,info,{BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)}):Play()
-			ts:Create(script.Parent.Parent.In.Frame,x,{Position = UDim2.new(0,0,0,0)}):Play()
-			status = false
+	-- Игрок и RemoteEvent для открытия яиц
+	local player        = Players.LocalPlayer
+	local remoteOpening = ReplicatedStorage:WaitForChild("UI")
+		:WaitForChild("EggOpening")
+	
+	-- Радиус поиска яиц
+	local OPEN_RADIUS = 6
+	
+	-- Флаг активности “бота”
+	local isActive = false
+	
+	-- Функция, вызываемая каждый кадр
+	local function tryOpenEggs()
+		if not isActive then return end
+	
+		local character = player.Character
+		if not character then return end
+		local hrp = character:FindFirstChild("HumanoidRootPart")
+		if not hrp then return end
+	
+		local eggsFolder = workspace:FindFirstChild("Eggs")
+		if not eggsFolder then return end
+	
+		for _, eggModel in ipairs(eggsFolder:GetChildren()) do
+			local part = eggModel:FindFirstChildWhichIsA("BasePart")
+			if part and (part.Position - hrp.Position).Magnitude <= OPEN_RADIUS then
+				local eggType = eggModel.Name
+				-- покупка яйца
+				remoteOpening:FireServer("buy", eggType)
+				-- подтверждение открытия
+				remoteOpening:FireServer("opened", eggType)
+			end
 		end
-		
-		while status do
-			pcall(function()
-				-- LocalScript (поместить в StarterPlayerScripts)
+	end
 	
-				local Players          = game:GetService("Players")
-				local RunService       = game:GetService("RunService")
-				local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	-- Подписываемся на каждую рамку
+	RunService.Heartbeat:Connect(tryOpenEggs)
 	
-				local player           = Players.LocalPlayer
-				local remoteOpening    = ReplicatedStorage:WaitForChild("UI")
-					:WaitForChild("EggOpening")
+	-- Toggle-кнопка включения/выключения
+	script.Parent.MouseButton1Click:Connect(function()
+		isActive = not isActive
 	
-				-- Радиус поиска яйца
-				local OPEN_RADIUS = 10
-	
-				-- Таблица для успеха открытия (чтобы не гонять повторно)
-				local openedEggs = {}
-	
-				local function tryOpenEggs()
-					local character = player.Character
-					if not character then return end
-					local hrp = character:FindFirstChild("HumanoidRootPart")
-					if not hrp then return end
-	
-					local eggsFolder = workspace:FindFirstChild("Eggs")
-					if not eggsFolder then return end
-	
-					for _, eggModel in ipairs(eggsFolder:GetChildren()) do
-						if not openedEggs[eggModel] then
-							local part = eggModel:FindFirstChildWhichIsA("BasePart")
-							if part and (part.Position - hrp.Position).Magnitude <= OPEN_RADIUS then
-								local eggType = eggModel.Name
-	
-								-- Первый пульт: покупка яйца
-								remoteOpening:FireServer("buy", eggType)
-	
-								-- Второй пульт: подтверждение открытия
-								remoteOpening:FireServer("opened", eggType)
-	
-								openedEggs[eggModel] = true
-							end
-						end
-					end
-				end
-	
-				RunService.Heartbeat:Connect(tryOpenEggs)
-			end)
-			wait()
+		if isActive then
+			-- анимация "включения"
+			TweenService:Create(script.Parent.Parent.In, info, {
+				BackgroundColor3 = Color3.new(0.568627, 0.85098, 0)
+			}):Play()
+			TweenService:Create(script.Parent.Parent.In.Frame, x, {
+				Position = UDim2.new(0, 24, 0, 0)
+			}):Play()
+			script.Parent.Text = "Открытие: ВКЛ"
+		else
+			-- анимация "выключения"
+			TweenService:Create(script.Parent.Parent.In, info, {
+				BackgroundColor3 = Color3.new(0.239216, 0.239216, 0.239216)
+			}):Play()
+			TweenService:Create(script.Parent.Parent.In.Frame, x, {
+				Position = UDim2.new(0, 0, 0, 0)
+			}):Play()
+			script.Parent.Text = "Открытие: ВЫКЛ"
 		end
 	end)
+	
 end
-coroutine.wrap(HIVHFA_fake_script)()
-local function VPJK_fake_script() -- TextLabel_8.Controller 
+coroutine.wrap(BBEL_fake_script)()
+local function DKGW_fake_script() -- TextLabel_8.Controller 
 	local script = Instance.new('LocalScript', TextLabel_8)
 
 	local ts = game:GetService("TweenService")
@@ -977,8 +984,8 @@ local function VPJK_fake_script() -- TextLabel_8.Controller
 		end)
 	end)
 end
-coroutine.wrap(VPJK_fake_script)()
-local function VJNPBCL_fake_script() -- Toggle.Controller 
+coroutine.wrap(DKGW_fake_script)()
+local function EQLIIU_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -1048,8 +1055,8 @@ local function VJNPBCL_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(VJNPBCL_fake_script)()
-local function MHEMFBW_fake_script() -- ImageButton.Controller 
+coroutine.wrap(EQLIIU_fake_script)()
+local function PCVMTU_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1058,8 +1065,8 @@ local function MHEMFBW_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(MHEMFBW_fake_script)()
-local function XXYZ_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(PCVMTU_fake_script)()
+local function FGIGT_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -1141,8 +1148,8 @@ local function XXYZ_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(XXYZ_fake_script)()
-local function RXBH_fake_script() -- CanonJumperNEWPOSTED.Controller 
+coroutine.wrap(FGIGT_fake_script)()
+local function ZPCWJ_fake_script() -- CanonJumperNEWPOSTED.Controller 
 	local script = Instance.new('LocalScript', CanonJumperNEWPOSTED)
 
 	local list = {
@@ -1198,8 +1205,8 @@ local function RXBH_fake_script() -- CanonJumperNEWPOSTED.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(RXBH_fake_script)()
-local function YGXGV_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(ZPCWJ_fake_script)()
+local function JGHYE_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1277,4 +1284,4 @@ local function YGXGV_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(YGXGV_fake_script)()
+coroutine.wrap(JGHYE_fake_script)()
