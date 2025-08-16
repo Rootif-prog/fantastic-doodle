@@ -10,6 +10,7 @@ local Container = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
 local ContainerList = Instance.new("ScrollingFrame")
 local UIPadding = Instance.new("UIPadding")
+local UIListLayout = Instance.new("UIListLayout")
 local infRebirth = Instance.new("Frame")
 local Trigger = Instance.new("TextButton")
 local UICorner_3 = Instance.new("UICorner")
@@ -55,7 +56,6 @@ local UICorner_18 = Instance.new("UICorner")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextBox = Instance.new("TextBox")
 local UICorner_19 = Instance.new("UICorner")
-local UIListLayout = Instance.new("UIListLayout")
 local Top = Instance.new("Frame")
 local UICorner_20 = Instance.new("UICorner")
 local TextLabel_7 = Instance.new("TextLabel")
@@ -107,6 +107,10 @@ ContainerList.VerticalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 UIPadding.Parent = ContainerList
 UIPadding.PaddingLeft = UDim.new(0, 16)
 UIPadding.PaddingTop = UDim.new(0, 6)
+
+UIListLayout.Parent = ContainerList
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
 
 infRebirth.Name = "inf Rebirth"
 infRebirth.Parent = ContainerList
@@ -422,10 +426,6 @@ TextBox.TextWrapped = true
 
 UICorner_19.Parent = TextBox
 
-UIListLayout.Parent = ContainerList
-UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-UIListLayout.Padding = UDim.new(0, 5)
-
 Top.Name = "Top"
 Top.Parent = ImageLabel
 Top.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
@@ -484,7 +484,7 @@ UICorner_21.Parent = PhoneManager
 
 -- Scripts:
 
-local function KOVQEUL_fake_script() -- JumpBrainnot1608NEW.Controller 
+local function BJCBJP_fake_script() -- JumpBrainnot1608NEW.Controller 
 	local script = Instance.new('LocalScript', JumpBrainnot1608NEW)
 
 	local list = {
@@ -540,8 +540,8 @@ local function KOVQEUL_fake_script() -- JumpBrainnot1608NEW.Controller
 	
 	if not a then print(b) end
 end
-coroutine.wrap(KOVQEUL_fake_script)()
-local function HCZV_fake_script() -- ImageLabel.Mains 
+coroutine.wrap(BJCBJP_fake_script)()
+local function XDAILY_fake_script() -- ImageLabel.Mains 
 	local script = Instance.new('LocalScript', ImageLabel)
 
 	local UIS = game:GetService('UserInputService')
@@ -623,8 +623,8 @@ local function HCZV_fake_script() -- ImageLabel.Mains
 	end)
 	
 end
-coroutine.wrap(HCZV_fake_script)()
-local function QUBJMQX_fake_script() -- Trigger.Controller 
+coroutine.wrap(XDAILY_fake_script)()
+local function FTBOHL_fake_script() -- Trigger.Controller 
 	local script = Instance.new('LocalScript', Trigger)
 
 	local ts = game:GetService("TweenService")
@@ -656,8 +656,8 @@ local function QUBJMQX_fake_script() -- Trigger.Controller
 		end
 	end)
 end
-coroutine.wrap(QUBJMQX_fake_script)()
-local function JIDG_fake_script() -- Trigger_2.Controller 
+coroutine.wrap(FTBOHL_fake_script)()
+local function NZHBT_fake_script() -- Trigger_2.Controller 
 	local script = Instance.new('LocalScript', Trigger_2)
 
 	local ts = game:GetService("TweenService")
@@ -689,8 +689,8 @@ local function JIDG_fake_script() -- Trigger_2.Controller
 		end
 	end)
 end
-coroutine.wrap(JIDG_fake_script)()
-local function COXQIS_fake_script() -- Trigger_3.Controller 
+coroutine.wrap(NZHBT_fake_script)()
+local function CURGT_fake_script() -- Trigger_3.Controller 
 	local script = Instance.new('LocalScript', Trigger_3)
 
 	local ts = game:GetService("TweenService")
@@ -720,8 +720,8 @@ local function COXQIS_fake_script() -- Trigger_3.Controller
 		end
 	end)
 end
-coroutine.wrap(COXQIS_fake_script)()
-local function OHTDE_fake_script() -- Trigger_4.Controller 
+coroutine.wrap(CURGT_fake_script)()
+local function XHTXNNG_fake_script() -- Trigger_4.Controller 
 	local script = Instance.new('LocalScript', Trigger_4)
 
 	local ts = game:GetService("TweenService")
@@ -804,8 +804,8 @@ local function OHTDE_fake_script() -- Trigger_4.Controller
 		end
 	end)
 end
-coroutine.wrap(OHTDE_fake_script)()
-local function NAVILF_fake_script() -- Trigger_5.Controller 
+coroutine.wrap(XHTXNNG_fake_script)()
+local function LVGTSNX_fake_script() -- Trigger_5.Controller 
 	local script = Instance.new('LocalScript', Trigger_5)
 
 	local ts = game:GetService("TweenService")
@@ -814,7 +814,7 @@ local function NAVILF_fake_script() -- Trigger_5.Controller
 	local status = false
 	
 	local b = {
-		"Basic", "Troll", "Crystal"
+		"Basic", "Troll", "Crystal", "GreenBlue", "Cactus", "DarkKraken", "PurpleEgg", "DesertThorns"
 	}
 	script.Parent.MouseButton1Click:Connect(function()
 		if not status then
@@ -841,8 +841,8 @@ local function NAVILF_fake_script() -- Trigger_5.Controller
 		end
 	end)
 end
-coroutine.wrap(NAVILF_fake_script)()
-local function MSMFOI_fake_script() -- TextBox.Controller 
+coroutine.wrap(LVGTSNX_fake_script)()
+local function DTJKO_fake_script() -- TextBox.Controller 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local ts = game:GetService("TweenService")
@@ -876,8 +876,8 @@ local function MSMFOI_fake_script() -- TextBox.Controller
 		if not sucess then print(err) end
 	end)
 end
-coroutine.wrap(MSMFOI_fake_script)()
-local function RFFUO_fake_script() -- TextLabel_7.Controller 
+coroutine.wrap(DTJKO_fake_script)()
+local function MOHDIF_fake_script() -- TextLabel_7.Controller 
 	local script = Instance.new('LocalScript', TextLabel_7)
 
 	local ts = game:GetService("TweenService")
@@ -895,8 +895,8 @@ local function RFFUO_fake_script() -- TextLabel_7.Controller
 		end)
 	end)
 end
-coroutine.wrap(RFFUO_fake_script)()
-local function VATEGQA_fake_script() -- Toggle.Controller 
+coroutine.wrap(MOHDIF_fake_script)()
+local function QHPM_fake_script() -- Toggle.Controller 
 	local script = Instance.new('LocalScript', Toggle)
 
 	local toggle : ImageButton = script.Parent
@@ -966,8 +966,8 @@ local function VATEGQA_fake_script() -- Toggle.Controller
 		if not success then print(err) end
 	end)
 end
-coroutine.wrap(VATEGQA_fake_script)()
-local function YBVGVTH_fake_script() -- ImageButton.Controller 
+coroutine.wrap(QHPM_fake_script)()
+local function YMXHXOG_fake_script() -- ImageButton.Controller 
 	local script = Instance.new('LocalScript', ImageButton)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -976,8 +976,8 @@ local function YBVGVTH_fake_script() -- ImageButton.Controller
 		end)
 	end)
 end
-coroutine.wrap(YBVGVTH_fake_script)()
-local function POFAPC_fake_script() -- PhoneManager.Controller 
+coroutine.wrap(YMXHXOG_fake_script)()
+local function FWUK_fake_script() -- PhoneManager.Controller 
 	local script = Instance.new('LocalScript', PhoneManager)
 
 	local UIS = game:GetService('UserInputService')
@@ -1055,4 +1055,4 @@ local function POFAPC_fake_script() -- PhoneManager.Controller
 		end)
 	end
 end
-coroutine.wrap(POFAPC_fake_script)()
+coroutine.wrap(FWUK_fake_script)()
