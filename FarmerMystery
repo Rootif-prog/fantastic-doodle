@@ -1,0 +1,237 @@
+print(1)
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/MiniUILibrary"))()
+local jsons = game:GetService("HttpService")
+local settings = {
+	CoinsFarmEnabled = false, 
+	BallsFarmEnabled = false,
+	CandyFarmEnabled = false,
+	Farming = false,
+	Webhook = "",
+	Speed = 1.15,
+	PlayerDiedInRound = false,
+	CoinBeingCollected = false,
+	FullCoins = false,
+	CoinsContainer = nil,
+	SafePosition = CFrame.new(-5054.30371, 309.006348, 17.0952587, -0.00873055123, -5.4557443e-08, -0.999961913, -2.98391321e-08, 1, -5.42990009e-08, 0.999961913, 2.93639353e-08, -0.00873055123),
+	ExceptCoins = {},
+	CoinFound = function(self, coin)
+		if coin == nil then return true end
+		for _, searchable_coin in pairs(self['ExceptCoins']) do
+			if searchable_coin == coin then
+				return true
+			end
+		end
+		return false
+	end
+} 
+settings['CalculateMinimumCoin'] = function(self, hrp)
+	if hrp == nil then return end
+	local formatted = {Magnitude = 9e9, Coin = nil}
+	for _, coin in self['CoinsContainer']:GetChildren() do
+		if self:CoinFound(coin) then continue end
+		local pos_ = Vector3.new(0, 0, 0);
+		for __, desc_c in coin:GetDescendants() do
+			if desc_c:IsA("MeshPart") or desc_c:IsA("UnionOperation") or desc_c:IsA("Part") then
+				pos_ = desc_c.Position
+			end
+		end
+
+		if (hrp.Position - pos_).Magnitude < formatted['Magnitude'] then
+			formatted['Magnitude'] = (hrp.Position - pos_).Magnitude
+			formatted['Coin'] = coin
+		end
+	end
+	return formatted
+end
+local function send_discord_message(message)
+	task.spawn(function()
+		local json_data = '{"content": "' .. message .. '"}'
+		local request_options = {
+			Url = tostring(settings['Webhook']),
+			Method = "POST",
+			Headers = {
+				["Content-Type"] = "application/json"
+			},
+			Body = json_data
+		}
+		local response = request(request_options)
+	end)
+end
+
+task.spawn(function()
+	-- file sys
+	local main_folder = isfolder('SpineWare')
+	local d_folder = isfolder('SpineWare/MM2Farmer')
+	local p_f = isfile('SpineWare/MM2Farmer/settings.json')
+	if not main_folder then
+		makefolder('SpineWare')
+	end
+	if not d_folder then
+		makefolder('SpineWare/MM2Farmer')
+	end
+	if not p_f then
+		writefile('SpineWare/MM2Farmer/settings.json', jsons:JSONEncode({
+			Farming = false,
+			CoinsFarmEnabled = false, 
+			BallsFarmEnabled = false,
+			CandyFarmEnabled = false,
+			Speed = 1.15,
+			Webhook = "",
+			ReadIt = "HEY! The speed is very sensitive! Change it slowly. Recommended speed: 1.5"
+		}))
+	end
+	local user_settings = jsons:JSONDecode(readfile('SpineWare/MM2Farmer/settings.json'))
+	settings['Farming'] = user_settings['Farming']
+	settings['CoinsFarmEnabled'] = user_settings['CoinsFarmEnabled']
+	settings['BallsFarmEnabled'] = user_settings['BallsFarmEnabled']
+	settings['CandyFarmEnabled'] = user_settings['CandyFarmEnabled']
+	settings['Webhook'] = user_settings['Webhook']
+	settings['Speed'] = user_settings['Speed']
+end)
+
+local player = game:GetService("Players")['LocalPlayer']
+local character = player['Character'] or player['CharacterAdded']:Wait()
+local ts = game:GetService("TweenService")
+
+player['CharacterAdded']:Connect(function(character_)
+	task.spawn(function()
+		character = character_
+		local humanoid = character:FindFirstChildOfClass("Humanoid") or character:WaitForChild("Humanoid", 1/0)
+		humanoid['Died']:Once(function()
+			settings['PlayerDiedInRound'] = true
+			character = player['Character'] or player['CharacterAdded']:Wait()
+		end)
+	end)
+end)
+
+local controller = lib:Init(game['CoreGui'], "SpineMurder")
+local autofarm_state = controller:CreateToggle({
+	Name = "Farming",
+	Signal = function(status)
+		settings['Farming'] = status
+	end,
+	FirstValue = settings['Farming']
+})
+local speed_checkbox = controller:CreateTextBox({
+	Text = "Speed [sensitive]",
+	Signal = function(new_speed)
+		if tonumber(new_speed) ~= nil then
+			settings['Speed'] = new_speed
+		end
+	end
+})
+local webhook_checkbox = controller:CreateTextBox({
+	Text = "Webhook",
+	Signal = function(webhook)
+		if webhook:match('discord') then
+			settings['Webhook'] = webhook
+		end
+	end
+})
+
+task.spawn(function()
+	for _, d in workspace:GetDescendants() do
+		if d.Name == "CoinContainer" then
+			settings['CoinsContainer'] = d
+			d.Destroying:Once(function()
+				settings['CoinsContainer'] = nil
+				table.clear(settings['ExceptCoins'])
+			end)
+		end
+	end
+end)
+
+workspace['DescendantAdded']:Connect(function(d)
+	task.spawn(function()
+		if d.Name == "CoinContainer" then
+			settings['CoinsContainer'] = d
+			task.spawn(function()
+				local coins = 'NaN'
+				for _, var in game['Players']['LocalPlayer']['PlayerGui']:GetDescendants() do
+					local var_name = var:GetFullName()
+					if var:IsA("TextLabel") and var_name:match('PurchaseCurrency') and var_name:match('Tokens') and var['Parent']:FindFirstChild("Currency") and var.Text ~= '0' then
+						coins = var.Text
+						break
+					end
+				end
+				send_discord_message(string.format('Round has been finished [Log of <b>%s</b>]. ```Has character died in round?: %s``` ```Full Bag?: %s``` ```Event Money Balance: %s```', player['Name'], settings['PlayerDiedInRound'] and "+" or "-", settings['FullCoins'] and "+" or "-", coins))
+			end)
+			settings['PlayerDiedInRound'] = false
+			settings['FullCoins'] = false
+			d.Destroying:Once(function()
+				settings['CoinsContainer'] = nil
+				table.clear(settings['ExceptCoins'])
+			end)
+		end
+	end)
+end)
+
+task.spawn(function()
+	while task.wait() do
+		if settings['Farming'] then
+			if character ~= nil and settings['CoinsContainer'] ~= nil and not settings['PlayerDiedInRound'] and not settings['CoinBeingCollected'] then
+				local coin_data = settings:CalculateMinimumCoin(character:FindFirstChild("HumanoidRootPart"))
+				if coin_data ~= nil then
+					local distance = coin_data['Magnitude']
+					local coin = coin_data['Coin']
+
+					pcall(function()
+						for _, part in character:GetChildren() do
+							if part:IsA("BasePart") or part:IsA("MeshPart") then
+								part.CanCollide = false
+							end
+						end
+					end)
+
+					if coin ~= nil then
+						local code_can_be_proceed = true
+						if not coin:FindFirstChild("CoinVisual") then
+							if character:FindFirstChild('Head') then
+								character:FindFirstChild("Head"):Destroy()
+							end
+							settings['FullCoins'] = true
+							task.wait(.1)
+							code_can_be_proceed = false
+						end
+						if code_can_be_proceed then 
+							if distance <= 180 then
+								local speed_of_tween = (distance/16)/settings['Speed']
+								settings['CoinBeingCollected'] = true
+
+								task.delay(speed_of_tween - 0.2, function()
+									pcall(function()
+										firetouchintererst(character:FindFirstChild("HumanoidRootPart"), coin, 0)
+										task.wait()
+										firetouchintererst(character:FindFirstChild("HumanoidRootPart"), coin, 1)
+									end)
+								end)
+								pcall(function()
+									ts:Create(character:FindFirstChild("HumanoidRootPart"), TweenInfo.new(speed_of_tween, Enum.EasingStyle.Linear), {CFrame = coin:GetPivot()}):Play()
+									task.wait(speed_of_tween - 0.05)
+									coin:Destroy()
+								end)
+								settings['CoinBeingCollected'] = false
+							else
+								pcall(function()
+									character:FindFirstChild("HumanoidRootPart").CFrame = coin:GetPivot()
+								end)
+							end
+						end
+					end
+				end
+			else
+				task.wait(.6)
+				if character then
+					pcall(function()
+						character:FindFirstChild("HumanoidRootPart").CFrame = settings['SafePosition']
+					end)
+				else
+					print("No char")
+				end
+				warn("No Character/No Coin Container/Player has already died in round")
+			end
+		end
+	end
+end)
+
+lib:Start()
