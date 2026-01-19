@@ -1,4 +1,3 @@
-print(1)
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/SpineZik/spsps/refs/heads/main/MiniUILibrary"))()
 local jsons = game:GetService("HttpService")
 local settings = {
@@ -11,8 +10,10 @@ local settings = {
 	PlayerDiedInRound = false,
 	CoinBeingCollected = false,
 	FullCoins = false,
+	CoinsCollected = 0,
 	CoinsContainer = nil,
-	SafePosition = CFrame.new(-5054.30371, 309.006348, 17.0952587, -0.00873055123, -5.4557443e-08, -0.999961913, -2.98391321e-08, 1, -5.42990009e-08, 0.999961913, 2.93639353e-08, -0.00873055123),
+	StartTick = tick(),
+	SafePosition = CFrame.new(-5073.67773, 284.78653, 70.5502548, -0.903661311, 3.13552606e-09, -0.428247869, 1.62285101e-08, 1, -2.69226117e-08, 0.428247869, -3.12787449e-08, -0.903661311),
 	ExceptCoins = {},
 	CoinFound = function(self, coin)
 		if coin == nil then return true end
@@ -43,20 +44,25 @@ settings['CalculateMinimumCoin'] = function(self, hrp)
 	end
 	return formatted
 end
-local function send_discord_message(message)
+local function send_discord_message(embed)
 	task.spawn(function()
-		local json_data = '{"content": "' .. message .. '"}'
+		local json_data = {
+			content = "",
+			embeds = {embed}
+		}
+
 		local request_options = {
 			Url = tostring(settings['Webhook']),
 			Method = "POST",
 			Headers = {
 				["Content-Type"] = "application/json"
 			},
-			Body = json_data
+			Body = game:GetService("HttpService"):JSONEncode(json_data)
 		}
 		local response = request(request_options)
 	end)
 end
+
 
 task.spawn(function()
 	-- file sys
@@ -104,7 +110,7 @@ player['CharacterAdded']:Connect(function(character_)
 	end)
 end)
 
-local controller = lib:Init(game['CoreGui'], "SpineMurder")
+local controller = lib:Init(game['CoreGui'], "SpineWare")
 local autofarm_state = controller:CreateToggle({
 	Name = "Farming",
 	Signal = function(status)
@@ -141,6 +147,11 @@ task.spawn(function()
 	end
 end)
 
+local function gettime(s)
+	s = math.floor(math.abs(s))
+	return string.format("%02d:%02d:%02d", math.floor(s/3600), math.floor((s%3600)/60), s%60)
+end
+
 workspace['DescendantAdded']:Connect(function(d)
 	task.spawn(function()
 		if d.Name == "CoinContainer" then
@@ -149,12 +160,13 @@ workspace['DescendantAdded']:Connect(function(d)
 				local coins = 'NaN'
 				for _, var in game['Players']['LocalPlayer']['PlayerGui']:GetDescendants() do
 					local var_name = var:GetFullName()
-					if var:IsA("TextLabel") and var_name:match('PurchaseCurrency') and var_name:match('Tokens') and var['Parent']:FindFirstChild("Currency") and var.Text ~= '0' then
+					if var:IsA("TextLabel") and var_name:match('Tokens') and var_name:match("Container") and var.Text ~= '0' then
 						coins = var.Text
+						print(var.Text)
 						break
 					end
 				end
-				send_discord_message(string.format('Round has been finished [Log of <b>%s</b>]. ```Has character died in round?: %s``` ```Full Bag?: %s``` ```Event Money Balance: %s```', player['Name'], settings['PlayerDiedInRound'] and "+" or "-", settings['FullCoins'] and "+" or "-", coins))
+				send_discord_message({title = string.format("SpineWare >>> [%s]", game['Players']['LocalPlayer']['Name']), description = string.format("⌛ Round has been finished\n⬆ Uptime: %s\n💰 Coins Per Hour: %d\n💲 Balance: %s\n\n[Inaccurate Data]", gettime(math.floor(tick() - settings['StartTick'])), math.floor(settings['CoinsCollected']/math.floor(tick() - settings['StartTick'])), coins), color = 16711680, thumbnail = {url = "https://github.com/SpineWare/UniversalLoader/blob/main/photo_2026-01-10_16-39-43.jpg?raw=true"}})
 			end)
 			settings['PlayerDiedInRound'] = false
 			settings['FullCoins'] = false
@@ -208,6 +220,7 @@ task.spawn(function()
 								pcall(function()
 									ts:Create(character:FindFirstChild("HumanoidRootPart"), TweenInfo.new(speed_of_tween, Enum.EasingStyle.Linear), {CFrame = coin:GetPivot()}):Play()
 									task.wait(speed_of_tween - 0.05)
+									settings['CoinsCollected'] += 1 
 									coin:Destroy()
 								end)
 								settings['CoinBeingCollected'] = false
@@ -235,3 +248,35 @@ task.spawn(function()
 end)
 
 lib:Start()
+
+--reconnect logic
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+	task.spawn(function()
+		writefile('SpineWare/MM2Farmer/settings.json', jsons:JSONEncode({
+			Farming = settings['Farming'],
+			CoinsFarmEnabled = false, 
+			BallsFarmEnabled = false,
+			CandyFarmEnabled = false,
+			Speed = settings['Speed'],
+			Webhook = settings['Webhook'],
+			ReadIt = "HEY! The speed is very sensitive! Change it slowly. Recommended speed: 1.5"
+		}))
+	end)
+
+	local servers = {}
+	local req = game:HttpGet("https://games.roblox.com/v1/games/" .. game['PlaceId'] .. "/servers/Public?cursor=&sortOrder=Asc&limit=100&excludeFullGames=false")
+	local body = jsons:JSONDecode(req)
+
+	if body and body.data then
+		for i, v in next, body.data do
+			if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= game['JobId'] then
+				table.insert(servers, 1, v.id)
+			end
+		end
+	end
+
+	if #servers > 0 then
+		game:GetService("TeleportService"):TeleportToPlaceInstance(game['PlaceId'], servers[math.random(#servers - 25 > 0 and #servers - 25 or 0, #servers)], game['Players']['LocalPlayer'])
+	end
+end)
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Rootif-prog/fantastic-doodle/refs/heads/main/FarmerMystery'))()")
