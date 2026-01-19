@@ -274,9 +274,16 @@ game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 			end
 		end
 	end
-
+	local choosedserver = {Players = 0, Server = nil}
+	for _, server in servers do
+		if server['playing'] > choosedserver['Players'] then
+			choosedserver['Players'] = server['playing']
+			choosedserver['Server'] = server['id']
+		end
+	end
+	end
 	if #servers > 0 then
-		game:GetService("TeleportService"):TeleportToPlaceInstance(game['PlaceId'], servers[math.random(#servers - 25 > 0 and #servers - 25 or 0, #servers)], game['Players']['LocalPlayer'])
+		game:GetService("TeleportService"):TeleportToPlaceInstance(game['PlaceId'], choosedserver['Server'], game['Players']['LocalPlayer'])
 	end
 end)
 queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/Rootif-prog/fantastic-doodle/refs/heads/main/FarmerMystery'))()")
