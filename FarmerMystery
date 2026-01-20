@@ -13,7 +13,7 @@ local settings = {
 	CoinsCollected = 0,
 	CoinsContainer = nil,
 	StartTick = tick(),
-	SafePosition = CFrame.new(-5073.67773, 284.78653, 70.5502548, -0.903661311, 3.13552606e-09, -0.428247869, 1.62285101e-08, 1, -2.69226117e-08, 0.428247869, -3.12787449e-08, -0.903661311),
+	SafePosition = CFrame.new(14.2089405, 504.818115, -59.328804, 0.994306505, 1.51343045e-08, 0.106557943, -9.71986935e-09, 1, -5.13314546e-08, -0.106557943, 5.00034716e-08, 0.994306505),
 	ExceptCoins = {},
 	CoinFound = function(self, coin)
 		if coin == nil then return true end
