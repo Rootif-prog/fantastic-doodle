@@ -139,7 +139,7 @@ local Functions = {
 }
 task.spawn(function()
     pcall(function()
-		local conn = game['Players']['LocalPlayer']['Character']['@Alerts']['ChildAdded']:Connect(function()
+		local conn; conn = game['Players']['LocalPlayer']['Character']['@Alerts']['ChildAdded']:Connect(function()
 			conn:Disconnect()
 	        local value = Instance.new("Color3Value")
 	        value['Value'] = Color3.fromRGB(0, 255, 0)
