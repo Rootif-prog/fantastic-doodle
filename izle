@@ -139,19 +139,22 @@ local Functions = {
 }
 task.spawn(function()
     pcall(function()
-        local value = Instance.new("Color3Value")
-        value['Value'] = Color3.fromRGB(0, 255, 0)
-        value['Name'] = "https://discord.gg/Pk7VQqZvZr"
-        value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']   
-        task.delay(2.5, function()
-            value:Destroy()
-            local value = Instance.new("Color3Value")
-            value['Value'] = Color3.fromRGB(0, 255, 0)
-            value['Name'] = "ORWALKEREDMZ COOKED"
-            value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']  
-            task.wait(2.5)
-            value:Destroy()
-        end)
+		local conn = game['Players']['LocalPlayer']['Character']['@Alerts']['ChildAdded']:Connect(function()
+			conn:Disconnect()
+	        local value = Instance.new("Color3Value")
+	        value['Value'] = Color3.fromRGB(0, 255, 0)
+	        value['Name'] = "https://discord.gg/Pk7VQqZvZr"
+	        value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']   
+	        task.delay(2.5, function()
+	            value:Destroy()
+	            local value = Instance.new("Color3Value")
+	            value['Value'] = Color3.fromRGB(0, 255, 0)
+	            value['Name'] = "ORWALKEREDMZ COOKED"
+	            value['Parent'] = game['Players']['LocalPlayer']['Character']['@Alerts']  
+	            task.wait(2.5)
+	            value:Destroy()
+	        end)
+		end)
     end)
 end)
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
@@ -970,467 +973,676 @@ local TpUI = Guis.Button({
 	Text = "Teleport GUI",
 	Callback = function()
 		local sucess, err = pcall(function()
-			local ScreenGui = Instance.new("ScreenGui")
-			local Container = Instance.new("Frame")
-			local ScrollingFrame = Instance.new("ScrollingFrame")
+			local teleportsUI = Instance.new("ScreenGui")
+			local MainFrame = Instance.new("Frame")
+			local UICorner = Instance.new("UICorner")
+			local TextLabel = Instance.new("TextLabel")
+			local Option = Instance.new("Frame")
+			local UICorner_2 = Instance.new("UICorner")
 			local UIListLayout = Instance.new("UIListLayout")
-			local ship = Instance.new("TextButton")
-			local forest = Instance.new("TextButton")
-			local forest_2 = Instance.new("TextButton")
-			local forest_3 = Instance.new("TextButton")
-			local forest_4 = Instance.new("TextButton")
-			local forest_5 = Instance.new("TextButton")
-			local forest_6 = Instance.new("TextButton")
-			local forest_7 = Instance.new("TextButton")
-			local forest_15 = Instance.new("TextButton")
-			local forest_8 = Instance.new("TextButton")
-			local forest_9 = Instance.new("TextButton")
-			local forest_10 = Instance.new("TextButton")
-			local forest_11 = Instance.new("TextButton")
-			local forest_12 = Instance.new("TextButton")
-			local forest_13 = Instance.new("TextButton")
-			local forest_14 = Instance.new("TextButton")
+			local UIPadding = Instance.new("UIPadding")
+			local _Name = Instance.new("TextLabel")
+			local Teleport = Instance.new("TextButton")
+			local UICorner_3 = Instance.new("UICorner")
+			local Rename = Instance.new("TextButton")
+			local UICorner_4 = Instance.new("UICorner")
+			local Delete = Instance.new("TextButton")
+			local UICorner_5 = Instance.new("UICorner")
+			local NewPoint = Instance.new("TextButton")
+			local UICorner_6 = Instance.new("UICorner")
+			local Copy = Instance.new("TextButton")
+			local UICorner_7 = Instance.new("UICorner")
+			local Set = Instance.new("TextButton")
+			local UICorner_8 = Instance.new("UICorner")
+			local Frame = Instance.new("Frame")
+			local New = Instance.new("TextButton")
+			local UICorner_9 = Instance.new("UICorner")
+			local Bypass = Instance.new("TextButton")
+			local UICorner_10 = Instance.new("UICorner")
+			local Main = Instance.new("Frame")
+			local UICorner_11 = Instance.new("UICorner")
+			local Locations = Instance.new("ScrollingFrame")
+			local UIListLayout_2 = Instance.new("UIListLayout")
+			local UIPadding_2 = Instance.new("UIPadding")
+			local Example = Instance.new("TextButton")
+			local UICorner_12 = Instance.new("UICorner")
+			local TextBox = Instance.new("Frame")
+			local UICorner_13 = Instance.new("UICorner")
+			local UIListLayout_3 = Instance.new("UIListLayout")
+			local UIPadding_3 = Instance.new("UIPadding")
+			local TextBox_2 = Instance.new("TextBox")
+			
 			--Properties:
-
-			ScreenGui.Parent = game.CoreGui
-			ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-			Container.Name = "Container"
-			Container.Parent = ScreenGui
-			Container.Active =true
-			Container.BackgroundColor3 = Color3.fromRGB(126, 126, 126)
-			Container.BackgroundTransparency = 0.200
-			Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			Container.BorderSizePixel = 0
-			Container.Position = UDim2.new(0.0516225062, 0, 0.276635528, 0)
-			Container.Size = UDim2.new(0, 171, 0, 241)
-
-			ScrollingFrame.Parent = Container
-			ScrollingFrame.Active = true
-			ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-			ScrollingFrame.BackgroundTransparency = 1.000
-			ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			ScrollingFrame.BorderSizePixel = 0
-			ScrollingFrame.Position = UDim2.new(0, 0, 0.107883818, 0)
-			ScrollingFrame.Size = UDim2.new(0, 171, 0, 215)
-			ScrollingFrame.CanvasSize = UDim2.new(0, 0, 3, 0)
-
-			UIListLayout.Parent = ScrollingFrame
+			
+			teleportsUI.Name = "teleportsUI"
+			teleportsUI.Parent = game['CoreGui']
+			teleportsUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+			
+			MainFrame.Name = "MainFrame"
+			MainFrame.Parent = teleportsUI
+			MainFrame.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+			MainFrame.BackgroundTransparency = 0.250
+			MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			MainFrame.BorderSizePixel = 0
+			MainFrame.Position = UDim2.new(0.344146699, 0, 0.266457677, 0)
+			MainFrame.Size = UDim2.new(0, 340, 0, 329)
+			
+			UICorner.CornerRadius = UDim.new(0, 5)
+			UICorner.Parent = MainFrame
+			
+			TextLabel.Parent = MainFrame
+			TextLabel.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+			TextLabel.BackgroundTransparency = 1.000
+			TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextLabel.BorderSizePixel = 0
+			TextLabel.Position = UDim2.new(0, 0, 0.0243161097, 0)
+			TextLabel.Size = UDim2.new(0, 182, 0, 32)
+			TextLabel.Font = Enum.Font.Unknown
+			TextLabel.Text = "SPINEWARE"
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextScaled = true
+			TextLabel.TextSize = 14.000
+			TextLabel.TextWrapped = true
+			
+			Option.Name = "Option"
+			Option.Parent = MainFrame
+			Option.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			Option.BackgroundTransparency = 0.250
+			Option.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Option.BorderSizePixel = 0
+			Option.Position = UDim2.new(0.573529422, 0, 0, 0)
+			Option.Size = UDim2.new(0, 145, 0, 329)
+			
+			UICorner_2.CornerRadius = UDim.new(0, 5)
+			UICorner_2.Parent = Option
+			
+			UIListLayout.Parent = Option
 			UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 			UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 			UIListLayout.Padding = UDim.new(0, 2)
-
-			ship.Name = "ship"
-			ship.Parent = ScrollingFrame
-			ship.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			ship.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			ship.BorderSizePixel = 0
-			ship.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			ship.Size = UDim2.new(0, 133, 0, 43)
-			ship.Font = Enum.Font.Jura
-			ship.Text = "Ship"
-			ship.TextColor3 = Color3.fromRGB(255, 255, 255)
-			ship.TextSize = 19.000
-			ship.TextWrapped = true
-
-			forest.Name = "forest"
-			forest.Parent = ScrollingFrame
-			forest.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest.BorderSizePixel = 0
-			forest.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest.Size = UDim2.new(0, 133, 0, 43)
-			forest.Font = Enum.Font.Jura
-			forest.Text = "Forest"
-			forest.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest.TextSize = 19.000
-			forest.TextWrapped = true
-
-			forest_2.Name = "forest"
-			forest_2.Parent = ScrollingFrame
-			forest_2.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_2.BorderSizePixel = 0
-			forest_2.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_2.Size = UDim2.new(0, 133, 0, 43)
-			forest_2.Font = Enum.Font.Jura
-			forest_2.Text = "Generators"
-			forest_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_2.TextSize = 19.000
-			forest_2.TextWrapped = true
-
-			forest_3.Name = "forest"
-			forest_3.Parent = ScrollingFrame
-			forest_3.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_3.BorderSizePixel = 0
-			forest_3.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_3.Size = UDim2.new(0, 133, 0, 43)
-			forest_3.Font = Enum.Font.Jura
-			forest_3.Text = "Observatory"
-			forest_3.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_3.TextSize = 19.000
-			forest_3.TextWrapped = true
-
-			forest_4.Name = "forest"
-			forest_4.Parent = ScrollingFrame
-			forest_4.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_4.BorderSizePixel = 0
-			forest_4.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_4.Size = UDim2.new(0, 133, 0, 43)
-			forest_4.Font = Enum.Font.Jura
-			forest_4.Text = "Tallest Point"
-			forest_4.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_4.TextSize = 19.000
-			forest_4.TextWrapped = true
-
-			forest_15.Name = "forest"
-			forest_15.Parent = ScrollingFrame
-			forest_15.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_15.BorderSizePixel = 0
-			forest_15.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_15.Size = UDim2.new(0, 133, 0, 43)
-			forest_15.Font = Enum.Font.Jura
-			forest_15.Text = "Lighthouse"
-			forest_15.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_15.TextSize = 19.000
-			forest_15.TextWrapped = true
-
-			forest_14.Name = "forest"
-			forest_14.Parent = ScrollingFrame
-			forest_14.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_14.BorderSizePixel = 0
-			forest_14.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_14.Size = UDim2.new(0, 133, 0, 43)
-			forest_14.Font = Enum.Font.Jura
-			forest_14.Text = "Crash"
-			forest_14.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_14.TextSize = 19.000
-			forest_14.TextWrapped = true
-
-			forest_5.Name = "forest"
-			forest_5.Parent = ScrollingFrame
-			forest_5.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_5.BorderSizePixel = 0
-			forest_5.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_5.Size = UDim2.new(0, 133, 0, 43)
-			forest_5.Font = Enum.Font.Jura
-			forest_5.Text = "Fireplace"
-			forest_5.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_5.TextSize = 19.000
-			forest_5.TextWrapped = true
-
-			forest_6.Name = "forest"
-			forest_6.Parent = ScrollingFrame
-			forest_6.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_6.BorderSizePixel = 0
-			forest_6.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_6.Size = UDim2.new(0, 133, 0, 43)
-			forest_6.Font = Enum.Font.Jura
-			forest_6.Text = "Idk place"
-			forest_6.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_6.TextSize = 19.000
-			forest_6.TextWrapped = true
-
-			forest_7.Name = "forest"
-			forest_7.Parent = ScrollingFrame
-			forest_7.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_7.BorderSizePixel = 0
-			forest_7.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_7.Size = UDim2.new(0, 133, 0, 43)
-			forest_7.Font = Enum.Font.Jura
-			forest_7.Text = "Labaratory"
-			forest_7.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_7.TextSize = 19.000
-			forest_7.TextWrapped = true
-
-			forest_8.Name = "forest"
-			forest_8.Parent = ScrollingFrame
-			forest_8.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_8.BorderSizePixel = 0
-			forest_8.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_8.Size = UDim2.new(0, 133, 0, 43)
-			forest_8.Font = Enum.Font.Jura
-			forest_8.Text = "Glass Laboratory"
-			forest_8.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_8.TextSize = 19.000
-			forest_8.TextWrapped = true
-
-			forest_9.Name = "forest"
-			forest_9.Parent = ScrollingFrame
-			forest_9.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_9.BorderSizePixel = 0
-			forest_9.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_9.Size = UDim2.new(0, 133, 0, 43)
-			forest_9.Font = Enum.Font.Jura
-			forest_9.Text = "Docks"
-			forest_9.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_9.TextSize = 19.000
-			forest_9.TextWrapped = true
-
-			forest_10.Name = "forest"
-			forest_10.Parent = ScrollingFrame
-			forest_10.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_10.BorderSizePixel = 0
-			forest_10.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_10.Size = UDim2.new(0, 133, 0, 43)
-			forest_10.Font = Enum.Font.Jura
-			forest_10.Text = "Lair"
-			forest_10.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_10.TextSize = 19.000
-			forest_10.TextWrapped = true
-
-			forest_11.Name = "forest"
-			forest_11.Parent = ScrollingFrame
-			forest_11.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_11.BorderSizePixel = 0
-			forest_11.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_11.Size = UDim2.new(0, 133, 0, 43)
-			forest_11.Font = Enum.Font.Jura
-			forest_11.Text = "Hangar"
-			forest_11.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_11.TextSize = 19.000
-			forest_11.TextWrapped = true
-
-			forest_12.Name = "forest"
-			forest_12.Parent = ScrollingFrame
-			forest_12.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_12.BorderSizePixel = 0
-			forest_12.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_12.Size = UDim2.new(0, 133, 0, 43)
-			forest_12.Font = Enum.Font.Jura
-			forest_12.Text = "Peanut Box"
-			forest_12.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_12.TextSize = 19.000
-			forest_12.TextWrapped = true
-
-			forest_13.Name = "forest"
-			forest_13.Parent = ScrollingFrame
-			forest_13.BackgroundColor3 = Color3.fromRGB(88, 88, 88)
-			forest_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
-			forest_13.BorderSizePixel = 0
-			forest_13.Position = UDim2.new(0.0760233924, 0, 0, 0)
-			forest_13.Size = UDim2.new(0, 133, 0, 43)
-			forest_13.Font = Enum.Font.Jura
-			forest_13.Text = "Ape City"
-			forest_13.TextColor3 = Color3.fromRGB(255, 255, 255)
-			forest_13.TextSize = 19.000
-			forest_13.TextWrapped = true
-
+			
+			UIPadding.Parent = Option
+			UIPadding.PaddingTop = UDim.new(0, 2)
+			
+			_Name.Name = "_Name"
+			_Name.Parent = Option
+			_Name.BackgroundColor3 = Color3.fromRGB(94, 94, 94)
+			_Name.BackgroundTransparency = 1.000
+			_Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			_Name.BorderSizePixel = 0
+			_Name.Position = UDim2.new(0.0448275879, 0, -0.0249221176, 0)
+			_Name.Size = UDim2.new(0, 130, 0, 45)
+			_Name.Font = Enum.Font.Unknown
+			_Name.Text = "Click On Location"
+			_Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+			_Name.TextScaled = true
+			_Name.TextSize = 14.000
+			_Name.TextWrapped = true
+			
+			Teleport.Name = "Teleport"
+			Teleport.Parent = Option
+			Teleport.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Teleport.BorderSizePixel = 0
+			Teleport.Position = UDim2.new(0.0413793102, 0, 0.143730894, 0)
+			Teleport.Size = UDim2.new(0, 133, 0, 32)
+			Teleport.Font = Enum.Font.Unknown
+			Teleport.Text = "Teleport"
+			Teleport.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Teleport.TextScaled = true
+			Teleport.TextSize = 14.000
+			Teleport.TextWrapped = true
+			
+			UICorner_3.CornerRadius = UDim.new(0, 5)
+			UICorner_3.Parent = Teleport
+			
+			Rename.Name = "Rename"
+			Rename.Parent = Option
+			Rename.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Rename.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Rename.BorderSizePixel = 0
+			Rename.Position = UDim2.new(0.0413793102, 0, 0.250026405, 0)
+			Rename.Size = UDim2.new(0, 133, 0, 32)
+			Rename.Font = Enum.Font.Unknown
+			Rename.Text = "Rename"
+			Rename.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Rename.TextScaled = true
+			Rename.TextSize = 14.000
+			Rename.TextWrapped = true
+			
+			UICorner_4.CornerRadius = UDim.new(0, 5)
+			UICorner_4.Parent = Rename
+			
+			Delete.Name = "Delete"
+			Delete.Parent = Option
+			Delete.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Delete.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Delete.BorderSizePixel = 0
+			Delete.Position = UDim2.new(0.0413793102, 0, 0.356321841, 0)
+			Delete.Size = UDim2.new(0, 133, 0, 32)
+			Delete.Font = Enum.Font.Unknown
+			Delete.Text = "Delete"
+			Delete.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Delete.TextScaled = true
+			Delete.TextSize = 14.000
+			Delete.TextWrapped = true
+			
+			UICorner_5.CornerRadius = UDim.new(0, 5)
+			UICorner_5.Parent = Delete
+			
+			NewPoint.Name = "NewPoint"
+			NewPoint.Parent = Option
+			NewPoint.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			NewPoint.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			NewPoint.BorderSizePixel = 0
+			NewPoint.Position = UDim2.new(0.0413793102, 0, 0.462617278, 0)
+			NewPoint.Size = UDim2.new(0, 133, 0, 32)
+			NewPoint.Font = Enum.Font.Unknown
+			NewPoint.Text = "Set New Point"
+			NewPoint.TextColor3 = Color3.fromRGB(255, 255, 255)
+			NewPoint.TextScaled = true
+			NewPoint.TextSize = 14.000
+			NewPoint.TextWrapped = true
+			
+			UICorner_6.CornerRadius = UDim.new(0, 5)
+			UICorner_6.Parent = NewPoint
+			
+			Copy.Name = "Copy"
+			Copy.Parent = Option
+			Copy.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Copy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Copy.BorderSizePixel = 0
+			Copy.Position = UDim2.new(0.0413793102, 0, 0.568912804, 0)
+			Copy.Size = UDim2.new(0, 133, 0, 32)
+			Copy.Font = Enum.Font.Unknown
+			Copy.Text = "Copy CFrame"
+			Copy.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Copy.TextScaled = true
+			Copy.TextSize = 14.000
+			Copy.TextWrapped = true
+			
+			UICorner_7.CornerRadius = UDim.new(0, 5)
+			UICorner_7.Parent = Copy
+			
+			Set.Name = "Set"
+			Set.Parent = Option
+			Set.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Set.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Set.BorderSizePixel = 0
+			Set.Position = UDim2.new(0.0413793102, 0, 0.67520833, 0)
+			Set.Size = UDim2.new(0, 133, 0, 32)
+			Set.Font = Enum.Font.Unknown
+			Set.Text = "Set CFrame"
+			Set.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Set.TextScaled = true
+			Set.TextSize = 14.000
+			Set.TextWrapped = true
+			
+			UICorner_8.CornerRadius = UDim.new(0, 5)
+			UICorner_8.Parent = Set
+			
+			Frame.Parent = Option
+			Frame.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
+			Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Frame.BorderSizePixel = 0
+			Frame.Position = UDim2.new(-0.0379310362, 0, 0.725856721, 0)
+			Frame.Size = UDim2.new(0, 132, 0, 2)
+			
+			New.Name = "New"
+			New.Parent = Option
+			New.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			New.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			New.BorderSizePixel = 0
+			New.Position = UDim2.new(0.0413793102, 0, 0.793314219, 0)
+			New.Size = UDim2.new(0, 133, 0, 32)
+			New.Font = Enum.Font.Unknown
+			New.Text = "New Location"
+			New.TextColor3 = Color3.fromRGB(255, 255, 255)
+			New.TextScaled = true
+			New.TextSize = 14.000
+			New.TextWrapped = true
+			
+			UICorner_9.CornerRadius = UDim.new(0, 5)
+			UICorner_9.Parent = New
+			
+			Bypass.Name = "Bypass"
+			Bypass.Parent = Option
+			Bypass.BackgroundColor3 = Color3.fromRGB(52, 52, 52)
+			Bypass.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Bypass.BorderSizePixel = 0
+			Bypass.Position = UDim2.new(0.0413793102, 0, 0.899609864, 0)
+			Bypass.Size = UDim2.new(0, 133, 0, 32)
+			Bypass.Font = Enum.Font.Unknown
+			Bypass.Text = "Bypass: Off"
+			Bypass.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Bypass.TextScaled = true
+			Bypass.TextSize = 14.000
+			Bypass.TextWrapped = true
+			
+			UICorner_10.CornerRadius = UDim.new(0, 5)
+			UICorner_10.Parent = Bypass
+			
+			Main.Name = "Main"
+			Main.Parent = MainFrame
+			Main.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			Main.BackgroundTransparency = 0.250
+			Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Main.BorderSizePixel = 0
+			Main.Position = UDim2.new(0.0382352956, 0, 0.139817625, 0)
+			Main.Size = UDim2.new(0, 161, 0, 266)
+			
+			UICorner_11.CornerRadius = UDim.new(0, 5)
+			UICorner_11.Parent = Main
+			
+			Locations.Name = "Locations"
+			Locations.Parent = Main
+			Locations.Active = true
+			Locations.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Locations.BackgroundTransparency = 1.000
+			Locations.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Locations.BorderSizePixel = 0
+			Locations.Size = UDim2.new(1.04968941, 0, 1, 0)
+			
+			UIListLayout_2.Parent = Locations
+			UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout_2.Padding = UDim.new(0, 3)
+			
+			UIPadding_2.Parent = Locations
+			UIPadding_2.PaddingRight = UDim.new(0, 7)
+			UIPadding_2.PaddingTop = UDim.new(0, 8)
+			
+			Example.Name = "Example"
+			Example.Parent = Locations
+			Example.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+			Example.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			Example.BorderSizePixel = 0
+			Example.Position = UDim2.new(0.0401234552, 0, 0, 0)
+			Example.Size = UDim2.new(0, 154, 0, 34)
+			Example.Visible = false
+			Example.Font = Enum.Font.Jura
+			Example.Text = "1. Lair"
+			Example.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Example.TextScaled = true
+			Example.TextSize = 14.000
+			Example.TextWrapped = true
+			
+			UICorner_12.CornerRadius = UDim.new(0, 5)
+			UICorner_12.Parent = Example
+			
+			TextBox.Name = "TextBox"
+			TextBox.Parent = MainFrame
+			TextBox.BackgroundColor3 = Color3.fromRGB(74, 74, 74)
+			TextBox.BackgroundTransparency = 0.250
+			TextBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextBox.BorderSizePixel = 0
+			TextBox.Position = UDim2.new(1.05882359, 0, 0.392097265, 0)
+			TextBox.Size = UDim2.new(0, 145, 0, 70)
+			TextBox.Visible = false
+			
+			UICorner_13.CornerRadius = UDim.new(0, 5)
+			UICorner_13.Parent = TextBox
+			
+			UIListLayout_3.Parent = TextBox
+			UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+			UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+			UIListLayout_3.Padding = UDim.new(0, 10)
+			
+			UIPadding_3.Parent = TextBox
+			UIPadding_3.PaddingTop = UDim.new(0, 8)
+			
+			TextBox_2.Parent = TextBox
+			TextBox_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			TextBox_2.BackgroundTransparency = 1.000
+			TextBox_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+			TextBox_2.BorderSizePixel = 0
+			TextBox_2.Size = UDim2.new(1, 0, 1, 0)
+			TextBox_2.Font = Enum.Font.Unknown
+			TextBox_2.Text = "Write here"
+			TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextBox_2.TextScaled = true
+			TextBox_2.TextSize = 14.000
+			TextBox_2.TextWrapped = true
+			
 			-- Scripts:
-
-			local function HDXSCO_fake_script() -- ship.LocalScript 
-				local script = Instance.new('LocalScript', ship)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)
-
-				end)
+			
+			local function ESYNN_fake_script() -- teleportsUI.Controller 
+				local script = Instance.new('LocalScript', teleportsUI)
+			
+				--[[Made by @kstopicstarter]]
+				local main_frame: Frame = script['Parent']['MainFrame']
+				local options: Frame = main_frame['Option']
+				local main: Frame = main_frame['Main']
+				local text_box: TextBox = main_frame['TextBox']:FindFirstChildOfClass("TextBox")
+				
+				local choosen_location = nil -- {Name: string, CFrame = CFrame}
+				local bypass_enabled = false -- bypass for isle 9 (ANTICHEAT OMG FUCKING ANTICHEAT!!!) but bliooooooozz isle DOG ZZZ wont add it i think
+				local connections = {} -- after changing location we will disconnect all of them
+				local logic_connections = {} -- buttons
+				
+				-- locations logic
+				local locations = {}
+				local jsons = game:GetService("HttpService")
+				local function cframeToTable(cf)
+					local x, y, z, r00, r01, r02, r10, r11, r12, r20, r21, r22 = cf:components()
+					return {x, y, z, r00, r01, r02, r10, r11, r12, r20, r21, r22}
+				end
+				local function tableToCFrame(t)
+			    if not t or type(t) ~= "table" or #t ~= 12 then
+			        warn("Invalid CFrame data:", t)
+			        return CFrame.new()
+			    end
+			    return CFrame.new(
+			        t[1], t[2], t[3],
+			        t[4], t[5], t[6],
+			        t[7], t[8], t[9],
+			        t[10], t[11], t[12]
+			    )
 			end
-			coroutine.wrap(HDXSCO_fake_script)()
-			local function YEPHH_fake_script() -- forest.LocalScript 
-				local script = Instance.new('LocalScript', forest)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)
-
+				local main_folder = isfolder('SpineWare')
+				local d_folder = isfolder('SpineWare/Isle')
+				local p_f = isfile('SpineWare/Isle/locations.json')
+				if not main_folder then
+					makefolder('SpineWare')
+				end
+				if not d_folder then
+					makefolder('SpineWare/Isle')
+				end
+				if not p_f then
+					local redacting = {
+							{name = "Ship", cframe = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)},
+							{name = "Forest", cframe = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)},
+							{name = "Generators", cframe = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)},
+							{name = "Observatory", cframe = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)},
+							{name = "Tallest Point", cframe = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)},
+							{name = "Lighthouse", cframe = CFrame.new(-1554.31982, 239.972183, -194.894745, -0.0421087965, 6.00672152e-08, -0.999113023, 1.10267962e-07, 1, 5.54731656e-08, 0.999113023, -1.07834254e-07, -0.0421087965)},
+							{name = "Crash", cframe = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)},
+							{name = "Fireplace", cframe = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)},
+							{name = "Idk place", cframe = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)},
+							{name = "Labaratory", cframe = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)},
+							{name = "Glass Laboratory", cframe = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)},
+							{name = "Docks", cframe = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)},
+							{name = "Lair", cframe = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)},
+							{name = "Hangar", cframe = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)},
+							{name = "Ape City", cframe = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)},
+					}
+					local save_data = {}
+					for _, location in redacting do
+						table.insert(save_data, {name = location['name'], cframe = cframeToTable(location['cframe'])})
+					end
+					writefile('SpineWare/Isle/locations.json', jsons:JSONEncode({
+						['locations'] = save_data
+					}))
+				else
+					local s = jsons:JSONDecode(readfile('SpineWare/Isle/locations.json'))
+					locations = {}
+					for _, loc in s['locations'] do
+						table.insert(locations, {
+							name = loc.name,
+							cframe = tableToCFrame(loc.cframe)
+						})
+					end
+				end
+				-- getting the locations from saved file (it they`re exits)
+				peanut = nil;
+				xpcall(function()
+					peanut = {name="Peanut Box", cframe = workspace.Map.Main.PeanutBox.WorldPivot}
+				end, function()
+					peanut = {name = "NO PEANUT BOX", cframe = CFrame.new(0, 0, 0)}
 				end)
-			end
-			coroutine.wrap(YEPHH_fake_script)()
-
-			coroutine.wrap(HDXSCO_fake_script)()
-
-			local function YEPHaH_fake_script() -- forest.LocalScript 
-				local script = Instance.new('LocalScript', forest_12)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = workspace.Map.Main.PeanutBox.WorldPivot
+				table.insert(locations, peanut)
+				if #locations < 2 then
+					locations = {
+						{name = "Ship", cframe = CFrame.new(-308.43808, 38.916851, 815.37915, 0.831244588, 0.12837708, -0.540880501, 0, 0.972969711, 0.230932713, 0.555906832, -0.191961572, 0.808775783)},
+						{name = "Forest", cframe = CFrame.new(-185.72644, 52.0320473, 106.646019, 0.797985852, -0.200255826, 0.568433106, 0, 0.943181634, 0.332277626, -0.602676213, -0.265152842, 0.752645612)},
+						{name = "Generators", cframe = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)},
+						{name = "Observatory", cframe = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)},
+						{name = "Tallest Point", cframe = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)},
+						{name = "Lighthouse", cframe = CFrame.new(-1554.31982, 239.972183, -194.894745, -0.0421087965, 6.00672152e-08, -0.999113023, 1.10267962e-07, 1, 5.54731656e-08, 0.999113023, -1.07834254e-07, -0.0421087965)},
+						{name = "Crash", cframe = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)},
+						{name = "Fireplace", cframe = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)},
+						{name = "Idk place", cframe = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)},
+						{name = "Labaratory", cframe = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)},
+						{name = "Glass Laboratory", cframe = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)},
+						{name = "Docks", cframe = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)},
+						{name = "Lair", cframe = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)},
+						{name = "Hangar", cframe = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)},
+						{name = "Ape City", cframe = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)},
+						peanut
+					}
+				end
+				-- logic
+				local remove_connections = function()
+					for _, connection in connections do
+						pcall(function()
+							connection:Disconnect()
+						end)
+					end
+				end
+				local reload_list = function()
+					for _, exist: TextButton in main['Locations']:GetChildren() do
+						if exist:IsA("TextButton") and exist['Name'] ~= "Example" then
+							exist:Destroy()
+						end
+					end
+					for _, logic_con: RBXScriptConnection in logic_connections do
+						pcall(function() logic_con:Disconnect() end)
+					end
+					for _, location in locations do
+						local example_button: TextButton = main['Locations']['Example']
+						local new_button: TextButton = example_button:Clone()
+						new_button['Visible'] = true
+						new_button['Parent'] = example_button['Parent']
+						new_button['Text'] = location['name']
+						new_button['Name'] = location['name'] ~= "Example" and location['name'] or "xueta"
+						logic_connection = new_button['MouseButton1Click']:Connect(function()
+							choosen_location = location
+							options['_Name']['Text'] = choosen_location and choosen_location['name'] or "Click On Location"
+							text_box['Parent']['Visible'] = false
+							remove_connections()
+							
+							for _, locbut in example_button['Parent']:GetChildren() do
+								if locbut:IsA("TextButton") then 
+									if locbut ~= new_button then
+										if locbut['Name'] ~= "Example" then
+											locbut['TextColor3'] = Color3.new(1,1,1)
+										end
+									else
+										locbut['TextColor3'] = Color3.new(0.14902, 1, 0.203922)
+									end
+								end
+							end
+						end)
+						table.insert(logic_connections, logic_connection)
+					end
+					options['_Name']['Text'] = choosen_location and choosen_location['name'] or "Click On Location"
+					main['Locations']['CanvasSize'] = UDim2.new(0, 0, #locations*0.15, 0)
+				end
+				local save = function()
+					reload_list()
+					local serializable = {}
+					for _, loc in locations do
+						if loc['name'] ~= "Peanut Box" then
+							table.insert(serializable, {
+								name = loc['name'],
+								cframe = cframeToTable(loc['cframe'])
+							})
+						end
+					end
+					writefile('SpineWare/Isle/locations.json', jsons:JSONEncode({locations = serializable}))
+				end
+				reload_list()
+				-- after that we`re got all of these locations 
+				local function bypass_tp(cframe: CFrame)
+					local char: Model = game['Players']['LocalPlayer']['Character']
+					local root: BasePart = char['HumanoidRootPart'] or char:WaitForChild("HumanoidRootPart", 9e9)
+					local anomaly: BasePart = workspace['Map']['Ignore']['SpecialRegions']['Anomaly3']
+					repeat task.wait() until anomaly['PointLight']['Enabled']
+					repeat root['CFrame'] = anomaly['CFrame']; firetouchinterest(anomaly, root, 0); task.wait(.01); firetouchinterest(anomaly, root, 1) until not anomaly:FindFirstChildOfClass("PointLight")['Enabled']
+					root['CFrame'] = cframe
+				end
+				options['Teleport']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						pcall(function()
+							if bypass_enabled then
+								bypass_tp(choosen_location['cframe'])
+							else
+								game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame'] = choosen_location['cframe']
+							end
+						end)
+					end
 				end)
-			end
-			coroutine.wrap(YEPHaH_fake_script)()
-
-			local function OONFA_fake_script() -- forest_2.LocalScript 
-				local script = Instance.new('LocalScript', forest_2)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(529.973633, 29.1626625, -416.487457, 0.792835832, 0.107498735, -0.599879444, 0, 0.984320223, 0.176390737, 0.60943526, -0.139848903, 0.780404329)
-
+				options['Bypass']['MouseButton1Click']:Connect(function()
+					bypass_enabled = not bypass_enabled
+					options['Bypass']['Text'] = string.format("Bypass: %s", bypass_enabled and "On" or "Off")
 				end)
-			end
-			coroutine.wrap(OONFA_fake_script)()
-			local function UJTFSP_fake_script() -- forest_3.LocalScript 
-				local script = Instance.new('LocalScript', forest_3)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(349.907837, 131.698532, -1099.12866, 0.854124844, 0.188716531, -0.484620303, 0, 0.931840181, 0.362868905, 0.520068049, -0.309935361, 0.795907855)
-
+				options['Rename']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								text_box['Parent']['Visible'] = true
+								remove_connections()
+								connection = text_box['FocusLost']:Connect(function(enter)
+									if enter then
+										connection:Disconnect()
+										local text = text_box['Text']
+										text_box['Parent']['Visible'] = false
+										text_box['Text'] = "Write here"
+										
+										if text ~= "Write here" and text ~= "" then
+											location['name'] = text
+											save()
+										end
+									end
+								end)
+								table.insert(connections, connection)
+							end
+						end
+					end
 				end)
-			end
-			coroutine.wrap(UJTFSP_fake_script)()
-
-			local function UJTFSPf_fake_script() -- forest_3.LocalScript 
-				local script = Instance.new('LocalScript', forest_15)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1554.31982, 239.972183, -194.894745, -0.0421087965, 6.00672152e-08, -0.999113023, 1.10267962e-07, 1, 5.54731656e-08, 0.999113023, -1.07834254e-07, -0.0421087965)
-
+				options['Delete']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								table.remove(locations, table.find(locations, location))
+							end
+						end
+						save()
+					end
 				end)
-			end
-			coroutine.wrap(UJTFSPf_fake_script)()
-
-			local function FKMGC_fake_script() -- forest_4.LocalScript 
-				local script = Instance.new('LocalScript', forest_4)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1073.46326, 546.358093, -1389.1261, -0.210189804, 0.796896279, -0.566371441, 0, 0.579312921, 0.815105259, 0.977660596, 0.171326816, -0.121765673)
-
+				options['Copy']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						xpcall(function()
+							setclipboard(tostring(choosen_location['cframe']))
+						end, function()
+							warn("fail :(")
+						end)
+					end
 				end)
-			end
-			coroutine.wrap(FKMGC_fake_script)()
-
-			local function FKMGcC_fake_script() -- forest_4.LocalScript 
-				local script = Instance.new('LocalScript', forest_13)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1250.66077, -37.2153473, -1011.94263, -0.999947488, -0.00405713124, 0.00940852892, 0, 0.918262661, 0.395971805, -0.0102460105, 0.395951003, -0.91821444)
-
+				options['NewPoint']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								location['cframe'] = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame']
+								save()
+							end
+						end
+					end
 				end)
-			end
-			coroutine.wrap(FKMGcC_fake_script)()
-
-			local function MYAPL_fake_script() -- forest_5.LocalScript 
-				local script = Instance.new('LocalScript', forest_5)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1064.56433, 357.02478, -1823.02551, 0.836878061, 0.39504692, -0.378910422, 0, 0.692213655, 0.721692681, 0.547389388, -0.603968799, 0.579298437)
-
+				options['Set']['MouseButton1Click']:Connect(function()
+					if choosen_location then
+						for _, location in locations do
+							if location['name'] == choosen_location['name'] then
+								text_box['Parent']['Visible'] = true
+								remove_connections()
+								connection = text_box['FocusLost']:Connect(function(enter)
+									if enter then
+										connection:Disconnect()
+										local text = text_box['Text']
+										text_box['Parent']['Visible'] = false
+										text_box['Text'] = "Write here"
+				
+										if text ~= "Write here" and text ~= "" then
+											pcall(function()
+												local v = text:split(",")
+												location['cframe'] = CFrame.new(v[1], v[2], v[3], v[4], v[5], v[6], v[7], v[8], v[9], v[10], v[11], v[12])
+												save()
+											end) 
+										end
+									end
+								end)
+								table.insert(connections, connection)
+							end
+						end
+					end
 				end)
-			end
-			coroutine.wrap(MYAPL_fake_script)()
-			local function SARW_fake_script() -- forest_6.LocalScript 
-				local script = Instance.new('LocalScript', forest_6)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-904.641724, -83.1726532, -1719.28613, 0.010427298, 0.60726738, -0.794429064, 0, 0.794472277, 0.607300401, 0.999945641, -0.00633250223, 0.00828419905)
-
+				options['New']['MouseButton1Click']:Connect(function()
+					text_box['Parent']['Visible'] = true
+					text_box['Text'] = "Write name of location here"
+					remove_connections()
+					connection = text_box['FocusLost']:Connect(function(enter)
+						if enter then
+							connection:Disconnect()
+							local text = text_box['Text']
+							text_box['Parent']['Visible'] = false
+							text_box['Text'] = "Write here"
+				
+							if text ~= "Write here" and text ~= "" then
+								table.insert(locations, {
+									name = text, cframe = game['Players']['LocalPlayer']['Character']['HumanoidRootPart']['CFrame']
+								})
+								save()
+							end
+						end
+					end)
+					table.insert(connections, connection)
+					
 				end)
-			end
-			coroutine.wrap(SARW_fake_script)()
-			local function ULDQ_fake_script() -- forest_7.LocalScript 
-				local script = Instance.new('LocalScript', forest_7)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1779.44434, -191.505554, -1420.9115, 0.912041843, -0.312818378, 0.265187353, 0, 0.646645188, 0.762790918, -0.410097152, -0.695697248, 0.589767456)
-
-				end)
-			end
-			coroutine.wrap(ULDQ_fake_script)()
-			local function WCSEIZ_fake_script() -- forest_8.LocalScript 
-				local script = Instance.new('LocalScript', forest_8)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-2019.27344, -183.613205, -1068.58179, 0.321444452, -0.318200707, 0.89186424, 0, 0.941849649, 0.336034596, -0.946928442, -0.108016454, 0.302752346)
-
-				end)
-			end
-			coroutine.wrap(WCSEIZ_fake_script)()
-			local function DELS_fake_script() -- forest_9.LocalScript 
-				local script = Instance.new('LocalScript', forest_9)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-2062.32959, 27.8716469, -1572.53076, -0.170217171, 0.431923598, -0.885702074, 0, 0.89881891, 0.43832019, 0.985406578, 0.0746096224, -0.152994409)
-
-				end)
-			end
-			coroutine.wrap(DELS_fake_script)()
-			local function MBSEPO_fake_script() -- forest_10.LocalScript 
-				local script = Instance.new('LocalScript', forest_10)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1800.56995, -37.4304619, -606.564575, -0.857012331, -0.00159565499, -0.515293419, 0, 0.999995232, -0.00309658027, 0.515295863, -0.0026538074, -0.857008219)
-
-				end)
-			end
-			coroutine.wrap(MBSEPO_fake_script)()
-			local function ECCLLRX_fake_script() -- forest_11.LocalScript 
-				local script = Instance.new('LocalScript', forest_11)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-1595.37292, 32.3509216, -2319.33423, 0.176203743, -0.153235316, 0.972353399, 0, 0.987808943, 0.155670986, -0.984353721, -0.0274298098, 0.174055636)	
-				end)
-			end
-			coroutine.wrap(ECCLLRX_fake_script)()
-
-			local function ECCLLRXx_fake_script() -- forest_11.LocalScript 
-				local script = Instance.new('LocalScript', forest_14)
-
-				script.Parent.MouseButton1Click:Connect(function()
-					local char = game.Players.LocalPlayer.Character.HumanoidRootPart
-					char.CFrame = CFrame.new(-184.955933, -47.531395, 369.698944, -0.988392949, -0.0378705971, 0.147123173, 0, 0.968431115, 0.249281377, -0.151919082, 0.246387959, -0.957190514)	
-				end)
-			end
-			coroutine.wrap(ECCLLRXx_fake_script)()	
-			local function WHYI_fake_script() -- Container.LocalScript 
-				local script = Instance.new('LocalScript', Container)	
-				local UIS = game:GetService('UserInputService')	
-				local frame = script.Parent
+				-- ok i think that`s all, now we will do it moveable!!!
+				local UIS = game:GetService('UserInputService')
+				local frame = MainFrame
+				
 				local dragToggle = nil
 				local dragSpeed = 0.25
 				local dragStart = nil
-				local startPos = nil	
+				local startPos = nil
+				
 				local function updateInput(input)
 					local delta = input.Position - dragStart
-					local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
-						startPos.Y.Scale, startPos.Y.Offset + delta.Y)
-					game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()	
-				end	
-				frame.InputBegan:Connect(function(input)	
-					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 	
-						dragToggle = true	
-						dragStart = input.Position	
-						startPos = frame.Position	
-						input.Changed:Connect(function()	
-							if input.UserInputState == Enum.UserInputState.End then	
-								dragToggle = false	
-							end	
-						end)	
-					end	
-				end)			
-				UIS.InputChanged:Connect(function(input)	
-					if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then	
-						if dragToggle then	
-							updateInput(input)	
-						end	
-					end	
+					local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+					game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+				end
+				
+				frame.InputBegan:Connect(function(input)
+					if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+						dragToggle = true
+						dragStart = input.Position
+						startPos = frame.Position
+						input.Changed:Connect(function()
+							if input.UserInputState == Enum.UserInputState.End then
+								dragToggle = false
+							end
+						end)
+					end
+				end)
+				
+				UIS.InputChanged:Connect(function(input)
+					if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+						if dragToggle then
+							updateInput(input)
+						end
+					end
 				end)
 			end
-			coroutine.wrap(WHYI_fake_script)()
+			coroutine.wrap(ESYNN_fake_script)()
+			
+			for _, v in teleportsUI:GetDescendants() do
+				if v['ClassName']:match("Text") then
+					v['RichText'] = true
+					v['Font'] = Enum.Font.Jura
+					v['Text'] = string.format("<b>%s</b>", v['Text'])
+				end
+			end
 		end)
 	end
 })
