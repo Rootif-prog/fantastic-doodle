@@ -291,33 +291,37 @@ toggles_list['HighPlayer']['Value'] = Color3.fromRGB(49, 204, 80)
 toggles_list['HighMerc']['Value'] = Color3.fromRGB(204, 104, 38)
 toggles_list['HighParasite']['Value'] = Color3.fromRGB(204, 11, 53)
 
--- file system (like saving the colors of highlights rn)
-local main_folder = isfolder('SpineWare')
-local d_folder = isfolder('SpineWare/Isle')
-local p_f = isfile('SpineWare/Isle/settings.json')
-if not main_folder then
-	makefolder('SpineWare')
+local success, error = pcall(function()
+	-- file system (like saving the colors of highlights rn)
+	local main_folder = isfolder('SpineWare')
+	local d_folder = isfolder('SpineWare/Isle')
+	local p_f = isfile('SpineWare/Isle/settings.json')
+	if not main_folder then
+		makefolder('SpineWare')
+	end
+	if not d_folder then
+		makefolder('SpineWare/Isle')
+	end
+	if not p_f then
+		writefile('SpineWare/Isle/settings.json', jsons:JSONEncode({
+			PlayerHighlightColor = {49, 204, 80},
+			MercenariesHiglightColor = {204, 104, 38},
+			ParasitesHiglightColor = {204, 11, 53},
+			ReadIt = "HI GUYS GUYZZ KSTOPICSTARTER COOKING TS SHIT"
+		}))
+	else
+		local s = jsons:JSONDecode(readfile('SpineWare/Isle/settings.json'))
+		local players_color = Color3.new(s['PlayerHighlightColor'][1], s['PlayerHighlightColor'][2], s['PlayerHighlightColor'][3])
+		local Mercenaries_color = Color3.new(s['MercenariesHiglightColor'][1], s['MercenariesHiglightColor'][2], s['MercenariesHiglightColor'][3])
+		local Parasites_color = Color3.new(s['ParasitesHiglightColor'][1], s['ParasitesHiglightColor'][2], s['ParasitesHiglightColor'][3])
+		toggles_list['HighPlayer']['Value'] = players_color
+		toggles_list['HighMerc']['Value'] = Mercenaries_color
+		toggles_list['HighParasite']['Value'] = Parasites_color
+	end
+end)
+if not success then
+	print(error)
 end
-if not d_folder then
-	makefolder('SpineWare/Isle')
-end
-if not p_f then
-	writefile('SpineWare/Isle/settings.json', jsons:JSONEncode({
-		PlayerHighlightColor = {49, 204, 80},
-		MercenariesHiglightColor = {204, 104, 38},
-		ParasitesHiglightColor = {204, 11, 53},
-		ReadIt = "HI GUYS GUYZZ KSTOPICSTARTER COOKING TS SHIT"
-	}))
-else
-	local s = jsons:JSONDecode(readfile('SpineWare/Isle/settings.json'))
-	local players_color = Color3.new(s['PlayerHighlightColor'][1], s['PlayerHighlightColor'][2], s['PlayerHighlightColor'][3])
-	local Mercenaries_color = Color3.new(s['MercenariesHiglightColor'][1], s['MercenariesHiglightColor'][2], s['MercenariesHiglightColor'][3])
-	local Parasites_color = Color3.new(s['ParasitesHiglightColor'][1], s['ParasitesHiglightColor'][2], s['ParasitesHiglightColor'][3])
-	toggles_list['HighPlayer']['Value'] = players_color
-	toggles_list['HighMerc']['Value'] = Mercenaries_color
-	toggles_list['HighParasite']['Value'] = Parasites_color
-end
-
 
 local color_picker_players = ESP.ColorPicker({
 	-- hi genius, if u are one of isle devs - u arent genius... u are dumbass (like a blioooz). btw urwalkerdmz - my username while i was writin that script 
