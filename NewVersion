@@ -1409,8 +1409,8 @@ local TpUI = Guis.Button({
 				end)
 				if #locations < 2 then
 					locations = locations_list
-                    table.insert(locations, peanut)
 				end
+                table.insert(locations, peanut)
 				-- logic
 				local remove_connections = function()
 					for _, connection in connections do
